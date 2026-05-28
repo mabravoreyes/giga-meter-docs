@@ -1,0 +1,76 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "Giga Meter",
+  "logo": {
+    "light": "/logo/giga-logo-light.svg",
+    "dark": "/logo/giga-logo-dark.svg",
+    "href": "https://giga.global"
+  },
+  "colors": {
+    "primary": "#277aff",
+    "light": "#5495ff",
+    "dark": "#0050e6"
+  },
+  "fonts": {
+    "heading": {
+      "family": "Manrope",
+      "weight": 500
+    },
+    "body": {
+      "family": "Open Sans"
+    }
+  },
+  "topbarLinks": [
+    {
+      "name": "Giga Maps",
+      "url": "https://maps.giga.global/map"
+    }
+  ],
+  "topbarCtaButton": {
+    "name": "Download Giga Meter",
+    "url": "https://meter.giga.global/"
+  },
+  "navigation": {
+    "groups": [
+      {
+        "group": "Overview",
+        "pages": [
+          "README",
+          "docs/getting-started/overview"
+        ]
+      },
+      {
+        "group": "Installation",
+        "pages": [
+          "docs/installation/system-requirements",
+          "docs/installation/installation-guide"
+        ]
+      },
+      {
+        "group": "Technical Reference",
+        "pages": [
+          "docs/technical-reference/measurement-protocols",
+          "docs/technical-reference/data-governance"
+        ]
+      },
+      {
+        "group": "Support",
+        "pages": [
+          "docs/troubleshooting/troubleshooting",
+          "docs/troubleshooting/faq"
+        ]
+      },
+      {
+        "group": "Deployment",
+        "pages": [
+          "docs/deployment/deployment-checklist",
+          "docs/deployment/deployment-blueprint"
+        ]
+      }
+    ]
+  },
+  "footerSocials": {
+    "website": "https://giga.global"
+  }
+}
