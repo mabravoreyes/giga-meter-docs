@@ -5,7 +5,15 @@
     "light": "/logo/giga-logo-light.svg",
     "dark": "/logo/giga-logo-dark.svg"
   },
-  "favicon": "/favicon.svg",
+  "font": {
+    "headings": {
+      "family": "Manrope",
+      "weight": 500
+    },
+    "body": {
+      "family": "Open Sans"
+    }
+  },
   "colors": {
     "primary": "#277aff",
     "light": "#5495ff",
