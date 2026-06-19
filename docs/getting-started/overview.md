@@ -31,7 +31,7 @@ Giga Meter was initially developed by Giga in 2023 in partnership with Ericsson.
 {% columns %}
 
 {% column %}
-![](https://gigabrand.vercel.app/illustrations/general/fill/measure-cycle.svg)
+<img src="https://gigabrand.vercel.app/illustrations/general/fill/measure-cycle.svg" height="120">
 
 **Effortless automation**
 
@@ -39,7 +39,7 @@ The Windows app runs seamlessly with minimal user input and data usage.
 {% endcolumn %}
 
 {% column %}
-![](https://gigabrand.vercel.app/illustrations/general/fill/network.svg)
+<img src="https://gigabrand.vercel.app/illustrations/general/fill/network.svg" height="120">
 
 **Reliable internet monitoring**
 
@@ -47,7 +47,7 @@ Quickly identify schools that aren't meeting benchmarks.
 {% endcolumn %}
 
 {% column %}
-![](https://gigabrand.vercel.app/illustrations/general/fill/sharing-data.svg)
+<img src="https://gigabrand.vercel.app/illustrations/general/fill/sharing-data.svg" height="120">
 
 **Data-driven connectivity planning**
 
