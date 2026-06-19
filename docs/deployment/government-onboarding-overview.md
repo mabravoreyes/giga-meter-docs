@@ -8,8 +8,8 @@ This is the master guide for governments deploying Giga Meter. It covers everyth
 
 Two prerequisites must be in place before any installation can begin:
 
-* [ ] **School data validated on** [**Giga Maps** ](https://maps.giga.global/map)— the country's schools are mapped with official government IDs and the data has been reviewed and approved by the government.
-* [ ] **Country whitelisted on Giga's backend** — Giga enables the country in the system before Giga Meter can register schools.
+* [ ] **School data validated on** [**Giga Maps**](https://maps.giga.global/map) — the country's schools are mapped with official government IDs and the data has been reviewed and approved by the government.
+* [ ] **Country whitelisted on Giga's backend** — Giga enables the country in the system before Giga Meter can register schools. Email [gigatech@unicef.org](mailto:gigatech@unicef.org) to request whitelisting. An active Giga deployment campaign must already be underway in the country — whitelisting is not available outside of an established partnership.
 
 Contact your Giga focal point or UNICEF country office to confirm both are ready. Once confirmed, complete the [Deployment Blueprint](deployment-blueprint.md) to align your team on strategy, scope, and timeline before the rollout begins.
 
