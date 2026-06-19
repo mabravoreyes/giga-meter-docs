@@ -301,15 +301,40 @@ Next steps:
 
 ---
 
-## Step 9 — Follow up with school-level focal points
+## Step 9 — Build for sustainability
 
-Identify a responsible individual at each school to maintain the app. If a device is replaced or reformatted, Giga Meter must be reinstalled — school focal points are responsible for flagging this.
+Installation is not the end. Giga Meter only generates useful data if schools keep it running — and most deployments see drop-off within months without deliberate mechanisms to maintain it. This step is about embedding Giga Meter into the fabric of how schools and the ministry operate, so monitoring continues without constant intervention from the Giga team.
 
-**Output:** Maintain a registry of school focal points, updated whenever contacts change.
+**Find a champion**
 
-| School name | School ID | Focal point name | Role | Phone / email |
-|---|---|---|---|---|
-| | | | | |
+Every successful long-term deployment has at least one named individual — inside the ministry or in a partner organisation — who cares personally about the data and advocates for it. This person is not necessarily technical. They use the dashboard, raise issues when schools drop off, and push for the data to inform real decisions. Without a champion, the deployment becomes infrastructure nobody maintains.
+
+Identify this person early and involve them from the pilot phase. Their ownership of the data is what makes the monitoring network self-sustaining.
+
+**Mechanisms that work**
+
+| Mechanism | What it looks like | Why it helps |
+|---|---|---|
+| Dedicated school focal point | One named staff member per school responsible for the device and for reinstalling after reformats | Creates individual accountability; makes it easy to know who to call |
+| Regional coordinator network | A named focal point per region who aggregates school-level issues and reports to the national lead | Scales support without centralising everything in the ministry |
+| Community of practice | Periodic calls or meetings between school focal points to share issues, solutions, and data insights | Builds peer knowledge-sharing; reduces load on the central support channel |
+| Monitoring dashboard review | A standing agenda item in existing ministry review meetings to look at Giga Meter data | Embeds data use into existing routines rather than creating a separate process |
+| Reinstallation protocol | A documented process for when a school reformats or replaces a device — who triggers it, how fast, who follows up | Prevents the most common cause of drop-off going undetected |
+
+**What to avoid**
+
+Assigning Giga Meter responsibility to someone who already has a full workload and no link to how the data is used. Schools maintain the app when they understand what it contributes to — that requires the data to visibly inform something they care about (ISP accountability, ministry reporting, budget decisions).
+
+**Output:**
+
+{% hint style="info" %}
+**Sustainability plan**\
+Champion name and role: \[Name, unit]\
+School focal point process: \[how focal points are assigned and updated]\
+Regional coordinator structure: \[if applicable — names, regions]\
+Review cadence: \[how often ministry reviews Giga Meter data, in which meeting]\
+Reinstallation protocol: \[who is notified, timeline, how tracked]
+{% endhint %}
 
 ---
 
