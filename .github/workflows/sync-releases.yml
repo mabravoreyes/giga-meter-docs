@@ -1,0 +1,65 @@
+name: Sync release notes
+
+on:
+  schedule:
+    - cron: '0 7 * * *'   # 07:00 UTC daily
+  workflow_dispatch:        # allow manual trigger from GitHub UI
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch latest release
+        id: release
+        run: |
+          curl -sf \
+            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            https://api.github.com/repos/unicef/project-connect-daily-check-app/releases/latest \
+            > /tmp/release.json
+
+          echo "tag=$(jq -r .tag_name  /tmp/release.json)"                       >> $GITHUB_OUTPUT
+          echo "name=$(jq -r .name     /tmp/release.json)"                       >> $GITHUB_OUTPUT
+          echo "date=$(jq -r .published_at /tmp/release.json | cut -c1-10)"      >> $GITHUB_OUTPUT
+          jq -r .body /tmp/release.json > /tmp/release_body.txt
+
+      - name: Skip if already current
+        id: check
+        run: |
+          TAG="${{ steps.release.outputs.tag }}"
+          if grep -qF "<!-- release:${TAG} -->" README.md 2>/dev/null; then
+            echo "current=true"  >> $GITHUB_OUTPUT
+            echo "Already at ${TAG} — nothing to do."
+          else
+            echo "current=false" >> $GITHUB_OUTPUT
+            echo "New release detected: ${TAG}"
+          fi
+
+      - name: Set up Python
+        if: steps.check.outputs.current == 'false'
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Summarize and inject into README
+        if: steps.check.outputs.current == 'false'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          RELEASE_TAG:  ${{ steps.release.outputs.tag }}
+          RELEASE_NAME: ${{ steps.release.outputs.name }}
+          RELEASE_DATE: ${{ steps.release.outputs.date }}
+        run: python .github/scripts/sync_releases.py
+
+      - name: Commit and push
+        if: steps.check.outputs.current == 'false'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git diff --staged --quiet || \
+            git commit -m "docs: update release notes → ${{ steps.release.outputs.tag }}"
+          git push

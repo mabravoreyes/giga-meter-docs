@@ -4,7 +4,8 @@
 
 Giga Meter is a free desktop app developed by [Giga](https://giga.global/) — a UNICEF-ITU initiative to connect every school to the internet. It runs daily automated internet quality tests and syncs results directly to [Giga Maps](https://maps.giga.global/), the global live map of school connectivity.
 
-
+<!-- release-start: -->
+<!-- release-end -->
 
 ***
 
