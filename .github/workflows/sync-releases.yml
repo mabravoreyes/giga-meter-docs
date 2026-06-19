@@ -31,7 +31,7 @@ jobs:
         id: check
         run: |
           TAG="${{ steps.release.outputs.tag }}"
-          if grep -qF "<!-- release:${TAG} -->" README.md 2>/dev/null; then
+          if grep -qF "<!-- release-start:${TAG} -->" README.md 2>/dev/null; then
             echo "current=true"  >> $GITHUB_OUTPUT
             echo "Already at ${TAG} — nothing to do."
           else
