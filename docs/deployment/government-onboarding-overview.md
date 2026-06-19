@@ -152,6 +152,22 @@ Schools install Giga Meter independently using the installation guide, with opti
 {% endtab %}
 {% endtabs %}
 
+**Support channels for schools**
+
+Schools need a named channel to ask for help during and after installation. The right format depends on scale and infrastructure. Most deployments use a combination.
+
+| Channel | Works best for | Notes |
+|---|---|---|
+| WhatsApp group | All strategies | Easy to set up, instant reach, works on mobile. Create one group per region for large rollouts. |
+| Hotline / phone number | Expert in-person, Hybrid | Ideal when schools have low digital confidence. Assign a named person, not a generic number. |
+| Email help desk | Guided remote, Self-installation | Allows written documentation of issues. Set a response time SLA (e.g. 48h). |
+| Virtual drop-in sessions | Guided remote | Scheduled video sessions where schools can join with live questions. |
+| Peer focal point network | Hybrid, Self-installation | Schools that installed successfully support nearby schools. Reduces load on central team. |
+
+{% hint style="success" %}
+Whichever channel you use, publicise it during the training workshop and include it in the installation guide you send to schools. Schools that can't find support simply give up.
+{% endhint %}
+
 **Output:** Document the following and share with the Giga team:
 
 {% hint style="info" %}
@@ -160,7 +176,7 @@ Chosen strategy: \[Expert in-person / Hybrid / Guided remote / Self-installation
 Rationale: \[brief explanation based on scale, geography, school IT capacity]\
 Target schools: \[N]\
 Coverage breakdown: \[e.g. by region or school type if using a mix]\
-Installer support channel: \[e.g. WhatsApp group, email list, help desk]
+Installer support channel: \[channel type, contact details, response time]
 {% endhint %}
 
 → [Installation Strategies](/broken/pages/m5tRNjSriTnejZFZY7TK)
