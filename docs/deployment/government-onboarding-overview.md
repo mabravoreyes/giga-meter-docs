@@ -82,12 +82,67 @@ Support contact for ID issues: \[Name, phone / email]
 
 Choose how installations will happen based on country capacity, geography, school digital readiness, and scale. Four strategies have been used across Giga deployments — they can be combined.
 
-| Strategy                    | When to use                            | Example         |
-| --------------------------- | -------------------------------------- | --------------- |
-| Expert in-person            | Small scale, low school IT capacity    | Honduras        |
-| Hybrid — regional workshops | Medium scale, regional structure       | Sri Lanka       |
-| Guided remote               | Large scale, decent school IT capacity | Belize, Albania |
-| Self-installation           | Very large scale, mature school IT     | Brazil          |
+{% tabs %}
+{% tab title="Expert in-person" %}
+<figure><img src="../../.gitbook/assets/strategy-expert-inperson.png" alt="Expert in-person installation" width="180"></figure>
+
+**When to use:** Small scale, or schools with low IT capacity.
+
+Government-trained staff visit each school, install Giga Meter themselves, and provide hands-on support to the school focal point.
+
+**Steps:**
+1. Identify staff who will visit schools for installation.
+2. Develop a deployment plan with scope, timeline, and assigned schools per installer.
+3. Train installation staff — in-person or virtually.
+4. During installation, collect focal point contact details for maintenance and troubleshooting.
+5. Set up a support channel for schools (e.g. hotline, WhatsApp group).
+6. Monitor rollout and follow up with schools that fail to install.
+{% endtab %}
+
+{% tab title="Hybrid — regional workshops" %}
+<figure><img src="../../.gitbook/assets/strategy-hybrid.png" alt="Hybrid regional workshop installation" width="180"></figure>
+
+**When to use:** Medium scale, with a regional structure. **Example: Sri Lanka.**
+
+School IT staff attend regional training workshops and then carry out installation at their own school.
+
+**Steps:**
+1. Adapt and share the installation guide with school principals.
+2. Ask schools to nominate 1–2 focal points responsible for installation and maintenance.
+3. Organise in-person regional workshops — guide focal points live through the installation.
+4. Set up a support channel (hotline or help desk) for post-workshop troubleshooting.
+5. Monitor rollout and follow up with schools that fail to install.
+{% endtab %}
+
+{% tab title="Guided remote" %}
+<figure><img src="../../.gitbook/assets/strategy-guided-remote.png" alt="Guided remote installation" width="180"></figure>
+
+**When to use:** Larger scale, schools with decent IT capacity. **Example: Belize, Bosnia and Herzegovina.**
+
+School focal points install Giga Meter themselves, supported through virtual training sessions and remote troubleshooting.
+
+**Steps:**
+1. Adapt and share the installation guide with school principals.
+2. Ask schools to nominate 1–2 focal points responsible for installation and maintenance.
+3. Organise virtual sessions — guide focal points live through the installation.
+4. Set up a support channel (hotline or help desk) for post-session troubleshooting.
+5. Monitor rollout and follow up with schools that fail to install.
+{% endtab %}
+
+{% tab title="Self-installation" %}
+<figure><img src="../../.gitbook/assets/strategy-self-install.png" alt="Self-installation" width="180"></figure>
+
+**When to use:** Large scale, schools with mature IT capacity. **Example: Botswana.**
+
+Schools install Giga Meter independently using the installation guide, with optional support via a help desk.
+
+**Steps:**
+1. Ensure school contact information is up to date.
+2. Customise and share the installation guide with schools. Set a clear deadline.
+3. Set up a support channel (hotline or help desk) for troubleshooting.
+4. Monitor rollout and follow up with schools that miss the deadline.
+{% endtab %}
+{% endtabs %}
 
 **Output:** Document the following and share with the Giga team:
 
