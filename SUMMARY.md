@@ -20,8 +20,14 @@
 * [Data Analysis Lead Guide](docs/deployment/data-analysis-lead.md)
 * [Training Support Materials](docs/deployment/deployment-checklist.md)
 
+## Privacy & Security
+
+* [Privacy & Security](docs/security/privacy-and-security.md)
+* [Network Destinations & Firewall Configuration](docs/security/network-destinations.md)
+
 ## Technical Reference
 
+* [API Reference](docs/technical-reference/api-reference.md)
 * [Measurement Protocols](docs/technical-reference/measurement-protocols.md)
 * [Metric Glossary](docs/technical-reference/metric-glossary.md)
 * [Data Governance & Privacy](docs/technical-reference/data-governance.md)
