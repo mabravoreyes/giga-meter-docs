@@ -57,8 +57,7 @@ def summarize() -> str:
 
 def build_block(summary: str) -> str:
     return (
-        f"<!-- release-start -->\n"
-        f"<!-- release:{TAG} -->\n"
+        f"<!-- release-start:{TAG} -->\n"
         f"**{NAME} — {DATE}**\n\n"
         f"{summary}\n\n"
         f"[Full release notes →]({RELEASES_URL})\n"
@@ -67,7 +66,7 @@ def build_block(summary: str) -> str:
 
 
 def inject(readme: str, block: str) -> str:
-    pattern = r"<!-- release-start -->.*?<!-- release-end -->"
+    pattern = r"<!-- release-start(?::[^>]*)? -->.*?<!-- release-end -->"
     if re.search(pattern, readme, re.DOTALL):
         return re.sub(pattern, block, readme, flags=re.DOTALL)
     # First run — no markers yet. Insert after the opening H1 + blank line.
