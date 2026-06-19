@@ -9,6 +9,8 @@
 
 * [System Requirements](docs/installation/system-requirements.md)
 * [Installation Guide](docs/installation/installation-guide.md)
+* [Troubleshooting](docs/troubleshooting/troubleshooting.md)
+* [FAQ](docs/troubleshooting/faq.md)
 
 ## Country Deployment
 
@@ -31,7 +33,3 @@
 * [Measurement Protocols](docs/technical-reference/measurement-protocols.md)
 * [Data Governance & Privacy](docs/technical-reference/data-governance.md)
 
-## Support
-
-* [Troubleshooting](docs/troubleshooting/troubleshooting.md)
-* [FAQ](docs/troubleshooting/faq.md)
