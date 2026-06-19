@@ -32,7 +32,7 @@ A Giga Meter deployment involves two distinct workstreams. They can sit with the
 
 ### Step 1 — Designate the installation lead
 
-The installation lead is the named person accountable for the Giga Meter rollout in the country. They coordinate the installer network, manage troubleshooting escalations, and are the primary point of contact between the government and Giga during the rollout. This can be the Giga Meter Project Owner or someone they designate — typically from the MoE IT department, a regional coordination unit, or a senior school principal network.
+The installation lead is the named person accountable for the Giga Meter rollout in the country. They coordinate the installer network, manage troubleshooting escalations, and are the primary point of contact between the government and Giga during the rollout.
 
 Where the rollout spans multiple regions, each region should also have a named subnational lead.
 
