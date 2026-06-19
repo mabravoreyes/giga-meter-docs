@@ -6,47 +6,14 @@ Before you start, confirm your device meets the [System Requirements](system-req
 
 ## Step-by-step installation
 
-### Step 1 — Download Giga Meter
-
-Visit [meter.giga.global](https://meter.giga.global/) and click **Download** in the upper right corner.
-
-{% hint style="success" %}
-If you've visited this page before, perform a hard refresh first:
-- **Windows:** `Ctrl + Shift + R` or `Ctrl + F5`
-- **Mac:** `Cmd + Shift + R`
-{% endhint %}
-
-### Step 2 — Open the downloaded file
-
-Once the download completes, click on the file to open it.
-
-{% hint style="success" %}
-The downloaded file may appear in your browser's bottom bar, in the upper-right downloads icon, or in your **Downloads** folder.
-{% endhint %}
-
-### Step 3 — Check the version
-
-If messages appear warning about an older version, go back to Step 1 and reinstall the latest version. Otherwise, proceed.
-
-### Step 4 — Allow installation
-
-If prompted by a system message asking for permission, click **Yes**. This opens the Setup Wizard.
-
-### Step 5 — Choose installation scope
-
-On the Setup Wizard, select **"Anyone who uses this computer (all users)"** and click **Next**.
-
-### Step 6 — Choose destination folder
-
-Select the destination folder where you want to save the application and click **Install**.
-
-### Step 7 — Finish the setup
-
-On the Setup Wizard, click **Finish**.
-
-### Step 8 — Open Giga Meter
-
-Navigate to your Desktop. You should see the Giga Meter shortcut icon. Click it to open the application.
+1. **Download Giga Meter** — Visit [meter.giga.global](https://meter.giga.global/) and click **Download** in the upper right corner. If you've visited before, hard refresh first (`Ctrl + Shift + R` on Windows, `Cmd + Shift + R` on Mac).
+2. **Open the downloaded file** — Click the file to open it. It may appear in your browser's bottom bar, the downloads icon, or your **Downloads** folder.
+3. **Check the version** — If a warning about an older version appears, go back to step 1 and reinstall the latest version.
+4. **Allow installation** — If prompted by a system permission message, click **Yes**. This opens the Setup Wizard.
+5. **Choose installation scope** — Select **"Anyone who uses this computer (all users)"** and click **Next**.
+6. **Choose destination folder** — Select where to save the app and click **Install**.
+7. **Finish the setup** — Click **Finish** on the Setup Wizard.
+8. **Open Giga Meter** — Find the Giga Meter shortcut on your Desktop and click it to open the app.
 
 ---
 
