@@ -49,13 +49,13 @@ The app runs in the background while the PC is on. Keep it on daily during schoo
 **Multiple user accounts**
 
 If the computer has multiple user accounts, register Giga Meter under each one. This ensures all measurements are correctly linked to the school.
+{% endcolumn %}
+
+{% endcolumns %}
 
 {% hint style="success" %}
 If new user accounts are added later, install and register Giga Meter in those accounts too.
 {% endhint %}
-{% endcolumn %}
-
-{% endcolumns %}
 
 **Software updates**
 
