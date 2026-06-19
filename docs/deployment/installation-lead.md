@@ -307,7 +307,7 @@ Installation is not the end. Giga Meter only generates useful data if schools ke
 
 **Find a champion**
 
-Every successful long-term deployment has at least one named individual — inside the ministry or in a partner organisation — who cares personally about the data and advocates for it. This person is not necessarily technical. They use the dashboard, raise issues when schools drop off, and push for the data to inform real decisions. Without a champion, the deployment becomes infrastructure nobody maintains.
+Every successful long-term deployment has at least one named individual — inside the ministry or in a partner organisation — who cares personally about the data and advocates for it. This person is not necessarily technical. They check Giga Maps, raise issues when schools drop off, and push for the data to inform real decisions. Without a champion, the deployment becomes infrastructure nobody maintains.
 
 Identify this person early and involve them from the pilot phase. Their ownership of the data is what makes the monitoring network self-sustaining.
 
