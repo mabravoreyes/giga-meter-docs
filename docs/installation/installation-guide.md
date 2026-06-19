@@ -6,14 +6,14 @@ Before you start, confirm your device meets the [System Requirements](system-req
 
 ## Step-by-step installation
 
-1. **Download Giga Meter** — Visit [meter.giga.global](https://meter.giga.global/) and click **Download** in the upper right corner. If you've visited before, hard refresh first (`Ctrl + Shift + R` on Windows, `Cmd + Shift + R` on Mac).
-2. **Open the downloaded file** — Click the file to open it. It may appear in your browser's bottom bar, the downloads icon, or your **Downloads** folder.
-3. **Check the version** — If a warning about an older version appears, go back to step 1 and reinstall the latest version.
-4. **Allow installation** — If prompted by a system permission message, click **Yes**. This opens the Setup Wizard.
-5. **Choose installation scope** — Select **"Anyone who uses this computer (all users)"** and click **Next**.
-6. **Choose destination folder** — Select where to save the app and click **Install**.
-7. **Finish the setup** — Click **Finish** on the Setup Wizard.
-8. **Open Giga Meter** — Find the Giga Meter shortcut on your Desktop and click it to open the app.
+- [ ] **Download Giga Meter** — Visit [meter.giga.global](https://meter.giga.global/) and click **Download** in the upper right corner. If you've visited before, hard refresh first (`Ctrl + Shift + R` on Windows, `Cmd + Shift + R` on Mac).
+- [ ] **Open the downloaded file** — Click the file to open it. It may appear in your browser's bottom bar, the downloads icon, or your **Downloads** folder.
+- [ ] **Check the version** — If a warning about an older version appears, go back to step 1 and reinstall the latest version.
+- [ ] **Allow installation** — If prompted by a system permission message, click **Yes**. This opens the Setup Wizard.
+- [ ] **Choose installation scope** — Select **"Anyone who uses this computer (all users)"** and click **Next**.
+- [ ] **Choose destination folder** — Select where to save the app and click **Install**.
+- [ ] **Finish the setup** — Click **Finish** on the Setup Wizard.
+- [ ] **Open Giga Meter** — Find the Giga Meter shortcut on your Desktop and click it to open the app.
 
 ---
 
