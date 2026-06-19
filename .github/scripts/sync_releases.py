@@ -58,9 +58,11 @@ def summarize() -> str:
 def build_block(summary: str) -> str:
     return (
         f"<!-- release-start:{TAG} -->\n"
+        f'{{% hint style="info" %}}\n'
         f"**{NAME} — {DATE}**\n\n"
         f"{summary}\n\n"
         f"[Full release notes →]({RELEASES_URL})\n"
+        f"{{% endhint %}}\n"
         f"<!-- release-end -->"
     )
 
