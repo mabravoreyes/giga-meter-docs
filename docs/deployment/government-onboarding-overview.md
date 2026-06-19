@@ -58,11 +58,9 @@ Before the rollout, verify that target schools meet the minimum device and conne
 
 **Output:** Complete one row per school and share with your Giga focal point before the rollout begins.
 
-{% hint style="info" %}
 | School name | School ID | Windows version | Free disk space ≥ 500 MB | Powered on during school hours | Admin rights available | Notes |
 |---|---|---|---|---|---|---|
 | | | | Yes / No | Yes / No | Yes / No | |
-{% endhint %}
 
 {% hint style="warning" %}
 If a school has no Windows device, flag it to Giga before the rollout. Android support is in development.
@@ -194,13 +192,11 @@ Next steps:
 
 Identify a responsible individual at each school to maintain the app. If a device is replaced or reformatted, Giga Meter must be reinstalled — school focal points are responsible for flagging this.
 
-**Output:** Maintain a registry of school focal points, updated whenever contacts change:
+**Output:** Maintain a registry of school focal points, updated whenever contacts change.
 
-{% hint style="info" %}
 | School name | School ID | Focal point name | Role | Phone / email |
 |---|---|---|---|---|
 | | | | | |
-{% endhint %}
 
 ---
 
@@ -229,13 +225,11 @@ How often is it reviewed:
 
 Identify who in the ministry — and beyond — needs Giga Meter data and at what level. School-level focal points and regional coordinators may also require access.
 
-**Output:** Share this list with the Giga team when requesting access provisioning:
+**Output:** Share this list with the Giga team when requesting access provisioning.
 
-{% hint style="info" %}
 | Name | Role | Unit | Access channel | Notes |
 |---|---|---|---|---|
 | | | | Dashboard / API | e.g. national view only |
-{% endhint %}
 
 → [Access Channels: Dashboard and API](../data/access-channels.md)
 
@@ -265,13 +259,11 @@ Giga Meter reports several technical metrics. Circulate a simple reference expla
 
 Translate the use case into 3–5 measurable KPIs, each with a formula, threshold, owner, and review frequency. Share the completed KPI document with the Giga data team so they can advise on whether the standard dashboard covers your needs or requires customisation.
 
-**Output:** Share the completed KPI document with the Giga data team:
+**Output:** Share the completed KPI document with the Giga data team.
 
-{% hint style="info" %}
 | KPI name | Formula | Threshold | Owner | Review cadence | Action triggered |
 |---|---|---|---|---|---|
 | | | | | | |
-{% endhint %}
 
 → [Defining and Tracking KPIs](../data/kpi-guide.md)
 
