@@ -59,11 +59,9 @@ def build_block(summary: str) -> str:
     return (
         f"<!-- release-start -->\n"
         f"<!-- release:{TAG} -->\n"
-        f"> **{NAME}** — {DATE}\n"
-        f">\n"
-        f"> {summary}\n"
-        f">\n"
-        f"> [Full release notes →]({RELEASES_URL})\n"
+        f"**{NAME} — {DATE}**\n\n"
+        f"{summary}\n\n"
+        f"[Full release notes →]({RELEASES_URL})\n"
         f"<!-- release-end -->"
     )
 
