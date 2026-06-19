@@ -2,8 +2,9 @@
 
 Before onboarding any user to the dashboard, decide what you are using Giga Meter for. This shapes which KPIs to track and which decisions the data is supposed to inform.
 
-> [!IMPORTANT]
-> Without a defined use case, dashboard users tend to look at the data without knowing what to do with it. The use case definition is the foundation of the entire data analysis workstream.
+{% hint style="warning" %}
+Without a defined use case, dashboard users tend to look at the data without knowing what to do with it. The use case definition is the foundation of the entire data analysis workstream.
+{% endhint %}
 
 ---
 

@@ -10,17 +10,19 @@ Before you start, confirm your device meets the [System Requirements](system-req
 
 Visit [meter.giga.global](https://meter.giga.global/) and click **Download** in the upper right corner.
 
-> [!TIP]
-> If you've visited this page before, perform a hard refresh first:
-> - **Windows:** `Ctrl + Shift + R` or `Ctrl + F5`
-> - **Mac:** `Cmd + Shift + R`
+{% hint style="success" %}
+If you've visited this page before, perform a hard refresh first:
+- **Windows:** `Ctrl + Shift + R` or `Ctrl + F5`
+- **Mac:** `Cmd + Shift + R`
+{% endhint %}
 
 ### Step 2 — Open the downloaded file
 
 Once the download completes, click on the file to open it.
 
-> [!TIP]
-> The downloaded file may appear in your browser's bottom bar, in the upper-right downloads icon, or in your **Downloads** folder.
+{% hint style="success" %}
+The downloaded file may appear in your browser's bottom bar, in the upper-right downloads icon, or in your **Downloads** folder.
+{% endhint %}
 
 ### Step 3 — Check the version
 
@@ -66,8 +68,9 @@ Read the set-up recommendations. Read and accept the **Data Privacy Policy** and
 
 Your country should be detected automatically.
 
-> [!IMPORTANT]
-> If the detected country is incorrect, select the correct one from the dropdown and click **OK**. Then click **Confirm** to continue.
+{% hint style="warning" %}
+If the detected country is incorrect, select the correct one from the dropdown and click **OK**. Then click **Confirm** to continue.
+{% endhint %}
 
 ### Step 13 — Country verification errors
 
@@ -81,15 +84,17 @@ Verify your selected country is correct. If the issue persists, contact your des
 
 Enter the school ID — a unique identifier provided by the government — and click **Search ID**. Select your school by clicking **Select**.
 
-> [!TIP]
-> If you're unsure of your school ID, check with your school administrator or IT department.
+{% hint style="success" %}
+If you're unsure of your school ID, check with your school administrator or IT department.
+{% endhint %}
 
 ### Step 15 — Confirm the school name
 
 Double-check the information shown. If the school name is correct, click **YES** to confirm.
 
-> [!WARNING]
-> Once you click **YES**, changing your school ID will require uninstalling and reinstalling the app.
+{% hint style="warning" %}
+Once you click **YES**, changing your school ID will require uninstalling and reinstalling the app.
+{% endhint %}
 
 ### Step 16 — First connectivity test
 
@@ -101,8 +106,9 @@ Congratulations — your installation is complete.
 
 If the test is unsuccessful, try again later when the internet connection improves. If tests fail repeatedly, take a screenshot and share it with the administrator who guided you through the installation.
 
-> [!NOTE]
-> Your school connectivity will be measured daily and data will be sent to Giga automatically. To ensure accurate data, keep the computer turned on and connected to the school's internet for as many hours as possible each day.
+{% hint style="info" %}
+Your school connectivity will be measured daily and data will be sent to Giga automatically. To ensure accurate data, keep the computer turned on and connected to the school's internet for as many hours as possible each day.
+{% endhint %}
 
 ---
 

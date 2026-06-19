@@ -25,8 +25,9 @@ Identify two Windows computers where the app will be installed. Each device shou
 - [ ] Be exclusively connected to the school's internet
 - [ ] Have at least 500 MB of free disk space
 
-> [!TIP]
-> Join the training session from one of the identified computers.
+{% hint style="success" %}
+Join the training session from one of the identified computers.
+{% endhint %}
 
 Additional pre-workshop steps for schools:
 

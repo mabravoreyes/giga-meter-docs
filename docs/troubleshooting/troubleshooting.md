@@ -37,8 +37,9 @@ The new installation will automatically overwrite the older version. Your school
 4. Enter your school ID and click **Logout** again to confirm
 5. You will be taken back to the registration screen — follow the steps from [Step 11 of the Installation Guide](../installation/installation-guide.md#step-11--accept-the-policies) to re-register with the correct school ID
 
-> [!WARNING]
-> Logging out removes the registration for **all users on this device**. No more internet quality measurements will be recorded for the previously registered school ID until re-registration is complete.
+{% hint style="warning" %}
+Logging out removes the registration for **all users on this device**. No more internet quality measurements will be recorded for the previously registered school ID until re-registration is complete.
+{% endhint %}
 
 After re-registering, all Windows users on the device will be automatically updated. To verify, switch to other user accounts and open Giga Meter to confirm they show the correct school ID. If not, restart the device or app and register again.
 

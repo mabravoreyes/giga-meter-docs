@@ -14,8 +14,9 @@ Three numbers to track from the start:
 | **% installed schools reporting** | Schools that sent data in the last 7 days ÷ installed schools × 100 | Are installed schools actually collecting data? |
 | **Open troubleshooting tickets** | Count of unresolved support requests per week | Is the support mechanism keeping up with issues? |
 
-> [!TIP]
-> A school can be "installed" but not "reporting" — the device may be powered off, the app may have crashed, or it may have lost internet. Treat any installed school that hasn't reported in 7+ days as a priority follow-up.
+{% hint style="success" %}
+A school can be "installed" but not "reporting" — the device may be powered off, the app may have crashed, or it may have lost internet. Treat any installed school that hasn't reported in 7+ days as a priority follow-up.
+{% endhint %}
 
 ---
 
