@@ -20,16 +20,9 @@
 * [Data Analysis Lead Guide](docs/deployment/data-analysis-lead.md)
 * [Training Support Materials](docs/deployment/deployment-checklist.md)
 
-## Data & Dashboard
-
-* [Defining Your Use Case](docs/data/use-case-definition.md)
-* [Access Channels: Dashboard and API](docs/data/access-channels.md)
-* [Using the Dashboard](docs/data/dashboard-guide.md)
-* [Metric Glossary](docs/data/metric-glossary.md)
-* [Defining and Tracking KPIs](docs/data/kpi-guide.md)
-
 ## Technical Reference
 
 * [Measurement Protocols](docs/technical-reference/measurement-protocols.md)
+* [Metric Glossary](docs/technical-reference/metric-glossary.md)
 * [Data Governance & Privacy](docs/technical-reference/data-governance.md)
 

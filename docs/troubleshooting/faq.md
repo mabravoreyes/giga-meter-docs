@@ -11,25 +11,17 @@ You can view results in two ways:
 
 The dot next to each school is colour-coded by connectivity level:
 
-{% columns %}
-{% column %}
+**Green** — Good connectivity. The school meets or exceeds the selected benchmark.
+
 <figure><img src="../../.gitbook/assets/maps-green-good.png" alt="Celetyuma Primary School — 51.99 Mbps, green dot"></figure>
 
-**Green** — Good connectivity. The school meets or exceeds the selected benchmark.
-{% endcolumn %}
+**Yellow** — Moderate connectivity. The school is below the benchmark but has a working connection.
 
-{% column %}
 <figure><img src="../../.gitbook/assets/maps-yellow-moderate.png" alt="Lonwabo Senior Secondary School — 7.87 Mbps, yellow dot"></figure>
 
-**Yellow** — Moderate connectivity. The school is below the benchmark but has a working connection.
-{% endcolumn %}
-
-{% column %}
-<figure><img src="../../.gitbook/assets/maps-red-slow.png" alt="Embekweni Junior Primary School — 0.8 Mbps, red dot"></figure>
-
 **Red** — Slow connectivity. The school is significantly below the benchmark.
-{% endcolumn %}
-{% endcolumns %}
+
+<figure><img src="../../.gitbook/assets/maps-red-slow.png" alt="Embekweni Junior Primary School — 0.8 Mbps, red dot"></figure>
 
 A **blue** dot means no recent data has been received — the device may be off or the app may need reinstalling.
 
@@ -39,9 +31,25 @@ Copy the URL on your browser after selecting your school — you can bookmark it
 
 ### What data does Giga Meter transmit to Giga?
 
-The app transmits:
-- Download speed, upload speed, latency, and ping test results (uptime)
-- Non-personally identifiable information: IP address, school ID, app version, detected ISP, network type, and operating system
+The app transmits only network performance data. No browsing history, search activity, or personal files are ever collected.
+
+| Field | Example | What it is |
+|---|---|---|
+| Download speed | 10 Mbps | Rate at which data travels from an M-Lab server to the device (NDT7 protocol, 10-second test) |
+| Upload speed | 5.7 Mbps | Rate at which data travels from the device to an M-Lab server (NDT7 protocol, 10-second test) |
+| Latency | 3 ms | Round-trip time for a small packet to travel from the device to a server and back |
+| Packet loss | 0.5% | Percentage of data packets sent that never arrive at their destination |
+| Uptime | 99% | Proportion of school hours (8 AM–8 PM) during which the connection is confirmed reachable, derived from automated pings |
+| ISP / ASN | AS8193 Uzbektelekom | The internet service provider and their Autonomous System Number — a unique identifier assigned by global internet authorities |
+| IP address | 84.54.71.31 | The public IP address assigned to the school's connection at the time of measurement |
+| Test server location | Chennai, IN | Geographic location of the M-Lab measurement server used in the speed test |
+| Device type | windows | Operating system running the measurement application |
+| Network name (SSID) | MERCUSYS_43A4 | Name of the Wi-Fi network the device is connected to at the time of the test |
+| Wi-Fi standard | 802.11n | Wi-Fi protocol version in use (802.11n = Wi-Fi 4, 802.11ac = Wi-Fi 5, 802.11ax = Wi-Fi 6) |
+| Wi-Fi channel | 10 | Radio frequency channel the router is broadcasting on |
+| Wi-Fi signal level | −70.5 dBm | Signal strength received by the device. Closer to 0 = stronger; below −80 dBm is poor |
+| Wi-Fi transmit rate | 300 Mbps | Speed at which the device's wireless adapter sends data to the router — the wireless link rate, not the internet speed |
+| Wi-Fi adapter model | Intel Wireless-AC 9560 | Hardware model of the Wi-Fi adapter inside the measurement device |
 
 No personal data is ever transmitted.
 
