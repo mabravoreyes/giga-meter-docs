@@ -28,11 +28,33 @@ Giga Meter was initially developed by Giga in 2023 in partnership with Ericsson.
 
 ## Why use Giga Meter?
 
-| Benefit                               | What it means                                                                      |
-| ------------------------------------- | ---------------------------------------------------------------------------------- |
-| **Effortless automation**             | The Windows app runs seamlessly with minimal user input and data usage             |
-| **Reliable internet monitoring**      | Quickly identify schools that aren't meeting benchmarks                            |
-| **Data-driven connectivity planning** | Use performance data to adapt plans and optimize internet quality for your schools |
+{% columns %}
+
+{% column %}
+![](https://gigabrand.vercel.app/illustrations/general/fill/measure-cycle.svg)
+
+**Effortless automation**
+
+The Windows app runs seamlessly with minimal user input and data usage.
+{% endcolumn %}
+
+{% column %}
+![](https://gigabrand.vercel.app/illustrations/general/fill/network.svg)
+
+**Reliable internet monitoring**
+
+Quickly identify schools that aren't meeting benchmarks.
+{% endcolumn %}
+
+{% column %}
+![](https://gigabrand.vercel.app/illustrations/general/fill/sharing-data.svg)
+
+**Data-driven connectivity planning**
+
+Use performance data to adapt plans and optimize internet quality for your schools.
+{% endcolumn %}
+
+{% endcolumns %}
 
 Giga Meter supports your government in understanding the status of connectivity in your schools, and where to make investments to achieve the best results possible for students' e-learning.
 
