@@ -20,7 +20,7 @@ To install Giga Meter, the device must meet the following minimum requirements:
 {% columns %}
 
 {% column %}
-<img src="https://gigabrand.vercel.app/illustrations/general/fill/devices.svg" height="80">
+<img src="https://gigabrand.vercel.app/illustrations/general/fill/devices.svg" height="100">
 
 **How many devices per school?**
 
@@ -28,15 +28,19 @@ Up to two computers per school. One should be the most frequently used device wi
 {% endcolumn %}
 
 {% column %}
-<img src="https://gigabrand.vercel.app/illustrations/general/fill/connection.svg" height="80">
+<img src="https://gigabrand.vercel.app/illustrations/general/fill/connection.svg" height="100">
 
 **Wired connection preferred**
 
-Install on at least one computer connected via Ethernet. This ensures more stable and accurate speed tests.
+Whenever possible, install on at least one computer connected via Ethernet. This ensures more stable and accurate speed tests.
 {% endcolumn %}
 
+{% endcolumns %}
+
+{% columns %}
+
 {% column %}
-<img src="https://gigabrand.vercel.app/illustrations/general/fill/cycle-data.svg" height="80">
+<img src="https://gigabrand.vercel.app/illustrations/general/fill/cycle-data.svg" height="100">
 
 **Keep the device on**
 
@@ -44,18 +48,18 @@ The app runs in the background while the PC is on. Keep it on daily during schoo
 {% endcolumn %}
 
 {% column %}
-<img src="https://gigabrand.vercel.app/illustrations/general/fill/people.svg" height="80">
+<img src="https://gigabrand.vercel.app/illustrations/general/fill/people.svg" height="100">
 
 **Multiple user accounts**
 
 If the computer has multiple user accounts, register Giga Meter under each one. This ensures all measurements are correctly linked to the school.
-{% endcolumn %}
-
-{% endcolumns %}
 
 {% hint style="success" %}
 If new user accounts are added later, install and register Giga Meter in those accounts too.
 {% endhint %}
+{% endcolumn %}
+
+{% endcolumns %}
 
 **Software updates**
 
