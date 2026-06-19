@@ -65,12 +65,12 @@ Select pilot schools to represent the range of your national target: mix urban a
 
 After the pilot, expand in phases rather than attempting a single national rollout. Common phasing approaches:
 
-| Approach | How it works | Works best when |
-|---|---|---|
-| By region | Roll out region by region, using regional focal points | You have a clear regional structure |
-| By school type | Start with secondary schools, then primary | Device readiness varies significantly by school type |
-| By connectivity tier | Start with better-connected schools to build early data coverage | You want to demonstrate value quickly |
-| By partner | Delegate phases to regional education offices or NGO partners | You have a distributed implementation network |
+| Approach             | How it works                                                     | Works best when                                      |
+| -------------------- | ---------------------------------------------------------------- | ---------------------------------------------------- |
+| By region            | Roll out region by region, using regional focal points           | You have a clear regional structure                  |
+| By school type       | Start with secondary schools, then primary                       | Device readiness varies significantly by school type |
+| By connectivity tier | Start with better-connected schools to build early data coverage | You want to demonstrate value quickly                |
+| By partner           | Delegate phases to regional education offices or NGO partners    | You have a distributed implementation network        |
 
 Phases can overlap — the next phase can begin before the previous one is complete, as long as the support channel can absorb the additional load.
 
@@ -89,7 +89,7 @@ Timeline: \[start – end date]\
 Schools: \[N] — \[scope: region / school type / partner]\
 Timeline: \[start – end date]\
 \
-**Phase 3** *(if applicable)*\
+**Phase 3** _(if applicable)_\
 Schools: \[N] — \[scope]\
 Timeline: \[start – end date]
 {% endhint %}
@@ -98,7 +98,7 @@ Timeline: \[start – end date]
 
 ### Step 3 — Confirm device readiness
 
-Before the rollout, verify that target schools meet the minimum device and connectivity conditions required for consistent data collection.&#x20;
+Before the rollout, verify that target schools meet the minimum device and connectivity conditions required for consistent data collection.
 
 {% hint style="warning" %}
 If a school has no Windows device, flag it to Giga before the rollout. Android support is in development.
@@ -131,6 +131,8 @@ Support contact for ID issues: \[Name, phone / email]
 
 Choose how installations will happen based on country capacity, geography, school digital readiness, and scale. Four strategies have been used across Giga deployments — they can be combined.
 
+→ [Installation Strategies](/broken/pages/m5tRNjSriTnejZFZY7TK)
+
 {% tabs %}
 {% tab title="Expert in-person" %}
 <figure><img src="../../.gitbook/assets/strategy-expert-inperson.png" alt="Expert in-person installation" width="180"><figcaption></figcaption></figure>
@@ -152,7 +154,7 @@ Government-trained staff visit each school, install Giga Meter themselves, and p
 {% tab title="Hybrid — regional workshops" %}
 <figure><img src="../../.gitbook/assets/strategy-hybrid.png" alt="Hybrid regional workshop installation" width="180"><figcaption></figcaption></figure>
 
-**When to use:** Medium scale, with a regional structure.&#x20;
+**When to use:** Medium scale, with a regional structure.
 
 School IT staff attend regional training workshops and then carry out installation at their own school.
 
@@ -168,7 +170,7 @@ School IT staff attend regional training workshops and then carry out installati
 {% tab title="Guided remote" %}
 <figure><img src="../../.gitbook/assets/strategy-guided-remote.png" alt="Guided remote installation" width="180"><figcaption></figcaption></figure>
 
-**When to use:** Larger scale, schools with decent IT capacity.&#x20;
+**When to use:** Larger scale, schools with decent IT capacity.
 
 School focal points install Giga Meter themselves, supported through virtual training sessions and remote troubleshooting.
 
@@ -184,7 +186,7 @@ School focal points install Giga Meter themselves, supported through virtual tra
 {% tab title="Self-installation" %}
 <figure><img src="../../.gitbook/assets/strategy-self-install.png" alt="Self-installation" width="180"><figcaption></figcaption></figure>
 
-**When to use:** Large scale, schools with mature IT capacity.&#x20;
+**When to use:** Large scale, schools with mature IT capacity.
 
 Schools install Giga Meter independently using the installation guide, with optional support via a help desk.
 
@@ -197,18 +199,6 @@ Schools install Giga Meter independently using the installation guide, with opti
 {% endtab %}
 {% endtabs %}
 
-**Output:** Document the following and share with the Giga team:
-
-{% hint style="info" %}
-**Installation strategy**\
-Chosen strategy: \[Expert in-person / Hybrid / Guided remote / Self-installation / combination]\
-Rationale: \[brief explanation based on scale, geography, school IT capacity]\
-Target schools: \[N]\
-Coverage breakdown: \[e.g. by region or school type if using a mix]
-{% endhint %}
-
-→ [Installation Strategies](/broken/pages/m5tRNjSriTnejZFZY7TK)
-
 ***
 
 ### Step 6 — Establish a support channel and escalation path
@@ -219,13 +209,13 @@ Set up a government support layer between schools, installers, and the Giga team
 
 Schools need a named channel to ask for help during and after installation. The right format depends on scale and infrastructure. Most deployments use a combination.
 
-| Channel | Works best for | Notes |
-|---|---|---|
-| WhatsApp group | All strategies | Easy to set up, instant reach, works on mobile. Create one group per region for large rollouts. |
-| Hotline / phone number | Expert in-person, Hybrid | Ideal when schools have low digital confidence. Assign a named person, not a generic number. |
-| Email help desk | Guided remote, Self-installation | Allows written documentation of issues. Set a response time SLA (e.g. 48h). |
-| Virtual drop-in sessions | Guided remote | Scheduled video sessions where schools can join with live questions. |
-| Peer focal point network | Hybrid, Self-installation | Schools that installed successfully support nearby schools. Reduces load on central team. |
+| Channel                  | Works best for                   | Notes                                                                                           |
+| ------------------------ | -------------------------------- | ----------------------------------------------------------------------------------------------- |
+| WhatsApp group           | All strategies                   | Easy to set up, instant reach, works on mobile. Create one group per region for large rollouts. |
+| Hotline / phone number   | Expert in-person, Hybrid         | Ideal when schools have low digital confidence. Assign a named person, not a generic number.    |
+| Email help desk          | Guided remote, Self-installation | Allows written documentation of issues. Set a response time SLA (e.g. 48h).                     |
+| Virtual drop-in sessions | Guided remote                    | Scheduled video sessions where schools can join with live questions.                            |
+| Peer focal point network | Hybrid, Self-installation        | Schools that installed successfully support nearby schools. Reduces load on central team.       |
 
 {% hint style="success" %}
 Whichever channel you use, publicise it during the training workshop and include it in the installation guide you send to schools. Schools that can't find support simply give up.
@@ -243,15 +233,13 @@ Beyond the school-facing channel, establish a clear escalation path for issues t
 
 {% hint style="info" %}
 **Support channel and escalation protocol**\
-School support channel: \[channel type, contact details, response time]\
-Government support owner: \[Name, phone / email]\
-When to escalate to government support: \[e.g. issue not resolved by installer within 24h]\
-Giga escalation contact: \[Name / email at UNICEF country office]\
-When to escalate to Giga: \[e.g. issue unresolved at government level after 48h]\
-Information to include when escalating: school name and ID, Giga Meter version, error message or screenshot, steps already attempted
+School support channel: _\[channel type, contact details, response time]_\
+Government support owner: _\[Name, phone / email]_\
+When to escalate to government support: _\[e.g. issue not resolved by installer within 24h]_\
+Giga escalation contact: _\[Name / email at UNICEF country office]_\
+When to escalate to Giga: _\[e.g. issue unresolved at government level after 48h]_\
+Information to include when escalating: _school name and ID, Giga Meter version, error message or screenshot, steps already attempted_
 {% endhint %}
-
-→ [Rollout Monitoring — Escalation path](rollout-monitoring.md)
 
 ***
 
@@ -264,7 +252,7 @@ Run one or more training sessions (virtual or in-person) and keep a support chan
 * Giga Meter Onboarding deck (EN / ES)
 * Workshop Checklist (EN)
 * Installation Guide (EN / ES / FR / PT / MN)
-* Installation videos (subtitles in EN / PT / MN)
+* Installation Videos (subtitles in [EN](https://www.youtube.com/watch?v=zWcXf7QrV88) / [PT](https://www.youtube.com/watch?v=WOgkqveWXcg) / [MN](https://www.youtube.com/watch?v=UesvBMkJvCw))
 
 **Output:** Confirm the following before the first installation session:
 
