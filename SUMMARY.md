@@ -14,9 +14,9 @@
 
 * [Government Onboarding Guide](docs/deployment/government-onboarding-overview.md)
 * [Deployment Blueprint](docs/deployment/deployment-blueprint.md)
-* [Device Readiness Checklist](docs/deployment/device-readiness.md)
-* [Workshop & School Checklist](docs/deployment/deployment-checklist.md)
-* [Rollout Monitoring](docs/deployment/rollout-monitoring.md)
+* [Installation Lead Guide](docs/deployment/installation-lead.md)
+* [Data Analysis Lead Guide](docs/deployment/data-analysis-lead.md)
+* [Training Support Materials](docs/deployment/deployment-checklist.md)
 
 ## Data & Dashboard
 
