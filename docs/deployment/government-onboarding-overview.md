@@ -1,84 +1,220 @@
-# Government Onboarding Overview
+# Government Onboarding Guide
 
-Deploying Giga Meter in a country involves two parallel workstreams that should both start on day one. By the time the first schools begin reporting data, the data analysis side should already be ready to read it.
+This is the master guide for governments deploying Giga Meter. It covers everything from initial setup through to sustained data use, with links to the detailed resources for each step.
 
 ---
 
-## Two roles, two workstreams
+## Before you start
 
-| Role | Responsible for | Who typically holds it |
+Two prerequisites must be in place before any installation can begin:
+
+- [ ] **School data validated on Giga Maps** — the country's schools are mapped with official government IDs and the data has been reviewed and approved by the government.
+- [ ] **Country whitelisted on Giga's backend** — Giga enables the country in the system before Giga Meter can register schools.
+
+Contact your Giga focal point or UNICEF country office to confirm both are ready. Once confirmed, complete the [Deployment Blueprint](deployment-blueprint.md) to align your team on strategy, scope, and timeline before the rollout begins.
+
+---
+
+## Two roles, running in parallel from day one
+
+A Giga Meter deployment involves two distinct workstreams. They can sit with the same department or person, but the activities are different and must not crowd each other out — typically installation absorbs all the attention and the data side never gets set up.
+
+| Role | Responsible for | Typically held by |
 |---|---|---|
-| **Giga Meter Project Owner / Installation Lead** | Getting Giga Meter installed across schools and keeping it running | MoE IT department, regional coordinators, or designated school principals |
-| **Data Analysis Lead** | Using the data strategically — defining use cases, onboarding dashboard users, setting KPIs | MoE planning or statistics unit, separate from the installation team |
+| **Installation Lead** | Getting Giga Meter running across schools and keeping it there | MoE IT department, regional coordinators, school principals |
+| **Data Analysis Lead** | Ensuring the data is used — defining use cases, onboarding users, setting KPIs | MoE planning or statistics unit |
 
-The two roles can sit with the same department or person, but the activities are distinct. Conflating them risks one crowding out the other — typically installation absorbs all the attention and the data side never gets set up properly.
-
----
-
-## Before deployment starts
-
-Two prerequisites must be in place before Giga Meter can be installed:
-
-1. **Validated school data on Giga Maps** — the country's schools must be mapped with official IDs and reviewed by the government.
-2. **Country whitelisted on Giga's backend** — Giga enables the country's schools in the system before installation can proceed.
-
-Contact your Giga focal point or the UNICEF country office to confirm both are ready.
+**Both workstreams start on day one.** By the time the first schools report data, the data analysis side should already be ready to read it.
 
 ---
 
 ## Role 1 — Installation Lead
 
-Eight steps to get Giga Meter running across schools and keep it running.
+### Step 1 — Designate the installation lead
 
-| Step | Action | Key output |
+Assign clear ownership for installation at national and subnational levels. Without named accountability, Giga Meter installation risks getting lost in bureaucracy.
+
+The installation lead can be the Giga Meter Project Owner or someone designated by them.
+
+**Output:** Name, contact, and title of the installation lead (and any regional or subnational leads).
+
+---
+
+### Step 2 — Confirm device readiness
+
+Before the rollout, verify that target schools meet the minimum device and connectivity conditions required for consistent data collection. Giga Meter currently runs on **Windows only** — tablets and Android devices cannot run the app.
+
+**Output:** School-level (or sampled) check of Windows version, free disk space, and whether devices are powered on and connected long enough to collect data.
+
+{% hint style="warning" %}
+If a school has no Windows device, flag it to Giga before the rollout. Android support is in development.
+{% endhint %}
+
+→ [Device Readiness Checklist](device-readiness.md)
+
+---
+
+### Step 3 — Ensure school ID matching
+
+Installers must register the correct school ID when setting up Giga Meter. Make sure installers know what to do if they can't find their school, encounter duplicates, or suspect a mismatch — and that there is a process to report errors to the Giga team.
+
+**Output:** Support mechanism available for wrong or missing school IDs; escalation path to Giga documented.
+
+---
+
+### Step 4 — Choose an installation strategy
+
+Pick how installations will happen based on country capacity, geography, school digital readiness, and scale. Four strategies have been used across Giga deployments — they can be combined.
+
+| Strategy | When to use | Example |
 |---|---|---|
-| 1 | Designate the installation lead | Named person with title and contact at national and subnational level |
-| 2 | Confirm device readiness | School-level check of Windows version, disk space, and connectivity |
-| 3 | Guarantee school ID matching | Installers know what to do if they can't find a school or find duplicates |
-| 4 | Choose an installation strategy | Documented strategy (or mix) with rationale |
-| 5 | Establish a troubleshooting and escalation mechanism | Named support owner, basic runbook, Giga escalation protocol |
-| 6 | Train installers | Webinars, WhatsApp groups, or other channel; materials in local language |
-| 7 | Monitor the rollout | % installed, % reporting, open tickets — reviewed monthly for the first 3 months |
-| 8 | Follow up school-level focal points | Named contacts per school for maintenance and quick troubleshooting |
+| Expert in-person | Small scale, low school IT capacity | Honduras |
+| Hybrid — regional workshops | Medium scale, regional structure | Sri Lanka |
+| Guided remote | Large scale, decent school IT capacity | Belize, Albania |
+| Self-installation | Very large scale, mature school IT | Brazil |
 
-See [Device Readiness](device-readiness.md), [Installation Strategies](installation-strategies.md), and [Rollout Monitoring](rollout-monitoring.md) for detail on steps 2, 4, and 7.
+**Output:** Documented installation strategy (or combination) with rationale.
+
+→ [Installation Strategies](installation-strategies.md)
+
+---
+
+### Step 5 — Establish a troubleshooting and escalation mechanism
+
+Build a government support layer between the installer and the Giga team. Common issues should be handled at the government level before escalating.
+
+At minimum, this needs:
+- A named support owner
+- A basic troubleshooting runbook (common issues + first-response steps)
+- A documented escalation path to Giga: who contacts whom, with what information
+
+**Output:** Support owner named; runbook in place; Giga escalation protocol documented.
+
+→ [Rollout Monitoring — Escalation path](rollout-monitoring.md)
+
+---
+
+### Step 6 — Train installers
+
+Equip installers with the knowledge and support channels needed to execute installations correctly and resolve issues quickly. This typically means one or more training sessions (virtual or in-person) and an ongoing support channel (e.g. WhatsApp group, email list).
+
+**Materials available from Giga:**
+- Giga Meter Onboarding deck (EN / ES)
+- Workshop Checklist (EN)
+- Installation Guide (EN / ES / FR / PT / MN)
+- Installation videos (subtitles in EN / PT / MN)
+
+**Output:** Installers trained; support channel open; materials available in local language.
+
+→ [Workshop & School Checklist](deployment-checklist.md)
+
+---
+
+### Step 7 — Monitor the rollout
+
+Track progress against your planned timeline and target from the day installation begins. Share monthly updates with the Giga team for the first three months, then quarterly.
+
+**Three metrics to track from the start:**
+
+| Metric | What it tells you |
+|---|---|
+| % of target schools with Giga Meter installed | Are you on pace? |
+| % of installed schools reporting data in the last 7 days | Are installed schools actually collecting data? |
+| Open troubleshooting tickets per week | Is the support mechanism keeping up? |
+
+**Output:** Active rollout tracker; monthly progress update shared with Giga for the first 3 months, then quarterly.
+
+→ [Rollout Monitoring](rollout-monitoring.md)
+
+---
+
+### Step 8 — Follow up with school-level focal points
+
+After the first installation, identify a responsible individual at each school to maintain the app and ensure continuous operation. If a device is replaced or reformatted, Giga Meter must be reinstalled — school focal points are the key to catching this.
+
+**Output:** Per-school contact list (name, role, phone/email) for maintenance and quick troubleshooting.
 
 ---
 
 ## Role 2 — Data Analysis Lead
 
-Seven steps to make Giga Meter data actionable.
+### Step 1 — Define the use case
 
-| Step | Action | Key output |
-|---|---|---|
-| 1 | Define the use case and target metrics | 1-pager or email establishing which decisions Giga Meter will inform |
-| 2 | Identify data users and assign access roles | Named list: who gets what access (dashboard / API), which unit they sit in |
-| 3 | Onboard data users to their access channels | Each user can independently pull the data they need without Giga's help |
-| 4 | Establish metric literacy | Simple metric glossary and interpretation guide circulated to all users |
-| 5 | Define KPIs | 3–5 KPIs documented with formula, threshold, owner, and update frequency |
-| 6 | Set KPI review and decision-triggering process | Meeting owner, review cadence (weekly / monthly / quarterly), actions triggered by each KPI |
-| 7 | Capacity building | Over time, government produces its own analyses — connectivity briefs, ISP performance reviews |
+Before onboarding any user to the dashboard, decide what the government is using Giga Meter for. This shapes which KPIs to track and which decisions the data is supposed to inform.
 
-See [Use Case Definition](../data/use-case-definition.md), [Using the Dashboard](../data/dashboard-guide.md), [Metric Glossary](../data/metric-glossary.md), and [KPI Guide](../data/kpi-guide.md) for detail.
+**Output:** A 1-pager or short document establishing which specific decisions Giga Meter will inform — e.g. "If schools are unconnected for 3 consecutive working days, the ISP is fined" (Moldova).
+
+→ [Defining Your Use Case](../data/use-case-definition.md)
 
 ---
 
-## Country examples
+### Step 2 — Identify data users and assign access roles
 
-| Country | Installation strategy | Data use case |
-|---|---|---|
-| Honduras | Expert in-person — government staff travel to schools | Baseline mapping |
-| Sri Lanka | Hybrid — regional in-person workshops for school IT staff | Policy compliance monitoring |
-| Belize, Albania | Guided remote — virtual sessions + support channel | Connectivity tracking |
-| Brazil | Self-installation — written guide + help desk | National strategy (1 Mbps/student) |
-| Moldova (SVG) | Hybrid | ISP performance: schools unconnected 3 consecutive days trigger ISP fines |
+Identify who in the ministry — and beyond — needs Giga Meter data and at what level. This is usually a different unit from the one running installation. School-level focal points and regional coordinators may also need access.
+
+**Output:** Named list of data users with their role, the access channel they need (dashboard or API), and the unit they sit in.
+
+→ [Access Channels: Dashboard and API](../data/access-channels.md)
 
 ---
 
-## Related pages
+### Step 3 — Onboard data users to their access channels
 
-- [Device Readiness Checklist](device-readiness.md)
-- [Installation Strategies](installation-strategies.md)
-- [Deployment Checklist](deployment-checklist.md)
-- [Use Case Definition](../data/use-case-definition.md)
-- [KPI Guide](../data/kpi-guide.md)
+Each identified user should be able to locate their data — school, regional, or national view — and export it without Giga's help. For dashboard users, this means a guided walkthrough (live or recorded) covering filters, comparisons, and data export.
+
+**Output:** Every user has logged in and can independently pull the data they need for their role.
+
+→ [Using the Dashboard](../data/dashboard-guide.md)
+
+---
+
+### Step 4 — Establish metric literacy
+
+Giga Meter reports several technical metrics. Most government users — let alone school principals — are not familiar with them. Circulate a simple reference explaining what each metric means and what counts as good or problematic in the country's context.
+
+**Output:** Metric glossary circulated to all data users.
+
+→ [Metric Glossary](../data/metric-glossary.md)
+
+---
+
+### Step 5 — Define KPIs
+
+Translate the use case into 3–5 measurable KPIs, each with a formula, threshold, owner, and review frequency. This also tells the Giga data team whether the standard dashboard is sufficient or whether customisation is needed.
+
+**Output:** KPI document shared with the Giga data team.
+
+→ [Defining and Tracking KPIs](../data/kpi-guide.md)
+
+---
+
+### Step 6 — Set a KPI review and decision-triggering process
+
+Define how often KPIs are reviewed, who runs the review, and what triggers action. Set this process before the data starts flowing — countries that leave it informal tend to use the data reactively rather than consistently.
+
+**Output:** Documented review process with a named meeting owner, review cadence (weekly / monthly / quarterly), and actions triggered by each KPI.
+
+---
+
+### Step 7 — Build capacity for ongoing analysis
+
+Over time, governments should take full ownership of the data: producing connectivity briefs, ISP performance reviews, and school-level investigations without needing Giga's support. If deeper analytical support is needed in the meantime, contact the Giga data team.
+
+**Output:** After 6–12 months, government users can independently produce analyses and interpret trends.
+
+---
+
+## All deployment resources
+
+| Resource | What it's for |
+|---|---|
+| [Deployment Blueprint](deployment-blueprint.md) | Planning questionnaire — complete before the rollout starts |
+| [Device Readiness Checklist](device-readiness.md) | School-level device and connectivity check (Step 2) |
+| [Installation Strategies](installation-strategies.md) | Four approaches and how to choose (Step 4) |
+| [Workshop & School Checklist](deployment-checklist.md) | Trainer guidance and school preparation materials (Step 6) |
+| [Rollout Monitoring](rollout-monitoring.md) | Health metrics, reporting cadence, escalation path (Step 7) |
+| [Defining Your Use Case](../data/use-case-definition.md) | How to frame what you're using the data for |
+| [Access Channels: Dashboard and API](../data/access-channels.md) | Getting dashboard access and provisioning users |
+| [Using the Dashboard](../data/dashboard-guide.md) | Screen-by-screen dashboard walkthrough |
+| [Metric Glossary](../data/metric-glossary.md) | Definitions for every metric |
+| [Defining and Tracking KPIs](../data/kpi-guide.md) | KPI framework and templates |

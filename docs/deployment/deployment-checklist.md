@@ -1,89 +1,77 @@
-# Deployment Checklist
+# Workshop & School Checklist
 
-This checklist covers the full Giga Meter deployment lifecycle: from government preparation before a training workshop, to recommendations for schools post-installation.
+Use this checklist when running an installation training session with schools — whether in-person, regional, or virtual. It covers what the government needs to prepare beforehand, what schools need to do before they join, and what to reinforce during the session.
+
+For the full campaign planning process, see the [Government Onboarding Guide](government-onboarding-overview.md).
 
 ---
 
-## 1. Pre-workshop
+## Before the workshop — Government
 
-### Government checklist
+- [ ] Country whitelisted on Giga's backend
+- [ ] Schools mapped with official IDs on Giga Maps
+- [ ] Installation strategy defined and documented
+- [ ] Installation materials translated into local language (if needed)
+- [ ] Schools notified with session details and pre-workshop instructions
 
-- [ ] Schools are mapped with official IDs on Giga Maps
-- [ ] A deployment strategy is in place, including:
-  - [ ] Defined scope and timeline
-  - [ ] Clear roles and responsibilities
-  - [ ] Mechanisms for data monitoring and usage
-- [ ] All necessary materials are translated into the local language, if needed
-- [ ] The country has been whitelisted in Giga's systems
+---
 
-### School checklist
+## Before the workshop — Schools
 
-Identify two Windows computers where the app will be installed. Each device should:
+Ask each participating school to identify **two Windows computers** where Giga Meter will be installed. Each device should:
 
 - [ ] Run Windows 7 or higher (desktop or laptop)
-- [ ] Be frequently used (ideally daily)
-- [ ] Be exclusively connected to the school's internet
+- [ ] Be frequently used — ideally daily during school hours
+- [ ] Connect exclusively to the school's internet (not a mobile hotspot or personal router)
 - [ ] Have at least 500 MB of free disk space
+- [ ] Have admin rights available for the person installing
+
+Additional preparation:
+
+- [ ] School ID is known and readily available
+- [ ] Internet connection is functional on the day of the session
+- [ ] Optional: download Giga Meter in advance from the link provided
 
 {% hint style="success" %}
-Join the training session from one of the identified computers.
+If possible, ask schools to join the training session from one of the identified computers so they can install during the session.
 {% endhint %}
 
-Additional pre-workshop steps for schools:
+---
 
-- [ ] Have the school ID readily available
-- [ ] Ensure admin rights are available on the selected computers
-- [ ] Verify the school's internet connection is functional
-- [ ] Pre-read the installation instructions shared by the government
-- [ ] Optional: pre-download Giga Meter from the link provided in the instructions
+## During the workshop — Guidance for trainers
+
+- Explain clearly **how the data will be used** by the government — schools are more likely to maintain the app when they understand what it contributes to.
+- Emphasise that keeping Giga Meter running consistently matters — and that if a computer is replaced or reformatted, the app must be reinstalled.
+- Walk through the installation live, step by step: [Installation Guide](../installation/installation-guide.md).
+- Show participants [Giga Maps](https://maps.giga.global/map) and how to find their school's data — highlight that it is publicly accessible.
+- Share the school ID process: what to do if the school isn't found, or if there are duplicates.
+- Share the support channel (WhatsApp group, email, hotline) that schools can use after the session.
+- Optionally: share the Ministry's connectivity benchmarks and what the data will be used to monitor.
 
 ---
 
-## 2. During the workshop
+## After the workshop — Government
 
-### Recommendations for trainers
-
-- Clearly explain how the collected data will be used by the government
-- Emphasize the importance of keeping the app running consistently (and reinstalling it when a computer is replaced or reformatted)
-- Demonstrate Giga Maps and show participants how to access their school data — highlight that it is publicly accessible and open source
-- Optionally, share the Ministry of Education's expectations regarding data quality and any relevant benchmarks for schools
-
----
-
-## 3. After the workshop
-
-### Government
-
-- Consider establishing a helpline or support channel for schools encountering technical issues
-- Regularly check the dashboard and follow up with schools that are not reporting data as expected
-- Reach out to the Giga team for assistance or to report any problems
-
-### Schools
-
-- Assign one or two staff members to maintain Giga Meter on school computers
-- Reinstall Giga Meter whenever computers are replaced or reformatted
-- Regularly monitor Giga Maps to ensure data is being transmitted properly
-- Contact the government team for support or to report any issues
+- [ ] Confirm that each attending school successfully installed and registered Giga Meter
+- [ ] Follow up with schools that did not install or had errors during the session
+- [ ] Add all school focal points to the support channel
+- [ ] Begin monitoring rollout progress → [Rollout Monitoring](rollout-monitoring.md)
+- [ ] Log the session: date, schools attended, schools that successfully installed, open issues
 
 ---
 
-## Success factors for scale-up and maintenance
+## After the workshop — Schools
 
-- **Scope & timeline:** Clearly define the deployment scope and timeline from the start
-- **Roles & responsibilities:** Ensure coordination across national, regional, and local levels
-- **Gradual rollout:** Start small to learn from challenges and improve the approach
-- **Maintenance roles:** Define clear ownership for app maintenance at the local and school level (e.g., IT staff, designated teachers)
-- **Local initiatives:** Leverage Digital Ambassadors, community centers, and other local actors to support deployment
-- **Remote support:** Establish a support channel to address deployment and maintenance challenges and collect feedback
-- **Stakeholder understanding:** Ensure schools and stakeholders understand the initiative's impact and the plan for data use from the very beginning
-- **Incentives or accountability:** Consider introducing measures to ensure consistent app usage and maintenance
-- **Integration:** Connect the initiative to broader education and digital inclusion programs to maximize impact
+- [ ] Assign one or two staff members responsible for maintaining Giga Meter on school computers
+- [ ] Reinstall Giga Meter whenever a computer is replaced or reformatted
+- [ ] Check [Giga Maps](https://maps.giga.global/map) periodically to confirm data is being transmitted
+- [ ] Contact the government support channel if any issues arise
 
 ---
 
-## Supporting materials
+## Related pages
 
-- [Giga Meter website](https://meter.giga.global/)
-- [Giga Maps website](https://maps.giga.global/map)
+- [Government Onboarding Guide](government-onboarding-overview.md)
+- [Installation Strategies](installation-strategies.md)
 - [Installation Guide](../installation/installation-guide.md)
-- [Deployment Blueprint](deployment-blueprint.md)
+- [Rollout Monitoring](rollout-monitoring.md)

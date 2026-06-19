@@ -12,11 +12,11 @@
 
 ## Country Deployment
 
-- [Government Onboarding Overview](docs/deployment/government-onboarding-overview.md)
+- [Government Onboarding Guide](docs/deployment/government-onboarding-overview.md)
+- [Deployment Blueprint](docs/deployment/deployment-blueprint.md)
 - [Device Readiness Checklist](docs/deployment/device-readiness.md)
 - [Installation Strategies](docs/deployment/installation-strategies.md)
-- [Deployment Checklist](docs/deployment/deployment-checklist.md)
-- [Deployment Blueprint](docs/deployment/deployment-blueprint.md)
+- [Workshop & School Checklist](docs/deployment/deployment-checklist.md)
 - [Rollout Monitoring](docs/deployment/rollout-monitoring.md)
 
 ## Data & Dashboard
