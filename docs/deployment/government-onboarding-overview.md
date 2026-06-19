@@ -53,13 +53,17 @@ Email / phone:
 
 ### Step 2 — Confirm device readiness
 
-Before the rollout, verify that target schools meet the minimum device and connectivity conditions required for consistent data collection. Giga Meter currently runs on **Windows only** — tablets and Android devices cannot run the app.
-
-→ [Device Readiness Checklist](device-readiness.md)
+Before the rollout, verify that target schools meet the minimum device and connectivity conditions required for consistent data collection.&#x20;
 
 {% hint style="warning" %}
 If a school has no Windows device, flag it to Giga before the rollout. Android support is in development.
 {% endhint %}
+
+* [ ] **Windows OS** — Windows 7 or higher (desktop or laptop)
+* [ ] **Free disk space** — at least 500 MB available
+* [ ] **Regular use** — device is used daily or near-daily (a device that is rarely powered on will collect very little data)
+* [ ] **Dedicated school connection** — device connects exclusively to the school's internet, not a mobile hotspot or personal router
+* [ ] **Admin rights available** — the person installing Giga Meter can approve the installation (admin password or IT approval in hand)
 
 ***
 
@@ -84,13 +88,14 @@ Choose how installations will happen based on country capacity, geography, schoo
 
 {% tabs %}
 {% tab title="Expert in-person" %}
-<figure><img src="../../.gitbook/assets/strategy-expert-inperson.png" alt="Expert in-person installation" width="180"></figure>
+<figure><img src="../../.gitbook/assets/strategy-expert-inperson.png" alt="Expert in-person installation" width="180"><figcaption></figcaption></figure>
 
 **When to use:** Small scale, or schools with low IT capacity.
 
 Government-trained staff visit each school, install Giga Meter themselves, and provide hands-on support to the school focal point.
 
 **Steps:**
+
 1. Identify staff who will visit schools for installation.
 2. Develop a deployment plan with scope, timeline, and assigned schools per installer.
 3. Train installation staff — in-person or virtually.
@@ -100,13 +105,14 @@ Government-trained staff visit each school, install Giga Meter themselves, and p
 {% endtab %}
 
 {% tab title="Hybrid — regional workshops" %}
-<figure><img src="../../.gitbook/assets/strategy-hybrid.png" alt="Hybrid regional workshop installation" width="180"></figure>
+<figure><img src="../../.gitbook/assets/strategy-hybrid.png" alt="Hybrid regional workshop installation" width="180"><figcaption></figcaption></figure>
 
-**When to use:** Medium scale, with a regional structure. **Example: Sri Lanka.**
+**When to use:** Medium scale, with a regional structure.&#x20;
 
 School IT staff attend regional training workshops and then carry out installation at their own school.
 
 **Steps:**
+
 1. Adapt and share the installation guide with school principals.
 2. Ask schools to nominate 1–2 focal points responsible for installation and maintenance.
 3. Organise in-person regional workshops — guide focal points live through the installation.
@@ -115,13 +121,14 @@ School IT staff attend regional training workshops and then carry out installati
 {% endtab %}
 
 {% tab title="Guided remote" %}
-<figure><img src="../../.gitbook/assets/strategy-guided-remote.png" alt="Guided remote installation" width="180"></figure>
+<figure><img src="../../.gitbook/assets/strategy-guided-remote.png" alt="Guided remote installation" width="180"><figcaption></figcaption></figure>
 
-**When to use:** Larger scale, schools with decent IT capacity. **Example: Belize, Bosnia and Herzegovina.**
+**When to use:** Larger scale, schools with decent IT capacity.&#x20;
 
 School focal points install Giga Meter themselves, supported through virtual training sessions and remote troubleshooting.
 
 **Steps:**
+
 1. Adapt and share the installation guide with school principals.
 2. Ask schools to nominate 1–2 focal points responsible for installation and maintenance.
 3. Organise virtual sessions — guide focal points live through the installation.
@@ -130,13 +137,14 @@ School focal points install Giga Meter themselves, supported through virtual tra
 {% endtab %}
 
 {% tab title="Self-installation" %}
-<figure><img src="../../.gitbook/assets/strategy-self-install.png" alt="Self-installation" width="180"></figure>
+<figure><img src="../../.gitbook/assets/strategy-self-install.png" alt="Self-installation" width="180"><figcaption></figcaption></figure>
 
-**When to use:** Large scale, schools with mature IT capacity. **Example: Botswana.**
+**When to use:** Large scale, schools with mature IT capacity.&#x20;
 
 Schools install Giga Meter independently using the installation guide, with optional support via a help desk.
 
 **Steps:**
+
 1. Ensure school contact information is up to date.
 2. Customise and share the installation guide with schools. Set a clear deadline.
 3. Set up a support channel (hotline or help desk) for troubleshooting.
@@ -155,7 +163,7 @@ Coverage breakdown: \[e.g. by region or school type if using a mix]\
 Installer support channel: \[e.g. WhatsApp group, email list, help desk]
 {% endhint %}
 
-→ [Installation Strategies](installation-strategies.md)
+→ [Installation Strategies](/broken/pages/m5tRNjSriTnejZFZY7TK)
 
 ***
 
@@ -347,7 +355,7 @@ Over time, government teams should be able to produce their own analyses: connec
 | ---------------------------------------------------------------- | ----------------------------------------------------------- |
 | [Deployment Blueprint](deployment-blueprint.md)                  | Planning questionnaire — complete before the rollout starts |
 | [Device Readiness Checklist](device-readiness.md)                | School-level device and connectivity check (Step 2)         |
-| [Installation Strategies](installation-strategies.md)            | Four approaches and how to choose (Step 4)                  |
+| [Installation Strategies](/broken/pages/m5tRNjSriTnejZFZY7TK)    | Four approaches and how to choose (Step 4)                  |
 | [Workshop & School Checklist](deployment-checklist.md)           | Trainer guidance and school preparation materials (Step 6)  |
 | [Rollout Monitoring](rollout-monitoring.md)                      | Health metrics, reporting cadence, escalation path (Step 7) |
 | [Defining Your Use Case](../data/use-case-definition.md)         | How to frame what you're using the data for                 |
