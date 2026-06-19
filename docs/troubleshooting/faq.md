@@ -9,14 +9,29 @@ You can view results in two ways:
 1. **In the app** — the last 10 successful measurements are visible in the app's Data page.
 2. **On Giga Maps** — visit [maps.giga.global/map](https://maps.giga.global/map), type your school name or ID in the left-hand panel, and select it to view results over time.
 
-Your school will appear color-coded:
+The dot next to each school is colour-coded by connectivity level:
 
-| Color | Meaning |
-|---|---|
-| 🟢 Green | Good connectivity (meets selected benchmark) |
-| 🟡 Yellow | Moderate connectivity |
-| 🔴 Red | Slow connectivity (below benchmark) |
-| 🔵 Blue | No recent data |
+{% columns %}
+{% column %}
+<figure><img src="../../.gitbook/assets/maps-green-good.png" alt="Celetyuma Primary School — 51.99 Mbps, green dot"></figure>
+
+**Green** — Good connectivity. The school meets or exceeds the selected benchmark.
+{% endcolumn %}
+
+{% column %}
+<figure><img src="../../.gitbook/assets/maps-yellow-moderate.png" alt="Lonwabo Senior Secondary School — 7.87 Mbps, yellow dot"></figure>
+
+**Yellow** — Moderate connectivity. The school is below the benchmark but has a working connection.
+{% endcolumn %}
+
+{% column %}
+<figure><img src="../../.gitbook/assets/maps-red-slow.png" alt="Embekweni Junior Primary School — 0.8 Mbps, red dot"></figure>
+
+**Red** — Slow connectivity. The school is significantly below the benchmark.
+{% endcolumn %}
+{% endcolumns %}
+
+A **blue** dot means no recent data has been received — the device may be off or the app may need reinstalling.
 
 Copy the URL on your browser after selecting your school — you can bookmark it for direct access any time.
 
