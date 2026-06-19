@@ -17,24 +17,49 @@ To install Giga Meter, the device must meet the following minimum requirements:
 
 ## Set-up recommendations
 
+{% columns %}
+
+{% column %}
+<img src="https://gigabrand.vercel.app/illustrations/general/fill/devices.svg" height="80">
+
 **How many devices per school?**
-Each school may install Giga Meter on up to two computers, unless instructed otherwise. One of these should be the most frequently used device with consistent access to the school's official internet.
+
+Up to two computers per school. One should be the most frequently used device with consistent access to the school's official internet.
+{% endcolumn %}
+
+{% column %}
+<img src="https://gigabrand.vercel.app/illustrations/general/fill/connection.svg" height="80">
 
 **Wired connection preferred**
-Whenever possible, install Giga Meter on at least one computer connected via a wired (Ethernet) connection to the internet. This ensures more stable and accurate speed tests.
+
+Install on at least one computer connected via Ethernet. This ensures more stable and accurate speed tests.
+{% endcolumn %}
+
+{% column %}
+<img src="https://gigabrand.vercel.app/illustrations/general/fill/cycle-data.svg" height="80">
 
 **Keep the device on**
-The app runs in the background as long as the PC is switched on. For best results, the computer should be turned on daily and remain connected to the school internet during school hours. Tests will not run if the device is switched off or on Sleep mode.
+
+The app runs in the background while the PC is on. Keep it on daily during school hours — tests won't run if the device is off or in Sleep mode.
+{% endcolumn %}
+
+{% column %}
+<img src="https://gigabrand.vercel.app/illustrations/general/fill/people.svg" height="80">
 
 **Multiple user accounts**
-If a computer has multiple active user accounts, the app must be registered under each account after installation. Each active user should open the app and register it with the school's ID. This ensures that all measurements taken from the device are correctly linked to the school.
+
+If the computer has multiple user accounts, register Giga Meter under each one. This ensures all measurements are correctly linked to the school.
 
 {% hint style="success" %}
-If new user accounts are added to the device later on, ensure that Giga Meter is also installed and registered in those accounts.
+If new user accounts are added later, install and register Giga Meter in those accounts too.
 {% endhint %}
+{% endcolumn %}
+
+{% endcolumns %}
 
 **Software updates**
-Update notifications appear as pop-up messages. When prompted, restart the app and follow on-screen instructions. Keeping the app updated ensures optimal performance and accuracy.
+
+Update notifications appear as pop-up messages. When prompted, restart the app and follow on-screen instructions.
 
 ---
 
