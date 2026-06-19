@@ -51,7 +51,52 @@ Email / phone:
 
 ***
 
-### Step 2 — Confirm device readiness
+### Step 2 — Define target schools and phasing
+
+Agree on which schools will receive Giga Meter and in what order before the rollout begins. The total number and selection criteria determine the installation strategy, the installer network size, and the monitoring workload.
+
+**Pilot first, then scale**
+
+Start with a small pilot cohort — typically 10–30 schools — before expanding nationally. The pilot validates the installation process, surfaces issues in the support channel, and gives the data analysis team real data to work with before the full rollout.
+
+Select pilot schools to represent the range of your national target: mix urban and rural, include different regions, and include at least some schools with lower IT capacity. Avoid selecting only the easiest schools — pilots that go too smoothly don't surface the friction that will slow down the national rollout.
+
+**Phasing the scale-up**
+
+After the pilot, expand in phases rather than attempting a single national rollout. Common phasing approaches:
+
+| Approach | How it works | Works best when |
+|---|---|---|
+| By region | Roll out region by region, using regional focal points | You have a clear regional structure |
+| By school type | Start with secondary schools, then primary | Device readiness varies significantly by school type |
+| By connectivity tier | Start with better-connected schools to build early data coverage | You want to demonstrate value quickly |
+| By partner | Delegate phases to regional education offices or NGO partners | You have a distributed implementation network |
+
+Phases can overlap — the next phase can begin before the previous one is complete, as long as the support channel can absorb the additional load.
+
+**Output:** Share the following with the Giga team before the rollout begins:
+
+{% hint style="info" %}
+**Target schools and phasing plan**\
+Total target schools: \[N]\
+Selection criteria: \[e.g. schools with Windows devices, mapped on Giga Maps, specific regions or school types]\
+\
+**Pilot**\
+Schools: \[N] — \[selection rationale]\
+Timeline: \[start – end date]\
+\
+**Phase 2**\
+Schools: \[N] — \[scope: region / school type / partner]\
+Timeline: \[start – end date]\
+\
+**Phase 3** *(if applicable)*\
+Schools: \[N] — \[scope]\
+Timeline: \[start – end date]
+{% endhint %}
+
+***
+
+### Step 3 — Confirm device readiness
 
 Before the rollout, verify that target schools meet the minimum device and connectivity conditions required for consistent data collection.&#x20;
 
@@ -67,7 +112,7 @@ If a school has no Windows device, flag it to Giga before the rollout. Android s
 
 ***
 
-### Step 3 — Ensure school IDs are known by installers
+### Step 4 — Ensure school IDs are known by installers
 
 Each school in Giga Meter is registered using an official school ID. Before the rollout, make sure the training covers what the school ID looks like in the country's system and where installers can look it up. Include a named support contact for cases where the school cannot be found or the ID appears incorrect.
 
@@ -82,7 +127,7 @@ Support contact for ID issues: \[Name, phone / email]
 
 ***
 
-### Step 4 — Choose an installation strategy
+### Step 5 — Choose an installation strategy
 
 Choose how installations will happen based on country capacity, geography, school digital readiness, and scale. Four strategies have been used across Giga deployments — they can be combined.
 
@@ -183,7 +228,7 @@ Installer support channel: \[channel type, contact details, response time]
 
 ***
 
-### Step 5 — Establish a troubleshooting and escalation mechanism
+### Step 6 — Establish a troubleshooting and escalation mechanism
 
 Set up a government support layer between the installer and the Giga team. At minimum, this needs:
 
@@ -206,7 +251,7 @@ Information to include when escalating: school name and ID, Giga Meter version, 
 
 ***
 
-### Step 6 — Train installers
+### Step 7 — Train installers
 
 Run one or more training sessions (virtual or in-person) and keep a support channel open throughout the rollout (e.g. WhatsApp group, email list).
 
@@ -231,7 +276,7 @@ Installer support channel: \[e.g. WhatsApp group name / help desk email]
 
 ***
 
-### Step 7 — Monitor the rollout
+### Step 8 — Monitor the rollout
 
 Track progress against your planned timeline and target from the day installation begins. Share monthly updates with the Giga team for the first three months, then quarterly.
 
@@ -259,7 +304,7 @@ Next steps:
 
 ***
 
-### Step 8 — Follow up with school-level focal points
+### Step 9 — Follow up with school-level focal points
 
 Identify a responsible individual at each school to maintain the app. If a device is replaced or reformatted, Giga Meter must be reinstalled — school focal points are responsible for flagging this.
 
@@ -370,10 +415,10 @@ Over time, government teams should be able to produce their own analyses: connec
 | Resource                                                         | What it's for                                               |
 | ---------------------------------------------------------------- | ----------------------------------------------------------- |
 | [Deployment Blueprint](deployment-blueprint.md)                  | Planning questionnaire — complete before the rollout starts |
-| [Device Readiness Checklist](device-readiness.md)                | School-level device and connectivity check (Step 2)         |
-| [Installation Strategies](/broken/pages/m5tRNjSriTnejZFZY7TK)    | Four approaches and how to choose (Step 4)                  |
-| [Workshop & School Checklist](deployment-checklist.md)           | Trainer guidance and school preparation materials (Step 6)  |
-| [Rollout Monitoring](rollout-monitoring.md)                      | Health metrics, reporting cadence, escalation path (Step 7) |
+| [Device Readiness Checklist](device-readiness.md)                | School-level device and connectivity check (Step 3)         |
+| [Installation Strategies](installation-strategies.md)            | Four approaches and how to choose (Step 5)                  |
+| [Workshop & School Checklist](deployment-checklist.md)           | Trainer guidance and school preparation materials (Step 7)  |
+| [Rollout Monitoring](rollout-monitoring.md)                      | Health metrics, reporting cadence, escalation path (Step 8) |
 | [Defining Your Use Case](../data/use-case-definition.md)         | How to frame what you're using the data for                 |
 | [Access Channels: Dashboard and API](../data/access-channels.md) | Getting dashboard access and provisioning users             |
 | [Using the Dashboard](../data/dashboard-guide.md)                | Screen-by-screen dashboard walkthrough                      |
