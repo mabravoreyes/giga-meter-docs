@@ -197,6 +197,24 @@ Schools install Giga Meter independently using the installation guide, with opti
 {% endtab %}
 {% endtabs %}
 
+**Output:** Document the following and share with the Giga team:
+
+{% hint style="info" %}
+**Installation strategy**\
+Chosen strategy: \[Expert in-person / Hybrid / Guided remote / Self-installation / combination]\
+Rationale: \[brief explanation based on scale, geography, school IT capacity]\
+Target schools: \[N]\
+Coverage breakdown: \[e.g. by region or school type if using a mix]
+{% endhint %}
+
+→ [Installation Strategies](/broken/pages/m5tRNjSriTnejZFZY7TK)
+
+***
+
+### Step 6 — Establish a support channel and escalation path
+
+Set up a government support layer between schools, installers, and the Giga team before the rollout begins.
+
 **Support channels for schools**
 
 Schools need a named channel to ask for help during and after installation. The right format depends on scale and infrastructure. Most deployments use a combination.
@@ -213,33 +231,19 @@ Schools need a named channel to ask for help during and after installation. The 
 Whichever channel you use, publicise it during the training workshop and include it in the installation guide you send to schools. Schools that can't find support simply give up.
 {% endhint %}
 
-**Output:** Document the following and share with the Giga team:
+**Escalation path**
 
-{% hint style="info" %}
-**Installation strategy**\
-Chosen strategy: \[Expert in-person / Hybrid / Guided remote / Self-installation / combination]\
-Rationale: \[brief explanation based on scale, geography, school IT capacity]\
-Target schools: \[N]\
-Coverage breakdown: \[e.g. by region or school type if using a mix]\
-Installer support channel: \[channel type, contact details, response time]
-{% endhint %}
+Beyond the school-facing channel, establish a clear escalation path for issues that cannot be resolved at school level:
 
-→ [Installation Strategies](/broken/pages/m5tRNjSriTnejZFZY7TK)
-
-***
-
-### Step 6 — Establish a troubleshooting and escalation mechanism
-
-Set up a government support layer between the installer and the Giga team. At minimum, this needs:
-
-* A named support owner
+* A named government support owner (first escalation from installers)
 * A basic troubleshooting runbook (common issues + first-response steps)
 * A documented escalation path to Giga: who contacts whom, with what information
 
-**Output:** Document the escalation protocol and circulate to all installers:
+**Output:** Document the following and circulate to all installers before the rollout begins:
 
 {% hint style="info" %}
-**Troubleshooting & escalation protocol**\
+**Support channel and escalation protocol**\
+School support channel: \[channel type, contact details, response time]\
 Government support owner: \[Name, phone / email]\
 When to escalate to government support: \[e.g. issue not resolved by installer within 24h]\
 Giga escalation contact: \[Name / email at UNICEF country office]\
