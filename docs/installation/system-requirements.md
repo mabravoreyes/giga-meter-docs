@@ -40,7 +40,7 @@ Whenever possible, install on at least one computer connected via Ethernet. This
 {% columns %}
 
 {% column %}
-<img src="https://gigabrand.vercel.app/illustrations/general/fill/cycle-data.svg" height="100">
+<img src="https://gigabrand.vercel.app/illustrations/general/fill/cloud.svg" height="100">
 
 **Keep the device on**
 
