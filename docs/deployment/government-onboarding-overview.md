@@ -70,18 +70,17 @@ If a school has no Windows device, flag it to Giga before the rollout. Android s
 
 ---
 
-### Step 3 — Ensure school ID matching
+### Step 3 — Ensure school IDs are known by installers
 
-Installers must register the correct school ID when setting up Giga Meter. Provide guidance on what to do if a school cannot be found, if duplicates appear, or if there is a suspected mismatch — and establish a process for reporting errors to the Giga team.
+Each school in Giga Meter is registered using an official school ID. Before the rollout, make sure the training covers what the school ID looks like in the country's system and where installers can look it up. Include a named support contact for cases where the school cannot be found or the ID appears incorrect.
 
-**Output:** Document the following and share with installers before the rollout:
+**Output:** Include the following in installer training materials:
 
 {% hint style="info" %}
-**School ID support**\
-Installer support contact: [Name, phone / email]\
-If school is not found: [instructions — e.g. check spelling, try partial ID, contact support]\
-If duplicates appear: [instructions — e.g. select the one matching official school records, flag to support]\
-To report a mismatch to Giga: [email / process]
+**School ID reference**\
+What the school ID looks like: [e.g. format, example — "BR12345"]\
+Where to find it: [e.g. national school registry, MoE database, letter from the ministry]\
+Support contact for ID issues: [Name, phone / email]
 {% endhint %}
 
 ---
