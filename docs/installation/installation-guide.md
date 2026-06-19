@@ -8,11 +8,33 @@ Before you start, confirm your device meets the [System Requirements](system-req
 
 ### Step 1 — Download Giga Meter
 
-Visit [meter.giga.global](https://meter.giga.global/) and click **Download** in the upper right corner. If you've visited before, hard refresh first (`Ctrl + Shift + R` on Windows, `Cmd + Shift + R` on Mac).
+{% columns %}
+{% column %}
+Visit [meter.giga.global](https://meter.giga.global/) and click **Download** in the upper right corner.
+
+If you've visited the page before, hard refresh first so you get the latest version:
+
+<figure><img src="../../.gitbook/assets/setup-hard-refresh.png" alt="Hard refresh shortcuts: Ctrl + Reload or Ctrl + F5"></figure>
+{% endcolumn %}
+
+{% column %}
+<figure><img src="../../.gitbook/assets/setup-download-page.png" alt="Giga Meter download page with download button highlighted"></figure>
+{% endcolumn %}
+{% endcolumns %}
 
 ### Step 2 — Open the downloaded file
 
+{% columns %}
+{% column %}
 Click the file to open it. It may appear in your browser's bottom bar, the downloads icon, or your **Downloads** folder.
+
+If Windows shows a **"Windows protected your PC"** SmartScreen warning, click **More info** then **Run anyway**. The app is published by UNICEF and safe to install.
+{% endcolumn %}
+
+{% column %}
+<figure><img src="../../.gitbook/assets/setup-smartscreen.png" alt="Windows SmartScreen warning: click More info then Run anyway"></figure>
+{% endcolumn %}
+{% endcolumns %}
 
 ### Step 3 — Check the version
 
@@ -20,23 +42,63 @@ If a warning about an older version appears, go back to step 1 and reinstall the
 
 ### Step 4 — Allow installation
 
-If prompted by a system permission message, click **Yes**. This opens the Setup Wizard.
+{% columns %}
+{% column %}
+If prompted by a **User Account Control** dialog, click **Yes**. The publisher is UNICEF. This opens the Setup Wizard.
+{% endcolumn %}
+
+{% column %}
+<figure><img src="../../.gitbook/assets/setup-uac-prompt.png" alt="Windows UAC dialog asking to allow Giga Meter to make changes — click Yes"></figure>
+{% endcolumn %}
+{% endcolumns %}
 
 ### Step 5 — Choose installation scope
 
-Select **"Anyone who uses this computer (all users)"** and click **Next**.
+{% columns %}
+{% column %}
+Select **"Anyone who uses this computer (all users)"** and click **Next**. This ensures the app is available to all user accounts on the device.
+{% endcolumn %}
+
+{% column %}
+<figure><img src="../../.gitbook/assets/setup-installation-scope.jpg" alt="Setup wizard: Choose Installation Options — select Anyone who uses this computer"></figure>
+{% endcolumn %}
+{% endcolumns %}
 
 ### Step 6 — Choose destination folder
 
-Select where to save the app and click **Install**.
+{% columns %}
+{% column %}
+The default folder (`C:\Program Files\unicef-pdca\Giga Meter`) is recommended. Click **Install**.
+{% endcolumn %}
+
+{% column %}
+<figure><img src="../../.gitbook/assets/setup-install-location.jpg" alt="Setup wizard: Choose Install Location with default destination folder"></figure>
+{% endcolumn %}
+{% endcolumns %}
 
 ### Step 7 — Finish the setup
 
-Click **Finish** on the Setup Wizard.
+{% columns %}
+{% column %}
+Click **Finish** on the Setup Wizard. Leave **"Run Giga Meter"** checked to open the app immediately.
+{% endcolumn %}
+
+{% column %}
+<figure><img src="../../.gitbook/assets/setup-finish.png" alt="Setup wizard: Completing Giga Meter Setup — click Finish"></figure>
+{% endcolumn %}
+{% endcolumns %}
 
 ### Step 8 — Open Giga Meter
 
-Find the Giga Meter shortcut on your Desktop and click it to open the app.
+{% columns %}
+{% column %}
+If the app didn't open automatically, find the **Giga Meter** shortcut on your Desktop and double-click it.
+{% endcolumn %}
+
+{% column %}
+<figure><img src="../../.gitbook/assets/setup-desktop-shortcut.png" alt="Windows desktop showing the Giga Meter shortcut icon"></figure>
+{% endcolumn %}
+{% endcolumns %}
 
 ---
 
