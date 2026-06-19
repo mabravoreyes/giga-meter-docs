@@ -28,6 +28,8 @@ Giga Meter was initially developed by Giga in 2023 in partnership with Ericsson.
 
 ## Why use Giga Meter?
 
+You can't improve what you can't measure. Giga Meter makes school connectivity visible, measurable, and actionable — so it can be prioritised, funded, and improved for the learners who depend on it.
+
 {% columns %}
 
 {% column %}
@@ -56,18 +58,71 @@ Use performance data to adapt plans and optimize internet quality for your schoo
 
 {% endcolumns %}
 
-Giga Meter supports your government in understanding the status of connectivity in your schools, and where to make investments to achieve the best results possible for students' e-learning.
-
 ***
 
-## How data flows
+## What it means for you
 
-```
-School device → Giga Meter app → Giga servers → Giga Maps (public)
-```
+{% tabs %}
+{% tab title="School principals & teachers" %}
+{% columns %}
 
-Test results — download speed, upload speed, latency, and uptime — are aggregated and automatically uploaded to Giga Maps. Governments, school administrators, and the broader public can access this data to monitor performance trends and make informed decisions about improving internet infrastructure in schools.
+{% column width="25%" %}
+<img src="https://gigabrand.vercel.app/illustrations/general/fill/schools.svg" height="100">
+{% endcolumn %}
 
-***
+{% column %}
+**Make schools visible**\
+Rural and underserved schools' connectivity challenges are recorded and visible, helping governments and partners prioritise support.
 
-> \[!NOTE] **Disclaimer:** Giga Meter measures the internet speed received on the user's device, providing a direct assessment of the user's experience. The measurements pass through multiple ISP networks (between the school and measurement servers) and are therefore not designed to measure the unique service of the contracted Internet Service Provider (ISP). Factors beyond the ISP's service provision can influence the user device's connection. App measurements cannot be used on their own to contest ISP service provision.
+**Make a stronger case for support**\
+Real data collected over time lets you advocate for better internet, equipment, or funding. Evidence transforms local concerns into actionable priorities.
+
+**Know if internet is good enough for learning**\
+Not just "connected" or "not connected" — but whether the connection is fast and reliable enough for digital education.
+
+**Spot problems early**\
+Notice slow speeds, weak connectivity, or outages before they disrupt classes.
+{% endcolumn %}
+
+{% endcolumns %}
+{% endtab %}
+
+{% tab title="Learners" %}
+{% columns %}
+
+{% column width="25%" %}
+<img src="https://gigabrand.vercel.app/illustrations/general/fill/kid.svg" height="100">
+{% endcolumn %}
+
+{% column %}
+**Connectivity that reaches the classroom**\
+Giga Meter helps assess whether internet is reliable enough to enable digital tools, online platforms, and classroom-based learning — ensuring connectivity directly benefits learners.
+
+**No learner left offline**\
+Ensuring underserved schools are visible means the students who need support most are more likely to get it.
+{% endcolumn %}
+
+{% endcolumns %}
+{% endtab %}
+
+{% tab title="Decision-makers & partners" %}
+{% columns %}
+
+{% column width="25%" %}
+<img src="https://gigabrand.vercel.app/illustrations/general/fill/hierarchy.svg" height="100">
+{% endcolumn %}
+
+{% column %}
+**Ground-level data at scale**\
+Giga Meter generates consistent, comparable connectivity data across schools — giving planners and ministries a reliable evidence base to work from.
+
+**Prioritise where it matters most**\
+Real measurement data from rural and underserved schools ensures infrastructure investment reaches the places that need it, not just the easiest to reach.
+
+**Track progress over time**\
+Continuous monitoring means decision-makers can assess whether interventions are working and adjust accordingly.
+{% endcolumn %}
+
+{% endcolumns %}
+{% endtab %}
+{% endtabs %}
