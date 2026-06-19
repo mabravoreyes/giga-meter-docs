@@ -18,6 +18,7 @@
 * [Deployment Blueprint](docs/deployment/deployment-blueprint.md)
 * [Installation Lead Guide](docs/deployment/installation-lead.md)
 * [Data Analysis Lead Guide](docs/deployment/data-analysis-lead.md)
+* [Case Studies](docs/deployment/case-studies.md)
 * [Training Support Materials](docs/deployment/deployment-checklist.md)
 
 ## Privacy & Security

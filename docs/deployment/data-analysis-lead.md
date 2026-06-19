@@ -26,15 +26,23 @@ Without a defined use case, dashboard users tend to look at the data without kno
 
 | Country | Use case | Decision triggered |
 |---|---|---|
-| Brazil | National Connected Schools Strategy — target: 1 Mbps per student in the longest shift | Schools below threshold flagged for ISP renegotiation |
-| Moldova | ISP contract enforcement | If a school is unconnected for 3 consecutive working days, the ISP is fined |
+| Brazil | Enforce 1 Mbps per enrolled student in longest shift (ENEC policy) | Schools below threshold flagged for ISP follow-up; ISP fiscal benefit claims validated against measured data |
+| Moldova | ISP contract enforcement — fine triggered if school is unconnected for 3 consecutive working days | Fine issued to ISP; schools flagged for reconnection follow-up |
+| Mongolia | Triangulate LAN performance to diagnose ISP vs. infrastructure issues; inform decentralised ISP contracting | Schools with poor end-device performance despite healthy routers escalated to ISP-side investigation |
+| Fiji | Identify which schools have stable enough connectivity for live broadcast STEM lessons | Only schools confirmed reliable over monitoring period enrolled in the live lesson programme |
+| Botswana | Track compliance against 100 Mbps national mandate (Village Connectivity Project) | Schools below mandate identified for ISP renegotiation or infrastructure upgrade |
+| Malawi | Establish independent baseline of student-experienced speeds vs. ISP-reported speeds | Evidence base for government accountability proceedings with ISPs |
 | General | Deployment monitoring | Schools not reporting within 7 days get a follow-up call from the regional coordinator |
+
+→ [Case Studies — full country deep dives](case-studies.md)
 
 **Writing your use case**
 
-Aim for one paragraph. It should answer: what is being monitored, what counts as a problem, and who acts on it.
+Aim for one paragraph. It should answer: what is being monitored, what counts as a problem, and who acts on it. The examples below show two different types:
 
-> *"We are using Giga Meter to monitor whether schools in the northern region are receiving the minimum contracted speed of 10 Mbps. Schools below this threshold for two consecutive weeks are reported to the regional ISP coordinator for follow-up. Reports are reviewed monthly by the MoE IT department."*
+> *Policy enforcement:* "We are using Giga Meter to monitor whether schools meet the national benchmark of 1 Mbps per enrolled student. Schools below threshold for two consecutive weeks are reported to the ISP coordinator. Compliance is reviewed monthly by the MoE IT department."
+
+> *Programme readiness:* "We are using Giga Meter to identify which schools have reliable enough connectivity to participate in live broadcast STEM lessons. Schools with confirmed stable download speeds over the previous 30 days are cleared for enrolment. The list is updated monthly by the MoE Digital Education team."
 
 **Connecting use case to KPIs**
 
@@ -43,8 +51,9 @@ Once the use case is clear, define the KPIs that operationalise it — see Step 
 | Use case type | Typical KPIs |
 |---|---|
 | Policy enforcement | % schools meeting national speed benchmark; # schools below benchmark for 30+ consecutive days |
-| ISP service monitoring | % schools where measured speed is within X% of contracted speed |
-| Deployment tracking | % schools with active Giga Meter data; % reporting in the last 7 days |
+| ISP contract compliance | % schools receiving ≥ 80% of contracted speed; # days below SLA threshold per school |
+| Digital education readiness | % schools meeting meaningful connectivity threshold; # schools cleared for programme enrolment |
+| Deployment monitoring | % installed schools reporting in last 7 days; # schools with 28+ day data gap |
 | Baseline and trend analysis | Average download speed per district per quarter; YoY change in median latency |
 
 **Output:** A short document specifying which decisions Giga Meter data will inform. Share with the Giga team before the first dashboard onboarding session.
@@ -74,11 +83,7 @@ Identify who in the ministry — and beyond — needs Giga Meter data and at wha
 | School focal point | Giga Maps | Own school only |
 | Technical partner / data analyst | API | Full export |
 
-**Output:** Share this list with the Giga team when requesting access provisioning.
-
-| Name | Role | Unit | Access channel | Notes |
-|---|---|---|---|---|
-| | | | Dashboard / API / Giga Maps | e.g. national view only |
+**Output:** Share the confirmed list of users and their required access levels with the Giga team. Dashboard and API accounts are role-based and must be provisioned — users cannot self-register.
 
 ---
 
