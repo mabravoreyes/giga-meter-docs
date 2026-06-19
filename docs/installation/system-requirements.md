@@ -29,8 +29,9 @@ The app runs in the background as long as the PC is switched on. For best result
 **Multiple user accounts**
 If a computer has multiple active user accounts, the app must be registered under each account after installation. Each active user should open the app and register it with the school's ID. This ensures that all measurements taken from the device are correctly linked to the school.
 
-> [!TIP]
-> If new user accounts are added to the device later on, ensure that Giga Meter is also installed and registered in those accounts.
+{% hint style="success" %}
+If new user accounts are added to the device later on, ensure that Giga Meter is also installed and registered in those accounts.
+{% endhint %}
 
 **Software updates**
 Update notifications appear as pop-up messages. When prompted, restart the app and follow on-screen instructions. Keeping the app updated ensures optimal performance and accuracy.

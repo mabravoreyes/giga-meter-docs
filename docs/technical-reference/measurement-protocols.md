@@ -8,8 +8,9 @@ Giga Meter uses two types of tests to assess internet quality at schools: a **Sp
 
 Powered by the **NDT-7 protocol** developed, maintained, and hosted by [Measurement Lab (M-Lab)](https://www.measurementlab.net/), the app measures download and upload speeds at scheduled intervals to the nearest M-Lab server.
 
-> [!NOTE]
-> Earlier versions of Giga Meter used the NDT-5 protocol. As of version 2.0+, all measurements use NDT-7.
+{% hint style="info" %}
+Earlier versions of Giga Meter used the NDT-5 protocol. As of version 2.0+, all measurements use NDT-7.
+{% endhint %}
 
 **What it measures:**
 - Download speed (Mbps)
@@ -46,8 +47,9 @@ The app runs a ping test every 15 minutes during school hours (8 AM–8 PM local
 | Afternoon | 12 PM – 4 PM |
 | Evening | 4 PM – 8 PM |
 
-> [!NOTE]
-> Tests will not run if the device is switched off or on Sleep mode. For best results, keep the device on and connected to the school's internet throughout the day.
+{% hint style="info" %}
+Tests will not run if the device is switched off or on Sleep mode. For best results, keep the device on and connected to the school's internet throughout the day.
+{% endhint %}
 
 ---
 

@@ -2,8 +2,9 @@
 
 Before installation begins, verify that schools meet the minimum device and connectivity conditions required for consistent Giga Meter data collection.
 
-> [!IMPORTANT]
-> Giga Meter currently runs on Windows only. Tablets and Android devices cannot run the app.
+{% hint style="warning" %}
+Giga Meter currently runs on Windows only. Tablets and Android devices cannot run the app.
+{% endhint %}
 
 ---
 
@@ -33,8 +34,9 @@ Install Giga Meter on **at least two computers per school**. More devices mean:
 - Redundancy if one device is switched off, repaired, or reformatted
 - A more reliable picture of the school's connectivity over time
 
-> [!TIP]
-> If a computer is replaced or reformatted, Giga Meter must be reinstalled. Build this into your maintenance plan by assigning a school-level focal point responsible for reinstallation.
+{% hint style="success" %}
+If a computer is replaced or reformatted, Giga Meter must be reinstalled. Build this into your maintenance plan by assigning a school-level focal point responsible for reinstallation.
+{% endhint %}
 
 ---
 

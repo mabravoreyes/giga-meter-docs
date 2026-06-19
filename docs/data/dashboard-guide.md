@@ -2,8 +2,9 @@
 
 Giga's school connectivity dashboards are built in Apache Superset. This guide walks through each screen, explains what it shows, and maps the column names to their plain-language definitions.
 
-> [!NOTE]
-> Dashboard access is provisioned by Giga. If you don't have login credentials, contact your Giga country focal point or the UNICEF country office.
+{% hint style="info" %}
+Dashboard access is provisioned by Giga. If you don't have login credentials, contact your Giga country focal point or the UNICEF country office.
+{% endhint %}
 
 ---
 
@@ -98,8 +99,9 @@ One row per school that has registered through Giga Meter, with the operational 
 | `num_devices_registered` | Number of devices registered | How many computers at the school are linked to Giga Meter |
 | `most_recent_app_version` | App version | Newest Giga Meter build any device at the school is running |
 
-> [!TIP]
-> Sort by "days since last measurement" descending to surface schools that need follow-up first.
+{% hint style="success" %}
+Sort by "days since last measurement" descending to surface schools that need follow-up first.
+{% endhint %}
 
 ---
 
@@ -122,8 +124,9 @@ One row per individual Giga Meter test. Includes the Wi-Fi diagnostics captured 
 | Wi-Fi TX rate column | Wi-Fi TX rate | Data rate to the router in Mbps — drops as wireless link weakens |
 | `detected_wifi_frequency` | Wi-Fi frequency | ~2400 = 2.4 GHz band; ~5000 = 5 GHz band |
 
-> [!NOTE]
-> If a school shows low `load_speed` but a healthy `avg_latency` and strong Wi-Fi signal, the bottleneck is likely on the ISP side, not the school's internal network.
+{% hint style="info" %}
+If a school shows low `load_speed` but a healthy `avg_latency` and strong Wi-Fi signal, the bottleneck is likely on the ISP side, not the school's internal network.
+{% endhint %}
 
 ---
 
@@ -139,8 +142,9 @@ Shows which version of Giga Meter is deployed across the country and how many sc
 | Bar chart | Real-time (RT) data | Each bar = number of schools that sent at least one measurement that day |
 | Grey line | Rolling average | 7-day rolling count — smooths weekend dips and reveals growth trend |
 
-> [!TIP]
-> After a version update, watch this screen for schools still on older builds. A fragmented donut is an indicator that some devices missed the update.
+{% hint style="success" %}
+After a version update, watch this screen for schools still on older builds. A fragmented donut is an indicator that some devices missed the update.
+{% endhint %}
 
 ---
 
@@ -156,8 +160,9 @@ Health-check view. Shows who's live, who's gone quiet, and how the drop-off rate
 | Drop-off count | Drop-off | Schools silent for 28+ days — without intervention unlikely to return |
 | Drop-off rate | Drop-off rate | Drop-offs ÷ total installed schools, as a percentage. Rising rate = support effort needed |
 
-> [!WARNING]
-> A drop-off rate above 10% is a signal to increase follow-up with school IT focal points or to plan re-installation visits.
+{% hint style="warning" %}
+A drop-off rate above 10% is a signal to increase follow-up with school IT focal points or to plan re-installation visits.
+{% endhint %}
 
 ---
 

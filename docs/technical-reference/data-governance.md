@@ -63,5 +63,6 @@ This data is made available under the **[CC BY 4.0 License](https://creativecomm
 
 ---
 
-> [!NOTE]
-> The data collected by Giga Meter will be shared with the public in combination with information about the registered school. No personal data is ever shared.
+{% hint style="info" %}
+The data collected by Giga Meter will be shared with the public in combination with information about the registered school. No personal data is ever shared.
+{% endhint %}
