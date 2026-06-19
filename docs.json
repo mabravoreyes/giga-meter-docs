@@ -34,7 +34,7 @@
   "navigation": {
     "groups": [
       {
-        "group": "Overview",
+        "group": "Get Started",
         "pages": [
           "README",
           "docs/getting-started/overview"
@@ -45,6 +45,27 @@
         "pages": [
           "docs/installation/system-requirements",
           "docs/installation/installation-guide"
+        ]
+      },
+      {
+        "group": "Country Deployment",
+        "pages": [
+          "docs/deployment/government-onboarding-overview",
+          "docs/deployment/device-readiness",
+          "docs/deployment/installation-strategies",
+          "docs/deployment/deployment-checklist",
+          "docs/deployment/deployment-blueprint",
+          "docs/deployment/rollout-monitoring"
+        ]
+      },
+      {
+        "group": "Data & Dashboard",
+        "pages": [
+          "docs/data/use-case-definition",
+          "docs/data/access-channels",
+          "docs/data/dashboard-guide",
+          "docs/data/metric-glossary",
+          "docs/data/kpi-guide"
         ]
       },
       {
@@ -59,13 +80,6 @@
         "pages": [
           "docs/troubleshooting/troubleshooting",
           "docs/troubleshooting/faq"
-        ]
-      },
-      {
-        "group": "Deployment",
-        "pages": [
-          "docs/deployment/deployment-checklist",
-          "docs/deployment/deployment-blueprint"
         ]
       }
     ]
