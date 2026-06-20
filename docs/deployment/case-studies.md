@@ -8,16 +8,16 @@ How governments are using Giga Meter data to drive decisions. Each deployment be
 
 ## Countries at a glance
 
-| Country                     | Main goal                                                                 | Benchmark                                        | Deployment model                  |
-| --------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------ | --------------------------------- |
-| <h3>🇧🇷 Brazil</h3>        | Enforce school-specific speed targets and validate ISP fiscal obligations | 1 Mbps per enrolled student in the longest shift | Hybrid                            |
-| <h3>🇧🇼 Botswana</h3>      | Track compliance against national connectivity mandate                    | 100 Mbps                                         | Remote (centralised support team) |
-| <h3>🇲🇳 Mongolia</h3>      | Improve LAN performance; enable decentralised ISP contracting             | No formal minimum                                | Remote (centralised support team) |
-| <h4>🇲🇼 Malawi</h4>        | Verify ISP-reported vs. student-experienced speeds                        | ISP contractual commitments                      | —                                 |
-| 🇫🇯 Fiji                   | Identify schools reliable enough for live broadcast STEM lessons          | No formal minimum                                | Hybrid                            |
-| 🇧🇦 Bosnia and Herzegovina | Identify schools meeting criteria for digital education programming       | Meaningful connectivity                          | Hybrid                            |
-| 🇱🇰 Sri Lanka              | Establish national connectivity baseline, starting in Eastern Province    | No formal minimum                                | Hybrid (province-level trainings) |
-| 🇳🇦 Namibia                | Generate evidence for procurement decisions                               | 100% of schools at 1 Gbps by 2030                | Hybrid                            |
+| Country                              | Main goal                                                                 | Benchmark                                        | Deployment model                  |
+| ------------------------------------ | ------------------------------------------------------------------------- | ------------------------------------------------ | --------------------------------- |
+| <h3>🇧🇷 Brazil</h3>                 | Enforce school-specific speed targets and validate ISP fiscal obligations | 1 Mbps per enrolled student in the longest shift | Hybrid                            |
+| <h3>🇧🇼 Botswana</h3>               | Track compliance against national connectivity mandate                    | 100 Mbps                                         | Remote (centralised support team) |
+| <h3>🇲🇳 Mongolia</h3>               | Improve LAN performance; enable decentralised ISP contracting             | No formal minimum                                | Remote (centralised support team) |
+| <h3>🇲🇼 Malawi</h3>                 | Verify ISP-reported vs. student-experienced speeds                        | ISP contractual commitments                      | —                                 |
+| <h3>🇫🇯 Fiji</h3>                   | Identify schools reliable enough for live broadcast STEM lessons          | No formal minimum                                | Hybrid                            |
+| <h3>🇧🇦 Bosnia and Herzegovina</h3> | Identify schools meeting criteria for digital education programming       | Meaningful connectivity                          | Hybrid                            |
+| <h3>🇱🇰 Sri Lanka</h3>              | Establish national connectivity baseline, starting in Eastern Province    | No formal minimum                                | Hybrid (province-level trainings) |
+| <h3>🇳🇦 Namibia</h3>                | Generate evidence for procurement decisions                               | 100% of schools at 1 Gbps by 2030                | Hybrid                            |
 
 ***
 
