@@ -30,15 +30,15 @@ Measurements
 
 {% columns %}
 {% column %}
-<a href="https://meter.giga.global" class="button primary" data-icon="rotate">Download Giga Meter</a>
+### <a href="https://meter.giga.global" class="button primary" data-icon="rotate">Download the app</a>
 {% endcolumn %}
 
 {% column %}
-<a href="https://superset.giga.global" class="button primary" data-icon="sidebar">Access dashboards</a>
+### <a href="https://superset.giga.global" class="button primary" data-icon="sidebar">Access dashboards</a>
 {% endcolumn %}
 
 {% column %}
-<a href="https://maps.giga.global" class="button primary" data-icon="earth-asia">View Giga Maps</a>
+### <a href="https://maps.giga.global" class="button primary" data-icon="earth-asia">View Giga Maps</a>
 {% endcolumn %}
 {% endcolumns %}
 
