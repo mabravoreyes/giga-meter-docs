@@ -16,7 +16,11 @@ Giga Meter is an open-source desktop app that monitors the quality of a school's
 
 By leveraging data from Giga Meter, governments and school administrators can make informed decisions that enhance school internet services, ultimately improving students' digital learning experiences.
 
-Giga Meter was initially developed by Giga in 2023 in partnership with Ericsson.&#x20;
+Giga Meter was initially developed by Giga in 2023 in partnership with Ericsson.
+
+## Why use Giga Meter?
+
+You can't improve what you can't measure. Giga Meter makes school connectivity visible, measurable, and actionable — so it can be prioritised, funded, and improved for the learners who depend on it.
 {% endcolumn %}
 
 {% column width="41.666666666666664%" %}
@@ -24,16 +28,11 @@ Giga Meter was initially developed by Giga in 2023 in partnership with Ericsson.
 {% endcolumn %}
 {% endcolumns %}
 
-***
-
-## Why use Giga Meter?
-
-You can't improve what you can't measure. Giga Meter makes school connectivity visible, measurable, and actionable — so it can be prioritised, funded, and improved for the learners who depend on it.
+##
 
 {% columns %}
-
 {% column %}
-<img src="https://gigabrand.vercel.app/illustrations/general/fill/measure-cycle.svg" height="120">
+<img src="https://gigabrand.vercel.app/illustrations/general/fill/measure-cycle.svg" alt="" height="120">
 
 **Effortless automation**
 
@@ -41,7 +40,7 @@ The Windows app runs seamlessly with minimal user input and data usage.
 {% endcolumn %}
 
 {% column %}
-<img src="https://gigabrand.vercel.app/illustrations/general/fill/network.svg" height="120">
+<img src="https://gigabrand.vercel.app/illustrations/general/fill/network.svg" alt="" height="120">
 
 **Reliable internet monitoring**
 
@@ -49,13 +48,12 @@ Quickly identify schools that aren't meeting benchmarks.
 {% endcolumn %}
 
 {% column %}
-<img src="https://gigabrand.vercel.app/illustrations/general/fill/sharing-data.svg" height="120">
+<img src="https://gigabrand.vercel.app/illustrations/general/fill/sharing-data.svg" alt="" height="120">
 
 **Data-driven connectivity planning**
 
 Use performance data to adapt plans and optimize internet quality for your schools.
 {% endcolumn %}
-
 {% endcolumns %}
 
 ***
@@ -64,13 +62,8 @@ Use performance data to adapt plans and optimize internet quality for your schoo
 
 {% tabs %}
 {% tab title="School principals & teachers" %}
-{% columns %}
+<img src="https://gigabrand.vercel.app/illustrations/general/fill/schools.svg" alt="" height="100">
 
-{% column width="25%" %}
-<img src="https://gigabrand.vercel.app/illustrations/general/fill/schools.svg" height="100">
-{% endcolumn %}
-
-{% column %}
 **Make schools visible**\
 Rural and underserved schools' connectivity challenges are recorded and visible, helping governments and partners prioritise support.
 
@@ -82,37 +75,21 @@ Not just "connected" or "not connected" — but whether the connection is fast a
 
 **Spot problems early**\
 Notice slow speeds, weak connectivity, or outages before they disrupt classes.
-{% endcolumn %}
-
-{% endcolumns %}
 {% endtab %}
 
 {% tab title="Learners" %}
-{% columns %}
+<img src="https://gigabrand.vercel.app/illustrations/general/fill/kid.svg" alt="" height="100">
 
-{% column width="25%" %}
-<img src="https://gigabrand.vercel.app/illustrations/general/fill/kid.svg" height="100">
-{% endcolumn %}
-
-{% column %}
 **Connectivity that reaches the classroom**\
 Giga Meter helps assess whether internet is reliable enough to enable digital tools, online platforms, and classroom-based learning — ensuring connectivity directly benefits learners.
 
 **No learner left offline**\
 Ensuring underserved schools are visible means the students who need support most are more likely to get it.
-{% endcolumn %}
-
-{% endcolumns %}
 {% endtab %}
 
 {% tab title="Decision-makers & partners" %}
-{% columns %}
+<img src="https://gigabrand.vercel.app/illustrations/general/fill/hierarchy.svg" alt="" height="100">
 
-{% column width="25%" %}
-<img src="https://gigabrand.vercel.app/illustrations/general/fill/hierarchy.svg" height="100">
-{% endcolumn %}
-
-{% column %}
 **Ground-level data at scale**\
 Giga Meter generates consistent, comparable connectivity data across schools — giving planners and ministries a reliable evidence base to work from.
 
@@ -121,8 +98,5 @@ Real measurement data from rural and underserved schools ensures infrastructure 
 
 **Track progress over time**\
 Continuous monitoring means decision-makers can assess whether interventions are working and adjust accordingly.
-{% endcolumn %}
-
-{% endcolumns %}
 {% endtab %}
 {% endtabs %}
