@@ -41,6 +41,38 @@ Giga Meter can now measure internet speed more accurately and identify your loca
 
 ***
 
+{% columns %}
+{% column %}
+**Download Giga Meter**\
+Free desktop app for Windows and Mac
+
+[meter.giga.global →](https://meter.giga.global/)
+{% endcolumn %}
+
+{% column %}
+**School data map**\
+Live connectivity status across all countries
+
+[maps.giga.global →](https://maps.giga.global/map)
+{% endcolumn %}
+
+{% column %}
+**Analytics dashboard**\
+School-level charts and trend analysis
+
+[superset.giga.global →](https://superset.giga.global)
+{% endcolumn %}
+
+{% column %}
+**API**\
+Programmatic access to all measurement data
+
+[maps.giga.global/docs →](https://maps.giga.global/docs/api/1)
+{% endcolumn %}
+{% endcolumns %}
+
+***
+
 ## What's in this documentation
 
 | Section                                                                    | What you'll find                                |
@@ -52,14 +84,5 @@ Giga Meter can now measure internet speed more accurately and identify your loca
 | [Data Governance](docs/technical-reference/data-governance.md)             | What data is collected and how it's handled     |
 | [Troubleshooting](docs/troubleshooting/troubleshooting.md)                 | Common issues and fixes                         |
 | [FAQ](docs/troubleshooting/faq.md)                                         | Frequently asked questions                      |
-| [Deployment Checklist](docs/deployment/deployment-checklist.md)            | For governments rolling out Giga Meter at scale |
-| [Deployment Blueprint](docs/deployment/deployment-blueprint.md)            | Country deployment planning questionnaire       |
-
-***
-
-## Quick links
-
-* **Download Giga Meter:** [meter.giga.global](https://meter.giga.global/)
-* **View school data:** [maps.giga.global](https://maps.giga.global/map)
-* **API access:** [maps.giga.global/docs/explore-api](https://maps.giga.global/docs/explore-api)
-* **Dashboard access:** [superset.giga.global](https://superset.giga.global)
+| [Country Deployment](docs/deployment/government-onboarding-overview.md)    | For governments rolling out Giga Meter at scale |
+| [Case Studies](docs/deployment/case-studies.md)                            | How other governments use the data              |
