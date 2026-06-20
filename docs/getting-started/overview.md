@@ -61,6 +61,19 @@ Use performance data to adapt plans and optimize internet quality for your schoo
 ## What it means for you
 
 {% tabs %}
+{% tab title="Decision-makers & partners" %}
+<img src="https://gigabrand.vercel.app/illustrations/general/fill/hierarchy.svg" alt="" height="100">
+
+**Ground-level data at scale**\
+Giga Meter generates consistent, comparable connectivity data across schools — giving planners and ministries a reliable evidence base to work from.
+
+**Prioritise where it matters most**\
+Real measurement data from rural and underserved schools ensures infrastructure investment reaches the places that need it, not just the easiest to reach.
+
+**Track progress over time**\
+Continuous monitoring means decision-makers can assess whether interventions are working and adjust accordingly.
+{% endtab %}
+
 {% tab title="School principals & teachers" %}
 <img src="https://gigabrand.vercel.app/illustrations/general/fill/schools.svg" alt="" height="100">
 
@@ -85,18 +98,5 @@ Giga Meter helps assess whether internet is reliable enough to enable digital to
 
 **No learner left offline**\
 Ensuring underserved schools are visible means the students who need support most are more likely to get it.
-{% endtab %}
-
-{% tab title="Decision-makers & partners" %}
-<img src="https://gigabrand.vercel.app/illustrations/general/fill/hierarchy.svg" alt="" height="100">
-
-**Ground-level data at scale**\
-Giga Meter generates consistent, comparable connectivity data across schools — giving planners and ministries a reliable evidence base to work from.
-
-**Prioritise where it matters most**\
-Real measurement data from rural and underserved schools ensures infrastructure investment reaches the places that need it, not just the easiest to reach.
-
-**Track progress over time**\
-Continuous monitoring means decision-makers can assess whether interventions are working and adjust accordingly.
 {% endtab %}
 {% endtabs %}
