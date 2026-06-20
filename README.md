@@ -42,12 +42,28 @@ Giga Meter can now measure internet speed more accurately and identify your loca
 
 ***
 
-| | |
-|---|---|
-| [**⬇ Download Giga Meter**](https://meter.giga.global/) | Free desktop app for Windows and Mac |
-| [**🗺 View school data**](https://maps.giga.global/map) | Live connectivity map across all countries |
-| [**📊 Analytics dashboard**](https://superset.giga.global) | School-level charts, trends, and benchmarks |
-| [**⚙ API**](https://maps.giga.global/docs/api/1) | Programmatic access to all measurement data |
+{% hint style="success" %}
+### [Download Giga Meter →](https://meter.giga.global/)
+
+Free desktop app for Windows and Mac
+{% endhint %}
+
+{% columns %}
+{% column %}
+**[School data map →](https://maps.giga.global/map)**\
+Live connectivity across all countries
+{% endcolumn %}
+
+{% column %}
+**[Analytics dashboard →](https://superset.giga.global)**\
+School-level charts and trend analysis
+{% endcolumn %}
+
+{% column %}
+**[API →](https://maps.giga.global/docs/api/1)**\
+Programmatic access to measurement data
+{% endcolumn %}
+{% endcolumns %}
 
 ***
 
