@@ -12,7 +12,7 @@ Learn more at [giga.global](https://giga.global/).
 {% column width="58.333333333333336%" %}
 ## What is Giga Meter?
 
-Giga Meter is a free desktop app that monitors the quality of a school's internet connection by performing automated internet quality tests daily. The app collects data over time, collates and syncs the results directly into [Giga Maps](https://maps.giga.global/) — a global live and open map of schools and their connectivity status.
+Giga Meter is an open-source desktop app that monitors the quality of a school's internet connection by performing automated internet quality tests daily. The app collects data over time, collates and syncs the results directly into [Giga Maps](https://maps.giga.global/) — a global live and open map of schools and their connectivity status.
 
 By leveraging data from Giga Meter, governments and school administrators can make informed decisions that enhance school internet services, ultimately improving students' digital learning experiences.
 

@@ -1,6 +1,7 @@
 """
 Daily stats updater for giga-meter-docs README.md.
 Fetches live counts from the Giga Meter API and regenerates the country flag grid PNG.
+Renders at 2x resolution (1440px wide) for crisp display on retina screens.
 """
 
 import io
@@ -19,22 +20,26 @@ README_PATH = "README.md"
 GRID_PATH = "docs/assets/country-grid.png"
 
 # Brand colours (matches gigabrand.vercel.app social media card)
-GIGA_BLUE = "#277AFF"
-GIGA_BLUE_DARK = "#1A5FD4"   # silhouette tint — slightly darker than background
-WHITE = "#FFFFFF"
+GIGA_BLUE     = (39, 122, 255)   # #277AFF
+GIGA_BLUE_MID = (26,  95, 212)   # #1A5FD4 — placeholder flag tint
+WHITE         = (255, 255, 255)
 
-GRID_COLS = 8
-CANVAS_WIDTH = 780
-H_PAD = 20
-CELL_WIDTH = (CANVAS_WIDTH - H_PAD * 2) // GRID_COLS  # ~92px
-FLAG_W, FLAG_H = 40, 28
-NAME_H = 13
-CELL_HEIGHT = FLAG_H + 4 + NAME_H + 10   # flag + gap + text + bottom pad
+# ── Layout (all values are source pixels at 2x; display size is half) ──────
+CANVAS_W   = 1440
+GRID_COLS  = 10
+H_PAD      = 40                                 # left/right margin
+FLAG_W     = 110                                # → 55px visual
+FLAG_H     = 73                                 # → 36px visual (≈3:2 ratio)
+CELL_GAP_H = 14                                 # horizontal gap between cells
+CELL_GAP_V = 14                                 # vertical gap between cells
+CELL_W     = (CANVAS_W - H_PAD * 2 - CELL_GAP_H * (GRID_COLS - 1)) // GRID_COLS
+CELL_H     = FLAG_H + CELL_GAP_V
+HEADER_H   = 64
+GRID_PAD_T = 16
+BOTTOM_PAD = 20
 
 
-# ---------------------------------------------------------------------------
-# Font loading — try Open Sans (matches brand), fall back to DejaVuSans
-# ---------------------------------------------------------------------------
+# ── Font loading ────────────────────────────────────────────────────────────
 
 def load_font(size: int, bold: bool = False) -> ImageFont.FreeTypeFont:
     candidates = []
@@ -49,20 +54,19 @@ def load_font(size: int, bold: bool = False) -> ImageFont.FreeTypeFont:
             "/usr/share/fonts/truetype/open-sans/OpenSans-Regular.ttf",
             "/usr/share/fonts/truetype/lato/Lato-Regular.ttf",
         ]
-    candidates += ["/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"]
+    candidates.append("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf")
     for path in candidates:
         if os.path.exists(path):
             return ImageFont.truetype(path, size)
     return ImageFont.load_default()
 
 
-# ---------------------------------------------------------------------------
-# API helpers
-# ---------------------------------------------------------------------------
+# ── API helpers ─────────────────────────────────────────────────────────────
 
 def fetch_countries() -> list[dict]:
-    """Paginate countries endpoint (max size=100 per page)."""
+    """Paginate countries endpoint (max size=100 per page). Deduplicate by ISO2."""
     all_countries: list[dict] = []
+    seen_iso2: set[str] = set()
     page = 0
     while True:
         resp = requests.get(
@@ -75,15 +79,18 @@ def fetch_countries() -> list[dict]:
         batch = resp.json().get("data", [])
         if not batch:
             break
-        all_countries.extend(batch)
+        for c in batch:
+            iso2 = c.get("code", "").upper()
+            if iso2 and iso2 not in seen_iso2:
+                seen_iso2.add(iso2)
+                all_countries.append(c)
         page += 1
-    print(f"  Countries fetched: {len(all_countries)}")
+    print(f"  Countries fetched (deduplicated): {len(all_countries)}")
     return all_countries
 
 
 def fetch_school_count() -> int:
-    page = 0
-    total = 0
+    page, total = 0, 0
     while True:
         resp = requests.get(
             f"{API_BASE}/api/v1/dailycheckapp_schools",
@@ -119,104 +126,89 @@ def fetch_measurement_count() -> int:
     return count
 
 
-# ---------------------------------------------------------------------------
-# Flag fetching
-# ---------------------------------------------------------------------------
+def filter_countries_with_measurements(countries: list[dict]) -> list[dict]:
+    """Keep only countries that have at least one measurement record."""
+    active = []
+    for c in countries:
+        iso3 = c.get("code_iso3", "")
+        if not iso3:
+            continue
+        try:
+            resp = requests.get(
+                f"{API_BASE}/api/v1/measurements",
+                params={"size": 1, "country_iso3_code": iso3},
+                headers=HEADERS,
+                timeout=15,
+            )
+            resp.raise_for_status()
+            if resp.json().get("data"):
+                active.append(c)
+            else:
+                print(f"  Skipping {c.get('name', iso3)} — no measurements")
+        except Exception as e:
+            print(f"  Warning: could not check {iso3}: {e}")
+    print(f"  Active countries (with measurements): {len(active)}")
+    return active
+
+
+# ── Flag fetching ────────────────────────────────────────────────────────────
 
 def fetch_flag(iso2: str) -> Image.Image | None:
-    url = f"https://flagcdn.com/w40/{iso2.lower()}.png"
+    # Use w160 for high quality; scale down to FLAG_W × FLAG_H
+    url = f"https://flagcdn.com/w160/{iso2.lower()}.png"
     try:
         resp = requests.get(url, timeout=10)
         if resp.status_code == 200:
-            return Image.open(io.BytesIO(resp.content)).convert("RGBA").resize(
-                (FLAG_W, FLAG_H), Image.LANCZOS
+            return (
+                Image.open(io.BytesIO(resp.content))
+                .convert("RGBA")
+                .resize((FLAG_W, FLAG_H), Image.LANCZOS)
             )
     except Exception:
         pass
     return None
 
 
-def hex_to_rgb(hex_color: str) -> tuple[int, int, int]:
-    h = hex_color.lstrip("#")
-    return tuple(int(h[i : i + 2], 16) for i in (0, 2, 4))  # type: ignore[return-value]
-
-
-# ---------------------------------------------------------------------------
-# Country grid image — Giga-branded: blue background, white text
-# ---------------------------------------------------------------------------
+# ── Country grid ─────────────────────────────────────────────────────────────
 
 def generate_grid(countries: list[dict]) -> Image.Image:
     countries_sorted = sorted(countries, key=lambda c: c.get("name", ""))
     n = len(countries_sorted)
     rows = (n + GRID_COLS - 1) // GRID_COLS
 
-    # Layout heights
-    header_h = 52          # logo strip + "Deployed in X countries"
-    grid_top_pad = 12
-    grid_h = rows * CELL_HEIGHT
-    bottom_pad = 20
-    total_h = header_h + grid_top_pad + grid_h + bottom_pad
-
-    bg_rgb = hex_to_rgb(GIGA_BLUE)
-    img = Image.new("RGB", (CANVAS_WIDTH, total_h), bg_rgb)
+    total_h = HEADER_H + GRID_PAD_T + rows * CELL_H + BOTTOM_PAD
+    img = Image.new("RGB", (CANVAS_W, total_h), GIGA_BLUE)
     draw = ImageDraw.Draw(img)
 
-    # Header: "Deployed in X countries" — white, semibold
-    font_header = load_font(14, bold=True)
-    header_text = f"Deployed in {n} countries"
-    header_y = (header_h - 18) // 2
-    draw.text((H_PAD, header_y), header_text, font=font_header, fill=WHITE)
+    # Header: "Deployed in X countries"
+    font_header = load_font(26, bold=True)
+    draw.text((H_PAD, (HEADER_H - 30) // 2), f"Deployed in {n} countries",
+              font=font_header, fill=WHITE)
 
-    # Subtle divider line below header
-    divider_y = header_h - 1
-    draw.line([(0, divider_y), (CANVAS_WIDTH, divider_y)], fill=(255, 255, 255, 40), width=1)
+    # Divider
+    draw.line([(0, HEADER_H - 1), (CANVAS_W, HEADER_H - 1)],
+              fill=(80, 148, 255), width=1)
 
-    # Grid of flags + country names
-    font_label = load_font(9, bold=False)
-    grid_y0 = header_h + grid_top_pad
+    grid_y0 = HEADER_H + GRID_PAD_T
 
     for i, country in enumerate(countries_sorted):
         col = i % GRID_COLS
         row = i // GRID_COLS
-        cell_x = H_PAD + col * CELL_WIDTH
-        cell_y = grid_y0 + row * CELL_HEIGHT
+        x = H_PAD + col * (CELL_W + CELL_GAP_H)
+        y = grid_y0 + row * CELL_H
 
-        # Flag — centred in cell
-        flag_x = cell_x + (CELL_WIDTH - FLAG_W) // 2
         flag = fetch_flag(country.get("code", ""))
         if flag:
-            # Paste with alpha mask
-            img.paste(flag, (flag_x, cell_y), flag)
+            img.paste(flag, (x, y), flag)
         else:
-            # Placeholder: slightly lighter blue rectangle
-            dark_rgb = hex_to_rgb(GIGA_BLUE_DARK)
-            draw.rectangle(
-                [(flag_x, cell_y), (flag_x + FLAG_W, cell_y + FLAG_H)],
-                fill=dark_rgb,
-            )
-
-        # Country name — white, centred
-        name = country.get("name", "")
-        if len(name) > 12:
-            name = name[:11] + "…"
-        text_y = cell_y + FLAG_H + 4
-        bbox = draw.textbbox((0, 0), name, font=font_label)
-        text_w = bbox[2] - bbox[0]
-        text_x = cell_x + (CELL_WIDTH - text_w) // 2
-        draw.text((text_x, text_y), name, font=font_label, fill=WHITE)
+            draw.rectangle([(x, y), (x + FLAG_W, y + FLAG_H)], fill=GIGA_BLUE_MID)
 
     return img
 
 
-# ---------------------------------------------------------------------------
-# README updater
-# ---------------------------------------------------------------------------
+# ── README updater ───────────────────────────────────────────────────────────
 
-def update_readme(
-    countries_count: int,
-    schools_count: int,
-    measurements_count: int,
-) -> None:
+def update_readme(countries_count: int, schools_count: int, measurements_count: int) -> None:
     with open(README_PATH, "r", encoding="utf-8") as f:
         content = f.read()
 
@@ -240,9 +232,7 @@ def update_readme(
     )
     content = re.sub(
         r"<!-- stats-start -->.*?<!-- stats-end -->",
-        stats_block,
-        content,
-        flags=re.DOTALL,
+        stats_block, content, flags=re.DOTALL,
     )
 
     grid_block = (
@@ -252,33 +242,29 @@ def update_readme(
     )
     content = re.sub(
         r"<!-- country-grid-start -->.*?<!-- country-grid-end -->",
-        grid_block,
-        content,
-        flags=re.DOTALL,
+        grid_block, content, flags=re.DOTALL,
     )
 
     with open(README_PATH, "w", encoding="utf-8") as f:
         f.write(content)
 
-    print(
-        f"  README updated: {countries_count} countries, "
-        f"{schools_count:,} schools, {measurements_count:,} measurements"
-    )
+    print(f"  README updated: {countries_count} countries, {schools_count:,} schools, {measurements_count:,} measurements")
 
 
-# ---------------------------------------------------------------------------
-# Main
-# ---------------------------------------------------------------------------
+# ── Main ─────────────────────────────────────────────────────────────────────
 
 def main() -> None:
     if not API_KEY:
-        print("ERROR: GIGA_API_KEY environment variable not set", file=sys.stderr)
+        print("ERROR: GIGA_API_KEY not set", file=sys.stderr)
         sys.exit(1)
 
     print("Fetching countries...")
     countries = fetch_countries()
 
-    print("Fetching school count (paginating)...")
+    print("Filtering to countries with measurements...")
+    countries = filter_countries_with_measurements(countries)
+
+    print("Fetching school count...")
     schools = fetch_school_count()
 
     print("Fetching measurement count...")
@@ -288,7 +274,7 @@ def main() -> None:
     grid_img = generate_grid(countries)
     os.makedirs("docs/assets", exist_ok=True)
     grid_img.save(GRID_PATH, "PNG", optimize=True)
-    print(f"  Saved: {GRID_PATH}")
+    print(f"  Saved: {GRID_PATH} ({grid_img.size[0]}×{grid_img.size[1]}px)")
 
     print("Updating README.md...")
     update_readme(len(countries), schools, measurements)

@@ -2,14 +2,14 @@
 
 **Unlock better school connectivity.** Giga Meter helps schools measure, monitor, and improve their internet quality.
 
-Giga Meter is a free desktop app developed by [Giga](https://giga.global/) — a UNICEF-ITU initiative to connect every school to the internet. It runs daily automated internet quality tests and syncs results directly to [Giga Maps](https://maps.giga.global/), the global live map of school connectivity.
+Giga Meter is an open-source desktop app developed by [Giga](https://giga.global/) — a UNICEF-ITU initiative to connect every school to the internet. It runs daily automated internet quality tests and syncs results directly to [Giga Maps](https://maps.giga.global/), the global live map of school connectivity.
 
 To date, we are in:
 
 <!-- stats-start -->
 {% columns %}
 {% column %}
-## 43
+## 39
 
 Countries
 {% endcolumn %}
@@ -42,49 +42,12 @@ Giga Meter can now measure internet speed more accurately and identify your loca
 
 ***
 
-{% columns %}
-{% column %}
-{% hint style="success" %}
-**Download Giga Meter**
-
-Free desktop app for Windows and Mac
-
-[meter.giga.global →](https://meter.giga.global/)
-{% endhint %}
-{% endcolumn %}
-
-{% column %}
-{% hint style="info" %}
-**View school data**
-
-Live connectivity map across all countries
-
-[maps.giga.global →](https://maps.giga.global/map)
-{% endhint %}
-{% endcolumn %}
-{% endcolumns %}
-
-{% columns %}
-{% column %}
-{% hint style="info" %}
-**Analytics dashboard**
-
-School-level charts, trends, and benchmarks
-
-[superset.giga.global →](https://superset.giga.global)
-{% endhint %}
-{% endcolumn %}
-
-{% column %}
-{% hint style="info" %}
-**API**
-
-Programmatic access to all measurement data
-
-[maps.giga.global/docs →](https://maps.giga.global/docs/api/1)
-{% endhint %}
-{% endcolumn %}
-{% endcolumns %}
+| | |
+|---|---|
+| [**⬇ Download Giga Meter**](https://meter.giga.global/) | Free desktop app for Windows and Mac |
+| [**🗺 View school data**](https://maps.giga.global/map) | Live connectivity map across all countries |
+| [**📊 Analytics dashboard**](https://superset.giga.global) | School-level charts, trends, and benchmarks |
+| [**⚙ API**](https://maps.giga.global/docs/api/1) | Programmatic access to all measurement data |
 
 ***
 
