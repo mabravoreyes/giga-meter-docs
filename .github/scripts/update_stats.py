@@ -18,31 +18,36 @@ HEADERS = {"Authorization": f"Bearer {API_KEY}"}
 README_PATH = "README.md"
 GRID_PATH = "docs/assets/country-grid.png"
 
-GIGA_BLUE = "#00A3E0"
-GIGA_NAVY = "#1a2142"
+# Brand colours (matches gigabrand.vercel.app social media card)
+GIGA_BLUE = "#277AFF"
+GIGA_BLUE_DARK = "#1A5FD4"   # silhouette tint — slightly darker than background
+WHITE = "#FFFFFF"
+
 GRID_COLS = 8
 CANVAS_WIDTH = 780
-CELL_PADDING_H = 20  # total horizontal padding (10 each side)
-CELL_WIDTH = (CANVAS_WIDTH - CELL_PADDING_H * 2) // GRID_COLS  # ~92px
+H_PAD = 20
+CELL_WIDTH = (CANVAS_WIDTH - H_PAD * 2) // GRID_COLS  # ~92px
 FLAG_W, FLAG_H = 40, 28
-CELL_HEIGHT = FLAG_H + 4 + 13 + 10  # flag + gap + text + bottom pad
+NAME_H = 13
+CELL_HEIGHT = FLAG_H + 4 + NAME_H + 10   # flag + gap + text + bottom pad
 
 
 # ---------------------------------------------------------------------------
-# Font loading
+# Font loading — try Open Sans (matches brand), fall back to DejaVuSans
 # ---------------------------------------------------------------------------
 
 def load_font(size: int, bold: bool = False) -> ImageFont.FreeTypeFont:
     candidates = []
     if bold:
         candidates += [
+            "/usr/share/fonts/truetype/open-sans/OpenSans-SemiBold.ttf",
+            "/usr/share/fonts/truetype/open-sans/OpenSans-Bold.ttf",
             "/usr/share/fonts/truetype/lato/Lato-Bold.ttf",
-            "/usr/share/fonts/truetype/lato/Lato-Regular.ttf",
         ]
     else:
         candidates += [
+            "/usr/share/fonts/truetype/open-sans/OpenSans-Regular.ttf",
             "/usr/share/fonts/truetype/lato/Lato-Regular.ttf",
-            "/usr/share/fonts/truetype/lato/Lato-Bold.ttf",
         ]
     candidates += ["/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"]
     for path in candidates:
@@ -56,16 +61,24 @@ def load_font(size: int, bold: bool = False) -> ImageFont.FreeTypeFont:
 # ---------------------------------------------------------------------------
 
 def fetch_countries() -> list[dict]:
-    resp = requests.get(
-        f"{API_BASE}/api/v1/dailycheckapp_countries",
-        params={"size": 200},
-        headers=HEADERS,
-        timeout=30,
-    )
-    resp.raise_for_status()
-    data = resp.json().get("data", [])
-    print(f"  Countries fetched: {len(data)}")
-    return data
+    """Paginate countries endpoint (max size=100 per page)."""
+    all_countries: list[dict] = []
+    page = 0
+    while True:
+        resp = requests.get(
+            f"{API_BASE}/api/v1/dailycheckapp_countries",
+            params={"size": 100, "page": page},
+            headers=HEADERS,
+            timeout=30,
+        )
+        resp.raise_for_status()
+        batch = resp.json().get("data", [])
+        if not batch:
+            break
+        all_countries.extend(batch)
+        page += 1
+    print(f"  Countries fetched: {len(all_countries)}")
+    return all_countries
 
 
 def fetch_school_count() -> int:
@@ -102,7 +115,7 @@ def fetch_measurement_count() -> int:
     if not data:
         return 0
     count = int(data[0].get("id", 0))
-    print(f"  Measurement count (approx): {count:,}")
+    print(f"  Measurement count (approx via latest ID): {count:,}")
     return count
 
 
@@ -123,8 +136,13 @@ def fetch_flag(iso2: str) -> Image.Image | None:
     return None
 
 
+def hex_to_rgb(hex_color: str) -> tuple[int, int, int]:
+    h = hex_color.lstrip("#")
+    return tuple(int(h[i : i + 2], 16) for i in (0, 2, 4))  # type: ignore[return-value]
+
+
 # ---------------------------------------------------------------------------
-# Country grid image
+# Country grid image — Giga-branded: blue background, white text
 # ---------------------------------------------------------------------------
 
 def generate_grid(countries: list[dict]) -> Image.Image:
@@ -132,47 +150,52 @@ def generate_grid(countries: list[dict]) -> Image.Image:
     n = len(countries_sorted)
     rows = (n + GRID_COLS - 1) // GRID_COLS
 
-    # Heights
-    accent_h = 4
-    subtitle_h = 32
-    grid_top_pad = 8
+    # Layout heights
+    header_h = 52          # logo strip + "Deployed in X countries"
+    grid_top_pad = 12
     grid_h = rows * CELL_HEIGHT
-    bottom_pad = 16
-    total_h = accent_h + subtitle_h + grid_top_pad + grid_h + bottom_pad
+    bottom_pad = 20
+    total_h = header_h + grid_top_pad + grid_h + bottom_pad
 
-    img = Image.new("RGBA", (CANVAS_WIDTH, total_h), (255, 255, 255, 255))
+    bg_rgb = hex_to_rgb(GIGA_BLUE)
+    img = Image.new("RGB", (CANVAS_WIDTH, total_h), bg_rgb)
     draw = ImageDraw.Draw(img)
 
-    # Top accent bar
-    draw.rectangle([(0, 0), (CANVAS_WIDTH, accent_h)], fill=GIGA_BLUE)
+    # Header: "Deployed in X countries" — white, semibold
+    font_header = load_font(14, bold=True)
+    header_text = f"Deployed in {n} countries"
+    header_y = (header_h - 18) // 2
+    draw.text((H_PAD, header_y), header_text, font=font_header, fill=WHITE)
 
-    # Subtitle
-    font_subtitle = load_font(12, bold=True)
-    subtitle_y = accent_h + (subtitle_h - 14) // 2
-    draw.text((20, subtitle_y), f"Deployed in {n} countries", font=font_subtitle, fill=GIGA_NAVY)
+    # Subtle divider line below header
+    divider_y = header_h - 1
+    draw.line([(0, divider_y), (CANVAS_WIDTH, divider_y)], fill=(255, 255, 255, 40), width=1)
 
-    # Grid
+    # Grid of flags + country names
     font_label = load_font(9, bold=False)
-    grid_y0 = accent_h + subtitle_h + grid_top_pad
+    grid_y0 = header_h + grid_top_pad
 
     for i, country in enumerate(countries_sorted):
         col = i % GRID_COLS
         row = i // GRID_COLS
-        cell_x = CELL_PADDING_H + col * CELL_WIDTH
+        cell_x = H_PAD + col * CELL_WIDTH
         cell_y = grid_y0 + row * CELL_HEIGHT
 
-        # Flag
+        # Flag — centred in cell
         flag_x = cell_x + (CELL_WIDTH - FLAG_W) // 2
         flag = fetch_flag(country.get("code", ""))
         if flag:
+            # Paste with alpha mask
             img.paste(flag, (flag_x, cell_y), flag)
         else:
+            # Placeholder: slightly lighter blue rectangle
+            dark_rgb = hex_to_rgb(GIGA_BLUE_DARK)
             draw.rectangle(
                 [(flag_x, cell_y), (flag_x + FLAG_W, cell_y + FLAG_H)],
-                fill="#d0d0d0",
+                fill=dark_rgb,
             )
 
-        # Country name
+        # Country name — white, centred
         name = country.get("name", "")
         if len(name) > 12:
             name = name[:11] + "…"
@@ -180,9 +203,9 @@ def generate_grid(countries: list[dict]) -> Image.Image:
         bbox = draw.textbbox((0, 0), name, font=font_label)
         text_w = bbox[2] - bbox[0]
         text_x = cell_x + (CELL_WIDTH - text_w) // 2
-        draw.text((text_x, text_y), name, font=font_label, fill=GIGA_NAVY)
+        draw.text((text_x, text_y), name, font=font_label, fill=WHITE)
 
-    return img.convert("RGB")
+    return img
 
 
 # ---------------------------------------------------------------------------
@@ -197,7 +220,6 @@ def update_readme(
     with open(README_PATH, "r", encoding="utf-8") as f:
         content = f.read()
 
-    # Stats block
     stats_block = (
         "<!-- stats-start -->\n"
         "{% columns %}\n"
@@ -223,7 +245,6 @@ def update_readme(
         flags=re.DOTALL,
     )
 
-    # Country grid block
     grid_block = (
         "<!-- country-grid-start -->\n"
         "![](docs/assets/country-grid.png)\n"
@@ -239,7 +260,10 @@ def update_readme(
     with open(README_PATH, "w", encoding="utf-8") as f:
         f.write(content)
 
-    print(f"  README updated: {countries_count} countries, {schools_count:,} schools, {measurements_count:,} measurements")
+    print(
+        f"  README updated: {countries_count} countries, "
+        f"{schools_count:,} schools, {measurements_count:,} measurements"
+    )
 
 
 # ---------------------------------------------------------------------------
