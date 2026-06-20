@@ -6,6 +6,7 @@ Giga Meter is a free desktop app developed by [Giga](https://giga.global/) — a
 
 To date, we are in:
 
+<!-- stats-start -->
 {% columns %}
 {% column %}
 ## 38
@@ -25,6 +26,10 @@ Schools
 Measurements
 {% endcolumn %}
 {% endcolumns %}
+<!-- stats-end -->
+
+<!-- country-grid-start -->
+<!-- country-grid-end -->
 
 {% hint style="info" %}
 **Giga Meter 2.0.3 — 2026-05-20**
