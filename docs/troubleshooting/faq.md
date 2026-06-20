@@ -1,19 +1,17 @@
 # FAQ
 
-| # | Question |
-|---|---|
-| 1 | [How can I view my school's data?](#how-can-i-view-my-schools-data) |
-| 2 | [When do speed tests run?](#when-do-speed-tests-run) |
-| 3 | [What data does Giga Meter transmit to Giga?](#what-data-does-giga-meter-transmit-to-giga) |
-| 4 | [Who will have access to my school connectivity data?](#who-will-have-access-to-my-school-connectivity-data) |
-| 5 | [Will Giga have access to any other information on my computer?](#will-giga-have-access-to-any-other-information-on-my-computer) |
-| 6 | [What is a School ID?](#what-is-a-school-id) |
-| 7 | [How do I find my School ID?](#how-do-i-find-my-school-id) |
-| 8 | [Can I change my school ID?](#can-i-change-my-school-id) |
-| 9 | [Can I install Giga Meter on more than one computer?](#can-i-install-giga-meter-on-more-than-one-computer) |
-| 10 | [Can I close the application?](#can-i-close-the-application) |
-| 11 | [How do I update the application?](#how-do-i-update-the-application) |
-| 12 | [How does Giga Meter help improve internet access?](#how-does-giga-meter-help-improve-internet-access) |
+1. [How can I view my school's data?](#how-can-i-view-my-schools-data)
+2. [When do speed tests run?](#when-do-speed-tests-run)
+3. [What data does Giga Meter transmit to Giga?](#what-data-does-giga-meter-transmit-to-giga)
+4. [Who will have access to my school connectivity data?](#who-will-have-access-to-my-school-connectivity-data)
+5. [Will Giga have access to any other information on my computer?](#will-giga-have-access-to-any-other-information-on-my-computer)
+6. [What is a School ID?](#what-is-a-school-id)
+7. [How do I find my School ID?](#how-do-i-find-my-school-id)
+8. [Can I change my school ID?](#can-i-change-my-school-id)
+9. [Can I install Giga Meter on more than one computer?](#can-i-install-giga-meter-on-more-than-one-computer)
+10. [Can I close the application?](#can-i-close-the-application)
+11. [How do I update the application?](#how-do-i-update-the-application)
+12. [How does Giga Meter help improve internet access?](#how-does-giga-meter-help-improve-internet-access)
 
 ***
 
