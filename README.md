@@ -9,19 +9,19 @@ To date, we are in:
 <!-- stats-start -->
 {% columns %}
 {% column %}
-## 38
+## 43
 
 Countries
 {% endcolumn %}
 
 {% column %}
-## 23,257
+## 71,537
 
 Schools
 {% endcolumn %}
 
 {% column %}
-## 8,375,411
+## 3,091,134
 
 Measurements
 {% endcolumn %}
@@ -29,6 +29,7 @@ Measurements
 <!-- stats-end -->
 
 <!-- country-grid-start -->
+![](docs/assets/country-grid.png)
 <!-- country-grid-end -->
 
 {% hint style="info" %}
