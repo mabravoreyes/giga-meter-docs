@@ -41,13 +41,15 @@ How governments are using Giga Meter data to drive decisions. Each deployment be
 
 <summary><strong>🇧🇼 Botswana — Village Connectivity Project monitoring</strong></summary>
 
-**Context:** Botswana's Village Connectivity Project aims to connect schools to a 100 Mbps standard. With \~700 schools connected, the government needed a way to verify that the standard was being met in practice, not just on paper.
+**Context:** Botswana's Village Connectivity Project aims to connect schools to a 100 Mbps standard. With ~700 schools connected, the government needed a way to verify that the standard was being met in practice, not just on paper.
 
-**Use case:** Giga Meter data is integrated into the government's SmartBots monitoring initiative. Schools are assessed against the 100 Mbps benchmark on an ongoing basis.&#x20;
+**Use case:** Giga Meter is deployed alongside UNICEF's Learning Passport — a digital content platform that gives students access to curriculum materials offline and online. The two programmes are co-deployed: Giga Meter data feeds into the government's SmartBots monitoring initiative to continuously assess whether schools meet the 100 Mbps benchmark, while Learning Passport depends on that connectivity being real and sustained. Connectivity monitoring is not just about ISP compliance — it is a prerequisite for digital content delivery reaching students.
+
+The model is being extended beyond schools to health centres and community facilities, with connectivity infrastructure shared across sectors to improve affordability.
 
 **Deployment model:** Remote, centralised support team — schools install Giga Meter independently following the installation guide, with a government-run support desk for troubleshooting.
 
-**Decision triggered:** Schools consistently below 100 Mbps are identified for ISP renegotiation or infrastructure upgrade planning.
+**Decision triggered:** Schools consistently below 100 Mbps are identified for ISP renegotiation or infrastructure upgrade planning. Learning Passport rollout is sequenced against connectivity verification — schools without confirmed connectivity are not activated for content delivery.
 
 </details>
 
