@@ -27,7 +27,7 @@ jobs:
 
       - name: Update stats and generate country grid
         env:
-          GIGA_API_KEY: ${{ secrets.GIGA_API_KEY }}
+          GIGA_API_KEY: ${{ secrets.GIGAMETER_API_KEY }}
         run: python .github/scripts/update_stats.py
 
       - name: Commit and push changes
