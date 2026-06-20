@@ -6,6 +6,8 @@ Giga Meter is an open-source desktop app developed by [Giga](https://giga.global
 
 To date, we are in:
 
+![](.gitbook/assets/country-grid.png)
+
 {% columns %}
 {% column %}
 ## 39
@@ -25,8 +27,6 @@ Schools
 Measurements
 {% endcolumn %}
 {% endcolumns %}
-
-![](.gitbook/assets/country-grid.png)
 
 {% columns %}
 {% column %}
