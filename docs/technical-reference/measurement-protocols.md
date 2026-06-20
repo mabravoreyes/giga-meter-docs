@@ -53,6 +53,38 @@ Tests will not run if the device is switched off or on Sleep mode. For best resu
 
 ---
 
+## Measurement servers
+
+### Speed test servers (NDT7 / M-Lab)
+
+Giga Meter does not connect to a fixed test server. For each speed test, it dynamically selects the nearest available M-Lab server using M-Lab's Locate API:
+
+1. The app calls `locate.measurementlab.net` and requests the nearest NDT server
+2. The Locate API returns the hostname of the nearest available server based on network routing
+3. The app connects to that server via WebSocket/TLS on port 443 and runs the NDT7 test
+
+Because the server is selected at runtime, the same school may test to different servers across different runs — particularly if M-Lab adds, removes, or takes servers offline for maintenance. The `ServerInfo` field in each measurement record identifies which server was used.
+
+**M-Lab server tiers:**
+
+| Tier | Description |
+|---|---|
+| Cloud deployments | Cloud-hosted, managed by M-Lab |
+| Full site deployments | Multiple co-located servers at a single point of presence, managed by M-Lab |
+| Minimal site deployments | Single server at a point of presence, managed by M-Lab |
+
+For network whitelisting, the wildcard `*.measurementlab.net` covers all tiers. A static IP list is not feasible and is not maintained — M-Lab's server pool changes regularly.
+
+**Why the server choice matters for results:**
+
+The M-Lab server is the remote endpoint for the speed test. A closer server (fewer hops, lower latency) will generally allow TCP to reach higher throughput than a distant server. Giga Meter selects the nearest server to minimise this variable, but cross-border routing means a school close to a border may sometimes test to a server in a neighbouring country. The `ServerInfo.Country` field in the API response shows where the selected server is located.
+
+### Ping / uptime test server (Cloudflare)
+
+The uptime ping test targets `speed.cloudflare.com`. Unlike M-Lab, this is a fixed target — Cloudflare's anycast network routes the connection to the nearest Cloudflare data centre automatically. The uptime metric reflects whether the school device can reach the public internet, not connectivity to any specific server.
+
+---
+
 ## Connectivity status on Giga Maps
 
 Results from Giga Meter are used to classify school connectivity status on [Giga Maps](https://maps.giga.global/):

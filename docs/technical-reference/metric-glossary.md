@@ -149,7 +149,7 @@ A chart that shows how speeds vary across all schools, not just on average. The 
 The public name of a Wi-Fi network — what shows up when a device scans for nearby networks.
 
 **Superset**
-Apache Superset, the open-source dashboard tool Giga uses to publish school connectivity data. The top bar — Dashboards, Charts, Datasets, SQL — comes from Superset's standard interface.
+Apache Superset, the open-source dashboard tool Giga uses to publish school connectivity data. Access it at [superset.giga.global](https://superset.giga.global). The top bar — Dashboards, Charts, Datasets, SQL — comes from Superset's standard interface.
 
 ---
 

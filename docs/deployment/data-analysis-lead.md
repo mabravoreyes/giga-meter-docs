@@ -27,7 +27,7 @@ Without a defined use case, dashboard users tend to look at the data without kno
 | Country | Use case | Decision triggered |
 |---|---|---|
 | Brazil | Enforce 1 Mbps per enrolled student in longest shift (ENEC policy) | Schools below threshold flagged for ISP follow-up; ISP fiscal benefit claims validated against measured data |
-| Moldova | ISP contract enforcement — fine triggered if school is unconnected for 3 consecutive working days | Fine issued to ISP; schools flagged for reconnection follow-up |
+| Moldova | Monitor connectivity quality in a decentralised system — all schools are connected but quality is unmonitored and no benchmarks exist; verify that schools meet connectivity prerequisites for mandatory platforms (Electronic Catalog/SICE requires "high-speed and secure network infrastructure") | Schools not meeting quality thresholds flagged for ISP contract review; data supports planning for Model School infrastructure standards |
 | Mongolia | Triangulate LAN performance to diagnose ISP vs. infrastructure issues; inform decentralised ISP contracting | Schools with poor end-device performance despite healthy routers escalated to ISP-side investigation |
 | Fiji | Identify which schools have stable enough connectivity for live broadcast STEM lessons | Only schools confirmed reliable over monitoring period enrolled in the live lesson programme |
 | Botswana | Track compliance against 100 Mbps national mandate (Village Connectivity Project) | Schools below mandate identified for ISP renegotiation or infrastructure upgrade |
@@ -93,23 +93,23 @@ Giga Meter data is accessible through two channels. Which channel a user needs d
 
 | Channel | Best for | Access |
 |---|---|---|
-| **Superset Dashboard** | Policy teams, ministry staff, country coordinators — people who need charts and tables without writing code | Login credentials provisioned by Giga |
-| **API** | Technical teams, data analysts, partners who want to integrate Giga data into their own systems or run custom analyses | API key provisioned by Giga |
+| **[Superset Dashboard](https://superset.giga.global)** | Policy teams, ministry staff, country coordinators — people who need charts and tables without writing code | Login credentials provisioned by Giga |
+| **[API](https://maps.giga.global/docs/api/1)** | Technical teams, data analysts, partners who want to integrate Giga data into their own systems or run custom analyses | API key provisioned by Giga |
 | **Giga Maps** | Schools, regional focal points, and the public — viewing a school's connectivity dot | Public — no credentials needed |
 
 Both channels access the same underlying data. The difference is presentation and flexibility.
 
-**Superset Dashboard**
+**[Superset Dashboard](https://superset.giga.global)**
 
 The dashboard provides seven pre-built screens covering school-level summaries, speed and latency trends, district breakdowns, per-measurement data tables, app version tracking, and installation health.
 
-*Getting access:* Contact your Giga focal point or the UNICEF country office. Provide the name, role, and email of each user who needs access.
+*Getting access:* Users create their own account at [superset.giga.global](https://superset.giga.global), then share their registered email with the Giga team, who assign the appropriate country-level role. Without role assignment, users can log in but will not see any data.
 
 *What users can do:* filter by school, district, date range, and education level; export any table to CSV; view time series, box plots, and distribution charts; share direct links to specific dashboard views.
 
 *What users cannot do:* edit the dashboard or charts (read-only); access data from other countries.
 
-**API**
+**[API](https://maps.giga.global/docs/api/1)**
 
 The Giga Maps API provides programmatic access to school connectivity data — for teams that want to pull data into their own tools, build automated reports, or integrate Giga data into government systems.
 
