@@ -28,7 +28,7 @@ You can't improve what you can't measure. Giga Meter makes school connectivity v
 {% endcolumn %}
 {% endcolumns %}
 
-##
+
 
 {% columns %}
 {% column %}
