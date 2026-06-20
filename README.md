@@ -6,7 +6,6 @@ Giga Meter is an open-source desktop app developed by [Giga](https://giga.global
 
 To date, we are in:
 
-<!-- stats-start -->
 {% columns %}
 {% column %}
 ## 39
@@ -26,11 +25,22 @@ Schools
 Measurements
 {% endcolumn %}
 {% endcolumns %}
-<!-- stats-end -->
 
-<!-- country-grid-start -->
-![](docs/assets/country-grid.png)
-<!-- country-grid-end -->
+![](.gitbook/assets/country-grid.png)
+
+{% columns %}
+{% column %}
+<a href="https://meter.giga.global" class="button primary" data-icon="rotate">Donwload Giga Meter</a>
+{% endcolumn %}
+
+{% column %}
+<a href="https://superset.giga.global" class="button primary" data-icon="sidebar">Access dashboards</a>
+{% endcolumn %}
+
+{% column %}
+<a href="https://maps.giga.global" class="button primary" data-icon="earth-asia">View Giga Maps</a>
+{% endcolumn %}
+{% endcolumns %}
 
 {% hint style="info" %}
 **Giga Meter 2.0.3 — 2026-05-20**
@@ -41,29 +51,6 @@ Giga Meter can now measure internet speed more accurately and identify your loca
 {% endhint %}
 
 ***
-
-{% hint style="success" %}
-### [Download Giga Meter →](https://meter.giga.global/)
-
-Free desktop app for Windows and Mac
-{% endhint %}
-
-{% columns %}
-{% column %}
-**[School data map →](https://maps.giga.global/map)**\
-Live connectivity across all countries
-{% endcolumn %}
-
-{% column %}
-**[Analytics dashboard →](https://superset.giga.global)**\
-School-level charts and trend analysis
-{% endcolumn %}
-
-{% column %}
-**[API →](https://maps.giga.global/docs/api/1)**\
-Programmatic access to measurement data
-{% endcolumn %}
-{% endcolumns %}
 
 ***
 
