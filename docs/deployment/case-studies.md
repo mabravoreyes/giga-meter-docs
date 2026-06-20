@@ -13,7 +13,6 @@ How governments are using Giga Meter data to drive decisions. Each deployment be
 | <h3>🇧🇷 Brazil</h3>                 | Enforce school-specific speed targets and validate ISP fiscal obligations | 1 Mbps per enrolled student in the longest shift | Hybrid                            |
 | <h3>🇧🇼 Botswana</h3>               | Track compliance against national connectivity mandate                    | 100 Mbps                                         | Remote (centralised support team) |
 | <h3>🇲🇳 Mongolia</h3>               | Improve LAN performance; enable decentralised ISP contracting             | No formal minimum                                | Remote (centralised support team) |
-| <h3>🇲🇼 Malawi</h3>                 | Verify ISP-reported vs. student-experienced speeds                        | ISP contractual commitments                      | —                                 |
 | <h3>🇫🇯 Fiji</h3>                   | Identify schools reliable enough for live broadcast STEM lessons          | No formal minimum                                | Hybrid                            |
 | <h3>🇧🇦 Bosnia and Herzegovina</h3> | Identify schools meeting criteria for digital education programming       | Meaningful connectivity                          | Hybrid                            |
 | <h3>🇱🇰 Sri Lanka</h3>              | Establish national connectivity baseline, starting in Eastern Province    | No formal minimum                                | Hybrid (province-level trainings) |
@@ -35,6 +34,8 @@ How governments are using Giga Meter data to drive decisions. Each deployment be
 
 **What makes this model work:** The benchmark is school-specific, it scales with enrolment, not a fixed Mbps number. This makes it harder for ISPs to meet the letter of the contract while underserving larger schools.
 
+<figure><img src="../../.gitbook/assets/case-brazil-1.png" alt="GigaMaps showing a school in Brazil with 210.41 Mbps download speed, above the 50 Mbps benchmark"><figcaption>A school in São Paulo state reporting 210 Mbps — well above the per-student benchmark. Data surfaced directly on Giga Maps.</figcaption></figure>
+
 </details>
 
 <details>
@@ -51,6 +52,8 @@ The model is being extended beyond schools to health centres and community facil
 
 **Decision triggered:** Schools consistently below 100 Mbps are identified for ISP renegotiation or infrastructure upgrade planning. Learning Passport rollout is sequenced against connectivity verification — schools without confirmed connectivity are not activated for content delivery.
 
+<figure><img src="../../.gitbook/assets/case-botswana-2.png" alt="Speed chart for Boswelakgomo school showing daily download and upload speeds well below the 100 Mbps benchmark"><figcaption>Boswelakgomo — a school with 580 students connected via Botswana Fibre Networks. Download speeds consistently fall short of the 100 Mbps benchmark (dashed line), flagging this school for ISP follow-up.</figcaption></figure>
+
 </details>
 
 <details>
@@ -65,25 +68,9 @@ Mongolia is also moving to decentralised connectivity contracting, allowing scho
 
 **Decision triggered:** Schools with poor end-device performance despite healthy router metrics are flagged for ISP-side investigation. Contract renewal decisions are informed by school-level measurement history.
 
-</details>
+<figure><img src="../../.gitbook/assets/case-mongolia-2.png" alt="Diagram showing the monitoring stack: Supplier NOC data and Giga Meter feed into a contract management dashboard, which drives decisions to escalate, credit, pay, fix, or improve"><figcaption>The evidence-to-decisions flow used in Mongolia: independent measurements (Giga Meter) alongside supplier-reported data create a shared evidence base for contract management.</figcaption></figure>
 
-***
-
-**ISP accountability**
-
-<details>
-
-<summary><strong>🇲🇼 Malawi — Closing the gap between reported and experienced speeds</strong></summary>
-
-**Context:** ISPs in Malawi report connectivity performance under their contracts. Governments had no independent way to verify whether what ISPs reported matched what students actually experienced.
-
-**Use case:** Giga Meter provides an independent, standardised baseline of student-experienced connectivity — measured at the device level, not at the ISP handoff point. The pilot used this data to:
-
-* Establish a credible baseline of real-world connectivity (not ISP-reported)
-* Diagnose which schools underperformed due to ISP factors vs. local infrastructure or congestion
-* Give governments reproducible evidence to assess ISP contract adherence at scale
-
-**Decision triggered:** Evidence base for government accountability proceedings with ISPs. Specific schools with persistent underperformance can be cited with documented measurement history.
+<figure><img src="../../.gitbook/assets/case-mongolia-1.png" alt="Network topology diagram showing Mongolia's school connectivity infrastructure — GPON, 4G, VSAT, and radio relay connections across rural and urban schools"><figcaption>Mongolia's connectivity infrastructure spans multiple access technologies — GPON, 4G, VSAT, and radio relay. Triangulating Giga Meter data against router-level monitoring helps identify whether issues sit at the ISP, the router, or the access point.</figcaption></figure>
 
 </details>
 
@@ -100,6 +87,10 @@ Mongolia is also moving to decentralised connectivity contracting, allowing scho
 **Use case:** Giga Meter data is used to identify which schools have connectivity stable enough to support live broadcast lessons. A school that frequently drops or shows high variability cannot reliably participate. The data makes the selection process evidence-based rather than relying on school self-reporting or ISP claims.
 
 **Decision triggered:** Only schools with confirmed reliable connectivity over a monitoring period are enrolled in the live lesson programme. Schools that fall below threshold are flagged for infrastructure support before enrolment.
+
+<figure><img src="../../.gitbook/assets/case-fiji-1.png" alt="Ministry official pointing at a large screen showing Giga Maps with Fiji school connectivity data"><figcaption>A Ministry official using Giga Maps to review school connectivity across Fiji's islands — the basis for identifying schools eligible for the live STEM broadcast programme.</figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/case-fiji-2.png" alt="School Connectivity Dashboard for Fiji showing average daily speed and speed distribution charts"><figcaption>The Fiji connectivity dashboard showing average daily speeds over time. Stability and consistency — not just peak speed — determine whether a school can reliably host live lessons.</figcaption></figure>
 
 </details>
 

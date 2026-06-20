@@ -26,11 +26,11 @@ Without a defined use case, dashboard users tend to look at the data without kno
 
 | Country | Use case | Decision triggered |
 |---|---|---|
-| Brazil | Enforce 1 Mbps per enrolled student in longest shift (ENEC policy) | Schools below threshold flagged for ISP follow-up; ISP fiscal benefit claims validated against measured data |
+| [Brazil](case-studies.md) | Enforce 1 Mbps per enrolled student in longest shift (ENEC policy) | Schools below threshold flagged for ISP follow-up; ISP fiscal benefit claims validated against measured data |
 | Moldova | Monitor connectivity quality in a decentralised system — all schools are connected but quality is unmonitored and no benchmarks exist; verify that schools meet connectivity prerequisites for mandatory platforms (Electronic Catalog/SICE requires "high-speed and secure network infrastructure") | Schools not meeting quality thresholds flagged for ISP contract review; data supports planning for Model School infrastructure standards |
-| Mongolia | Triangulate LAN performance to diagnose ISP vs. infrastructure issues; inform decentralised ISP contracting | Schools with poor end-device performance despite healthy routers escalated to ISP-side investigation |
-| Fiji | Identify which schools have stable enough connectivity for live broadcast STEM lessons | Only schools confirmed reliable over monitoring period enrolled in the live lesson programme |
-| Botswana | Track compliance against 100 Mbps national mandate (Village Connectivity Project) | Schools below mandate identified for ISP renegotiation or infrastructure upgrade |
+| [Mongolia](case-studies.md) | Triangulate LAN performance to diagnose ISP vs. infrastructure issues; inform decentralised ISP contracting | Schools with poor end-device performance despite healthy routers escalated to ISP-side investigation |
+| [Fiji](case-studies.md) | Identify which schools have stable enough connectivity for live broadcast STEM lessons | Only schools confirmed reliable over monitoring period enrolled in the live lesson programme |
+| [Botswana](case-studies.md) | Track compliance against 100 Mbps national mandate (Village Connectivity Project) | Schools below mandate identified for ISP renegotiation or infrastructure upgrade |
 | Malawi | Establish independent baseline of student-experienced speeds vs. ISP-reported speeds | Evidence base for government accountability proceedings with ISPs |
 | General | Deployment monitoring | Schools not reporting within 7 days get a follow-up call from the regional coordinator |
 
