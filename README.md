@@ -30,7 +30,7 @@ Measurements
 
 {% columns %}
 {% column %}
-<a href="https://meter.giga.global" class="button primary" data-icon="rotate">Donwload Giga Meter</a>
+<a href="https://meter.giga.global" class="button primary" data-icon="rotate">Download Giga Meter</a>
 {% endcolumn %}
 
 {% column %}
