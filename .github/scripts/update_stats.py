@@ -5,6 +5,7 @@ Renders at 2x resolution (1440px wide) for crisp display on retina screens.
 """
 
 import io
+import math
 import os
 import re
 import sys
@@ -17,44 +18,42 @@ API_KEY = os.environ.get("GIGA_API_KEY", "")
 HEADERS = {"Authorization": f"Bearer {API_KEY}"}
 
 README_PATH = "README.md"
-GRID_PATH = "docs/assets/country-grid.png"
+GRID_PATH = ".gitbook/assets/country-grid.png"
 
-# Brand colours (matches gigabrand.vercel.app social media card)
+# Brand colours
 GIGA_BLUE     = (39, 122, 255)   # #277AFF
-GIGA_BLUE_MID = (26,  95, 212)   # #1A5FD4 — placeholder flag tint
+GIGA_BLUE_MID = (26,  95, 212)   # placeholder flag tint
 WHITE         = (255, 255, 255)
 
-# ── Layout (all values are source pixels at 2x; display size is half) ──────
-CANVAS_W   = 1440
-GRID_COLS  = 10
-H_PAD      = 40                                 # left/right margin
-FLAG_W     = 110                                # → 55px visual
-FLAG_H     = 73                                 # → 36px visual (≈3:2 ratio)
-CELL_GAP_H = 14                                 # horizontal gap between cells
-CELL_GAP_V = 14                                 # vertical gap between cells
-CELL_W     = (CANVAS_W - H_PAD * 2 - CELL_GAP_H * (GRID_COLS - 1)) // GRID_COLS
-CELL_H     = FLAG_H + CELL_GAP_V
-HEADER_H   = 64
-GRID_PAD_T = 16
-BOTTOM_PAD = 20
+CANVAS_W = 1440
 
 
 # ── Font loading ────────────────────────────────────────────────────────────
+
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+MANROPE_BOLD = os.path.join(SCRIPT_DIR, "Manrope-Bold.ttf")
 
 def load_font(size: int, bold: bool = False) -> ImageFont.FreeTypeFont:
     candidates = []
     if bold:
         candidates += [
+            MANROPE_BOLD,  # bundled — works on both macOS and Linux
             "/usr/share/fonts/truetype/open-sans/OpenSans-SemiBold.ttf",
             "/usr/share/fonts/truetype/open-sans/OpenSans-Bold.ttf",
             "/usr/share/fonts/truetype/lato/Lato-Bold.ttf",
+            "/Library/Fonts/Arial Unicode.ttf",
         ]
     else:
         candidates += [
+            MANROPE_BOLD,
             "/usr/share/fonts/truetype/open-sans/OpenSans-Regular.ttf",
             "/usr/share/fonts/truetype/lato/Lato-Regular.ttf",
+            "/Library/Fonts/Arial Unicode.ttf",
         ]
-    candidates.append("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf")
+    candidates += [
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+        "/System/Library/Fonts/Helvetica.ttc",
+    ]
     for path in candidates:
         if os.path.exists(path):
             return ImageFont.truetype(path, size)
@@ -154,54 +153,91 @@ def filter_countries_with_measurements(countries: list[dict]) -> list[dict]:
 # ── Flag fetching ────────────────────────────────────────────────────────────
 
 def fetch_flag(iso2: str) -> Image.Image | None:
-    # Use w160 for high quality; scale down to FLAG_W × FLAG_H
     url = f"https://flagcdn.com/w160/{iso2.lower()}.png"
     try:
         resp = requests.get(url, timeout=10)
         if resp.status_code == 200:
-            return (
-                Image.open(io.BytesIO(resp.content))
-                .convert("RGBA")
-                .resize((FLAG_W, FLAG_H), Image.LANCZOS)
-            )
+            return Image.open(io.BytesIO(resp.content)).convert("RGBA")
     except Exception:
         pass
     return None
 
 
+def round_corners(img: Image.Image, radius: int) -> Image.Image:
+    img = img.convert("RGBA")
+    mask = Image.new("L", img.size, 0)
+    ImageDraw.Draw(mask).rounded_rectangle(
+        [(0, 0), (img.width - 1, img.height - 1)], radius=radius, fill=255
+    )
+    img.putalpha(mask)
+    return img
+
+
 # ── Country grid ─────────────────────────────────────────────────────────────
 
-def generate_grid(countries: list[dict]) -> Image.Image:
+def generate_grid(countries: list[dict], schools: int = 0, measurements: int = 0) -> Image.Image:
     countries_sorted = sorted(countries, key=lambda c: c.get("name", ""))
     n = len(countries_sorted)
-    rows = (n + GRID_COLS - 1) // GRID_COLS
 
-    total_h = HEADER_H + GRID_PAD_T + rows * CELL_H + BOTTOM_PAD
+    # Layout
+    OUTER_H = 44          # left/right outer margin
+    OUTER_V = 28          # top/bottom outer margin
+    LEFT_COL_W = 260      # text column width
+    COL_GAP = 32          # gap between text col and flags
+    RIGHT_PAD = 32
+    GRID_ROWS = 4
+    CELL_GAP_H = 10
+    CELL_GAP_V = 12
+    CORNER_R = 5
+
+    flags_x0 = OUTER_H + LEFT_COL_W + COL_GAP
+    flag_area_w = CANVAS_W - flags_x0 - RIGHT_PAD
+    grid_cols = math.ceil(n / GRID_ROWS)
+    flag_w = (flag_area_w - CELL_GAP_H * (grid_cols - 1)) // grid_cols
+    flag_h = flag_w * 2 // 3
+    cell_h = flag_h + CELL_GAP_V
+    total_h = OUTER_V * 2 + GRID_ROWS * cell_h
+
     img = Image.new("RGB", (CANVAS_W, total_h), GIGA_BLUE)
     draw = ImageDraw.Draw(img)
 
-    # Header: "Deployed in X countries"
-    font_header = load_font(26, bold=True)
-    draw.text((H_PAD, (HEADER_H - 30) // 2), f"Deployed in {n} countries",
-              font=font_header, fill=WHITE)
+    # Left column: "Deployed in\nX countries"
+    line1, line2 = "Deployed in", f"{n} countries"
+    font_size = 56
+    font = load_font(font_size, bold=True)
+    while font_size > 18:
+        font = load_font(font_size, bold=True)
+        w1 = draw.textbbox((0, 0), line1, font=font)[2]
+        w2 = draw.textbbox((0, 0), line2, font=font)[2]
+        if max(w1, w2) <= LEFT_COL_W:
+            break
+        font_size -= 2
 
-    # Divider
-    draw.line([(0, HEADER_H - 1), (CANVAS_W, HEADER_H - 1)],
-              fill=(80, 148, 255), width=1)
+    b1 = draw.textbbox((0, 0), line1, font=font)
+    b2 = draw.textbbox((0, 0), line2, font=font)
+    h1, h2 = b1[3] - b1[1], b2[3] - b2[1]
+    line_gap = 6
+    text_total_h = h1 + line_gap + h2
+    text_y = (total_h - text_total_h) // 2
 
-    grid_y0 = HEADER_H + GRID_PAD_T
+    draw.text((OUTER_H, text_y), line1, font=font, fill=WHITE)
+    draw.text((OUTER_H, text_y + h1 + line_gap), line2, font=font, fill=WHITE)
 
+    # Flags grid
     for i, country in enumerate(countries_sorted):
-        col = i % GRID_COLS
-        row = i // GRID_COLS
-        x = H_PAD + col * (CELL_W + CELL_GAP_H)
-        y = grid_y0 + row * CELL_H
+        col = i % grid_cols
+        row = i // grid_cols
+        x = flags_x0 + col * (flag_w + CELL_GAP_H)
+        y = OUTER_V + row * cell_h
 
         flag = fetch_flag(country.get("code", ""))
         if flag:
+            flag = round_corners(flag.resize((flag_w, flag_h), Image.LANCZOS), CORNER_R)
             img.paste(flag, (x, y), flag)
         else:
-            draw.rectangle([(x, y), (x + FLAG_W, y + FLAG_H)], fill=GIGA_BLUE_MID)
+            draw.rounded_rectangle(
+                [(x, y), (x + flag_w, y + flag_h)], radius=CORNER_R, fill=GIGA_BLUE_MID
+            )
 
     return img
 
@@ -271,8 +307,8 @@ def main() -> None:
     measurements = fetch_measurement_count()
 
     print("Generating country grid image...")
-    grid_img = generate_grid(countries)
-    os.makedirs("docs/assets", exist_ok=True)
+    grid_img = generate_grid(countries, schools, measurements)
+    os.makedirs(".gitbook/assets", exist_ok=True)
     grid_img.save(GRID_PATH, "PNG", optimize=True)
     print(f"  Saved: {GRID_PATH} ({grid_img.size[0]}×{grid_img.size[1]}px)")
 
