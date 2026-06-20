@@ -10,6 +10,8 @@ For general questions about how the app works, see the [FAQ](faq.md).
 
 <summary>Windows shows a SmartScreen warning</summary>
 
+<figure><img src="../../.gitbook/assets/setup-smartscreen.png" alt="Windows SmartScreen warning dialog"><figcaption></figcaption></figure>
+
 This is a standard Windows warning for apps not yet in Microsoft's signature database. The app is published by UNICEF and safe to install.
 
 1. Click **More info**
@@ -20,6 +22,8 @@ This is a standard Windows warning for apps not yet in Microsoft's signature dat
 <details>
 
 <summary>Windows asks for permission to make changes (UAC prompt)</summary>
+
+<figure><img src="../../.gitbook/assets/setup-uac-prompt.png" alt="Windows UAC permission prompt"><figcaption></figcaption></figure>
 
 Click **Yes**. The publisher shown is UNICEF. This opens the Setup Wizard.
 
@@ -57,6 +61,8 @@ The new version overwrites the old one automatically. Your school registration i
 
 <summary>Wrong country detected</summary>
 
+<figure><img src="../../.gitbook/assets/app-country-warning.png" alt="Country detection warning screen"><figcaption></figcaption></figure>
+
 Select the correct country from the dropdown, click **OK**, then **Confirm**.
 
 If a warning still appears after selecting the correct country, it may be caused by a VPN or your IP address signalling a different location. You can proceed by clicking **Confirm**.
@@ -89,6 +95,8 @@ After re-registering, check any other Windows user accounts on the device and op
 
 <summary>Tests are not running or keep failing</summary>
 
+<figure><img src="../../.gitbook/assets/app-home.png" alt="Giga Meter home screen showing test status"><figcaption></figcaption></figure>
+
 Work through this checklist:
 
 * [ ] Is the device **turned on** and not in Sleep mode?
@@ -103,6 +111,8 @@ If all of the above are confirmed and tests continue to fail, take a screenshot 
 <details>
 
 <summary>No data appearing on Giga Maps</summary>
+
+<figure><img src="../../.gitbook/assets/app-data.png" alt="Giga Meter data tab showing test history"><figcaption></figcaption></figure>
 
 Data takes up to 24–48 hours to appear after the first successful test.
 
