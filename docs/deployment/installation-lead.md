@@ -285,7 +285,7 @@ Track progress against your planned timeline and target from the day installatio
 A school can be "installed" but not "reporting" — the device may be powered off, the app may have crashed, or it may have lost internet. Treat any installed school that hasn't reported in 7+ days as a priority follow-up.
 {% endhint %}
 
-Once schools start reporting, use the **Installation Tracking** tab in the Superset dashboard to monitor rollout health in real time. Key figures: live schools (data in last 21 days), at-risk schools (21–28 day silence), and drop-offs (28+ days silent).
+Once schools start reporting, use the **Installation Tracking** tab in the [Superset dashboard](https://superset.giga.global) to monitor rollout health in real time. Key figures: live schools (data in last 21 days), at-risk schools (21–28 day silence), and drop-offs (28+ days silent).
 
 **Output:** Share a monthly update with the Giga team using this format:
 

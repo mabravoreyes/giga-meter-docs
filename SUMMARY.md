@@ -4,6 +4,7 @@
 
 * [Introduction](README.md)
 * [About Giga Meter](docs/getting-started/overview.md)
+* [Case Studies](docs/deployment/case-studies.md)
 
 ## Installation
 
@@ -28,8 +29,9 @@
 
 ## Technical Reference
 
-* [API Reference](docs/technical-reference/api-reference.md)
+* [Internet Measurement 101](docs/technical-reference/internet-measurement-101.md)
 * [Measurement Protocols](docs/technical-reference/measurement-protocols.md)
 * [Metric Glossary](docs/technical-reference/metric-glossary.md)
+* [API Reference](docs/technical-reference/api-reference.md)
 * [Data Governance & Privacy](docs/technical-reference/data-governance.md)
 

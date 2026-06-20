@@ -1,94 +1,101 @@
 # Privacy & Security
 
-Giga Meter is built and maintained by UNICEF's Giga Initiative. This page covers what data the app collects, how it is protected, and the governance frameworks that apply.
+Giga Meter is built and maintained by UNICEF's Giga Initiative. This page explains what data the app collects, how it is protected, and the governance frameworks that apply.
+
+**The short version:** Giga Meter collects only technical connectivity measurements — no personal data, no student information, no school staff records. All measurement data is published as open data under a standard international license.
 
 ---
 
-## Data policy
+## Data collected
 
-All Giga Meter measurement data is published under the [Open Database License (ODbL 1.0)](https://opendatacommons.org/licenses/odbl/). This license allows anyone to share, adapt, and build on the data as long as they attribute the source and keep any derived databases open.
+Giga Meter measures the quality of a school's internet connection. The data it collects is entirely technical:
 
-The application is developed in accordance with [UNICEF's Privacy Policy](https://www.unicef.org/legal/privacy-policy). No personal data is collected. See [What data does Giga Meter transmit?](../troubleshooting/faq.md#what-data-does-giga-meter-transmit-to-giga) for the full field-level breakdown.
+- Download and upload speed, latency, and packet loss
+- The internet service provider (ISP) and network type
+- Device type and Giga Meter app version
+- Test timestamp and test server location
 
-Data collected through M-Lab's NDT speed test infrastructure is additionally published as open data under M-Lab's [Open Database License (ODbL 1.0)](https://opendatacommons.org/licenses/odbl/) and is available in M-Lab's public BigQuery dataset. Anonymized test results (throughput, latency, server location, client IP subnet) are included. Giga's published dataset does not include raw IP addresses or test IDs that would link back to M-Lab's database.
-
----
-
-## Infrastructure and hosting
-
-All Giga products are hosted on **Microsoft Azure**, operating under Azure's shared responsibility model:
-
-- **Microsoft is responsible for:** physical data centres, servers, and global networking infrastructure
-- **Giga/UNICEF is responsible for:** application security, data, identities, and access controls
+No names, no student records, no staff information, no location data beyond what's needed to identify the ISP. See [What data does Giga Meter transmit?](../troubleshooting/faq.md#what-data-does-giga-meter-transmit-to-giga) for the complete field-level list.
 
 ---
 
-## Product security
+## Data license
 
-| Area | Implementation |
+All Giga Meter measurement data is published under the [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/) license. This means:
+
+- Anyone can access, share, and use the data
+- Anyone can build tools or reports on top of it
+- The only requirement is that the source (Giga/UNICEF) is credited
+
+The application is developed in accordance with [UNICEF's Privacy Policy](https://www.unicef.org/legal/privacy-policy).
+
+---
+
+## Where data is stored
+
+All Giga products are hosted on **Microsoft Azure**, a cloud platform operated by Microsoft and used by governments, international organisations, and enterprises worldwide. Azure is compliant with ISO 27001, SOC 2, and other international standards.
+
+Under Azure's shared responsibility model:
+- **Microsoft** is responsible for physical data centres, servers, and network infrastructure
+- **Giga/UNICEF** is responsible for application security, data governance, and access controls
+
+---
+
+## How data is protected
+
+| Protection measure | What it means in practice |
 |---|---|
-| Transport encryption | All connections use TLS 1.2/1.3 (HTTPS and WebSocket over TLS). No plaintext connections. |
-| Authentication | JWT (JSON Web Tokens) for all API requests. All requests are authenticated and logged. |
-| Input validation | Defense against SQL injection, XSS, and data integrity threats |
-| Data at rest | Encrypted using Azure-managed keys via Azure Blob Storage |
-| Secrets management | Securely stored in App Service settings — not in code |
-| Storage access | Public access to storage accounts is blocked |
-| CORS policies | Restricted to authorised origins |
-| Soft delete | Enabled for data recovery |
-| Data retention | Active retention policy applied |
-| Threat protection | Azure Defender enabled |
+| Encrypted in transit | All data sent between the app and Giga's servers is encrypted. No data travels in plaintext. |
+| Encrypted at rest | Stored data is encrypted on Giga's servers. Unauthorised parties cannot read it even with physical server access. |
+| Access controls | Only authorised Giga and UNICEF staff can access backend systems. Access is role-based and regularly reviewed. |
+| Authentication | All API access requires a verified token. Unauthenticated requests are rejected. |
+| Input validation | The app is protected against common web security threats (injection attacks, data manipulation). |
+| Secrets management | Credentials and configuration keys are stored securely, not in the application code. |
+| Threat protection | Microsoft Azure's security monitoring detects and alerts on suspicious activity. |
+| Soft delete | Data deletion is reversible, preventing accidental permanent loss. |
 
 ---
 
-## Identity and access management
+## Who can access your country's data
 
-Access to Giga's backend systems follows least-privilege principles:
+Access to country-level data on the Superset dashboard follows a role-based model:
 
-- **Role-Based Access Control (RBAC):** each team member has only the permissions their role requires
-- **Authentication:** Microsoft Entra ID (formerly Azure AD) for single sign-on (SSO) and multi-factor authentication (MFA)
-- **Access review:** regular reviews of access policies and permissions
+- Users create an account at [superset.giga.global](https://superset.giga.global)
+- The Giga team assigns a country-specific role — users can only see data for the countries they are authorised for
+- No user can view data from another country without explicit authorisation
 
----
-
-## Development and deployment pipeline
-
-| Stage | Tool / Practice |
-|---|---|
-| CI/CD | Azure DevOps and GitHub Actions with managed identities |
-| Code quality | SonarQube static analysis and dependency checks |
-| Environments | Isolated dev, staging, and production environments |
-| Error tracking | Self-hosted Sentry instance (`excubo.unicef.io`) and Azure Monitor for real-time tracking |
+For API access, the same principle applies: API keys are scoped to specific countries and must be requested through the Giga team.
 
 ---
 
-## Monitoring and compliance
+## Single sign-on and multi-factor authentication
 
-**Monitoring tools:** Azure Monitor, Log Analytics Workspace, and Azure Defender for Cloud provide:
-- Threat detection (brute force, malware)
-- Alerts and actionable insights
-- Compliance monitoring via Azure Policy
+Giga's internal team accesses backend systems via Microsoft Entra ID (formerly Azure AD), which provides:
 
-**Governance frameworks:**
-- Azure security best practices
-- UNICEF Privacy Policy
-- HTTPS enforcement across all endpoints
-- Regular activity log reviews
+- **Single sign-on (SSO):** staff use one set of credentials across all Giga systems
+- **Multi-factor authentication (MFA):** login requires both a password and a second verification step
+- **Centralised access management:** when a team member leaves or changes role, access is removed centrally
 
 ---
 
-## Speed test infrastructure (M-Lab)
+## Development practices
 
-Giga Meter uses [Measurement Lab (M-Lab)](https://www.measurementlab.net/) for speed tests — the same open-source infrastructure used by Google's internet speed test and other major measurement tools globally.
+Giga Meter is developed and released through a managed pipeline:
 
-M-Lab operates a globally distributed fleet of servers. Giga Meter does not connect to a fixed server — it dynamically selects the nearest available server at the time of each test. M-Lab maintains several deployment tiers:
+- Code is reviewed and tested before it reaches production
+- Static analysis tools check for common security vulnerabilities before each release
+- Development, staging, and production environments are kept separate — changes are tested before users see them
+- Application errors are monitored through a self-hosted error tracking system operated by UNICEF
 
-| Tier | Description |
-|---|---|
-| Cloud deployments | Cloud-hosted resources, managed by M-Lab |
-| Full site deployments | Multiple co-located servers, managed by M-Lab |
-| Minimal site deployments | Single server, managed by M-Lab |
+---
 
-For network whitelisting, a single DNS wildcard rule (`*.measurementlab.net`) covers all M-Lab servers regardless of tier. See [Network Destinations & Firewall Configuration](network-destinations.md) for the complete whitelist.
+## Speed test infrastructure
+
+Giga Meter uses [Measurement Lab (M-Lab)](https://www.measurementlab.net/) to run speed tests — the same infrastructure used by Google's speed test and other widely used measurement tools. M-Lab is an open-source project supported by academic and technology partners globally.
+
+M-Lab operates a globally distributed network of servers. Giga Meter dynamically selects the nearest available server for each test — no fixed server is used.
+
+For network whitelisting, a single DNS wildcard rule (`*.measurementlab.net`) covers all M-Lab servers. See [Network Destinations & Firewall Configuration](network-destinations.md) for the complete list.
 
 ---
 

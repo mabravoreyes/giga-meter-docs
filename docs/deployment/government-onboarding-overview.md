@@ -52,7 +52,7 @@ The Data Analysis Lead ensures Giga Meter data feeds into government decisions â
 
 1. Define the use case
 2. Identify data users and assign access roles
-3. Onboard data users to the dashboard or API
+3. Onboard data users to the [Superset Dashboard](https://superset.giga.global) or [API](https://maps.giga.global/docs/api/1)
 4. Establish metric literacy
 5. Define KPIs
 6. Set a KPI review and decision-triggering process
@@ -76,8 +76,7 @@ Complete the [Deployment Blueprint](deployment-blueprint.md) before starting the
 | [Installation Lead Guide](installation-lead.md) | Step-by-step guide for the Installation Lead |
 | [Data Analysis Lead Guide](data-analysis-lead.md) | Step-by-step guide for the Data Analysis Lead |
 | [Training Support Materials](deployment-checklist.md) | Session agenda, talking points, and Q&A for installation workshops |
-| [Defining Your Use Case](../data/use-case-definition.md) | How to frame what you're using the data for |
-| [Access Channels: Dashboard and API](../data/access-channels.md) | Getting dashboard access and provisioning users |
-| [Using the Dashboard](../data/dashboard-guide.md) | Screen-by-screen dashboard walkthrough |
-| [Metric Glossary](../data/metric-glossary.md) | Definitions for every metric |
-| [Defining and Tracking KPIs](../data/kpi-guide.md) | KPI framework and templates |
+| [Data Analysis Lead Guide](data-analysis-lead.md) | Full guide â€” use case definition, dashboard onboarding, KPI framework |
+| [Case Studies](case-studies.md) | How other governments have used Giga Meter data |
+| [Metric Glossary](../technical-reference/metric-glossary.md) | Definitions for every metric |
+| [API Reference](../technical-reference/api-reference.md) | Endpoint documentation for technical integrations |
