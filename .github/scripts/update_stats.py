@@ -88,8 +88,11 @@ def fetch_countries() -> list[dict]:
     return all_countries
 
 
-def fetch_school_count() -> int:
-    page, total = 0, 0
+def fetch_school_count(active_countries: list[dict]) -> int:
+    """Count unique school_id_giga values in countries that have measurements."""
+    active_iso3 = {c.get("code_iso3", "").upper() for c in active_countries}
+    seen: set[str] = set()
+    page = 0
     while True:
         resp = requests.get(
             f"{API_BASE}/api/v1/dailycheckapp_schools",
@@ -101,12 +104,23 @@ def fetch_school_count() -> int:
         batch = resp.json().get("data", [])
         if not batch:
             break
-        total += len(batch)
+        for school in batch:
+            iso3 = (
+                school.get("country_iso3_code")
+                or school.get("country_iso3")
+                or (school.get("country") or {}).get("code_iso3")
+                or ""
+            ).upper()
+            if iso3 not in active_iso3:
+                continue
+            giga_id = school.get("school_id_giga") or school.get("giga_id")
+            if giga_id:
+                seen.add(str(giga_id))
         page += 1
         if page % 10 == 0:
-            print(f"  Schools paginated: {total} so far (page {page})")
-    print(f"  Schools total: {total}")
-    return total
+            print(f"  Schools paginated: page {page}, {len(seen)} unique so far")
+    print(f"  Schools total (unique school_id_giga, active countries): {len(seen)}")
+    return len(seen)
 
 
 def fetch_measurement_count() -> int:
@@ -301,7 +315,7 @@ def main() -> None:
     countries = filter_countries_with_measurements(countries)
 
     print("Fetching school count...")
-    schools = fetch_school_count()
+    schools = fetch_school_count(countries)
 
     print("Fetching measurement count...")
     measurements = fetch_measurement_count()
