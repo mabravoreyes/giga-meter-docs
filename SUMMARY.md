@@ -4,6 +4,7 @@
 
 * [Introduction](README.md)
 * [About Giga Meter](docs/getting-started/overview.md)
+* [Features](docs/getting-started/features.md)
 * [Case Studies](docs/deployment/case-studies.md)
 
 ## Installation
