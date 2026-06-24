@@ -104,6 +104,9 @@ def fetch_school_count(active_countries: list[dict]) -> int:
         batch = resp.json().get("data", [])
         if not batch:
             break
+        if page == 0 and batch:
+            print(f"  DEBUG school record keys: {list(batch[0].keys())}")
+            print(f"  DEBUG first school sample: {batch[0]}")
         for school in batch:
             iso3 = (
                 school.get("country_iso3_code")
