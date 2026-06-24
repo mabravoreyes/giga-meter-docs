@@ -27,6 +27,10 @@
 * [Privacy & Security](docs/security/privacy-and-security.md)
 * [Network Destinations & Firewall Configuration](docs/security/network-destinations.md)
 
+## Pricing
+
+* [Pricing](docs/pricing/pricing.md)
+
 ## Technical Reference
 
 * [Internet Measurement 101](docs/technical-reference/internet-measurement-101.md)
