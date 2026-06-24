@@ -89,8 +89,8 @@ def fetch_countries() -> list[dict]:
 
 
 def fetch_school_count(active_countries: list[dict]) -> int:
-    """Count unique school_id_giga values in countries that have measurements."""
-    active_iso3 = {c.get("code_iso3", "").upper() for c in active_countries}
+    """Count unique giga_id_school values in countries that have measurements."""
+    active_iso2 = {c.get("code", "").upper() for c in active_countries}
     seen: set[str] = set()
     page = 0
     while True:
@@ -104,25 +104,16 @@ def fetch_school_count(active_countries: list[dict]) -> int:
         batch = resp.json().get("data", [])
         if not batch:
             break
-        if page == 0 and batch:
-            print(f"  DEBUG school record keys: {list(batch[0].keys())}")
-            print(f"  DEBUG first school sample: {batch[0]}")
         for school in batch:
-            iso3 = (
-                school.get("country_iso3_code")
-                or school.get("country_iso3")
-                or (school.get("country") or {}).get("code_iso3")
-                or ""
-            ).upper()
-            if iso3 not in active_iso3:
+            if school.get("country_code", "").upper() not in active_iso2:
                 continue
-            giga_id = school.get("school_id_giga") or school.get("giga_id")
+            giga_id = school.get("giga_id_school")
             if giga_id:
                 seen.add(str(giga_id))
         page += 1
         if page % 10 == 0:
             print(f"  Schools paginated: page {page}, {len(seen)} unique so far")
-    print(f"  Schools total (unique school_id_giga, active countries): {len(seen)}")
+    print(f"  Schools total (unique giga_id_school, active countries): {len(seen)}")
     return len(seen)
 
 
