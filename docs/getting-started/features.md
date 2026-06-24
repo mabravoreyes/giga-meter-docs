@@ -1,108 +1,101 @@
-# Features
+# What Giga Meter does
 
-Giga Meter is a desktop application that runs automated internet quality tests on school devices and streams results to Giga Maps — building a continuous, independently verified record of connectivity at every registered school.
+Governments can't improve what they can't measure. Giga Meter gives every connected school a permanent, automated record of how its internet actually performs — feeding data directly into Giga Maps and your own analytics dashboards, day after day, without anyone at the school having to do anything.
 
 ***
 
-## Measurement
+## Automated measurement
+
+Install once. After that, Giga Meter runs on its own.
+
+Four speed tests run every day — one within 15 minutes of the device starting up, then one in each of the 8am–12pm, 12pm–4pm, and 4pm–8pm windows. Test times are randomised within each window to avoid patterns. Between speed tests, ping checks run every 15 minutes from 8am to 8pm to track whether the connection is up at all.
+
+No button to press. No staff action required. No risk of tests being forgotten.
+
+{% hint style="info" %}
+**Manual tests are available too.** Any user can trigger an on-demand test from the app interface at any time — useful during site visits or when troubleshooting a reported issue.
+{% endhint %}
+
+***
+
+## What gets measured
+
+Every speed test captures:
+
+* **Download speed** — measured via M-Lab's NDT7 protocol against the nearest available M-Lab server
+* **Upload speed** — same protocol, same server
+* **Latency** — minimum round-trip time (MinRTT) per test
+* **Uptime** — derived from ping checks: the proportion of school hours (8am–8pm) during which the connection was confirmed reachable
+* **ISP and network details** — ISP name, ASN, IP address, WiFi SSID, signal strength, channel, and adapter model on every test
+
+These are measurements of the **public internet connection** — not the school's local network speed to the router.
+
+***
+
+## Tied to a school, not a device
+
+This is what makes Giga Meter different from a speed test app.
+
+Before the first measurement runs, the device is registered to a specific school using its national school ID. That registration links every subsequent measurement to a school record in Giga's database — including the school's country, administrative divisions, education level, and environment type.
+
+A few things this makes possible:
+
+**Geolocation validation.** Device coordinates are captured on every test. If the device running Giga Meter is more than 4km from the registered school's location, the measurement is automatically flagged. This prevents data quality issues from misregistered devices or devices moved off-site.
+
+**Multi-device coordination.** Up to 3 Giga Meter installations can be registered to the same school. Multiple devices measure independently, making the school's data more robust and reducing gaps from device downtime.
+
+**Persistent school history.** Because measurements are tied to a school ID rather than a device, the historical record survives device replacements. A school's connectivity trend is preserved even when hardware changes.
+
+***
+
+## Data where you need it
+
+Every measurement syncs to Giga Maps and your analytics dashboards automatically — no manual exports, no CSV files.
 
 {% columns %}
 {% column %}
-### Speed
+**Giga Maps**
 
-Download and upload speeds measured via M-Lab's Network Diagnostic Tool (NDT7) protocol. Tests run against the nearest available M-Lab server, measuring the connection to the public internet — not local network speed to the router.
+Results appear on the public Giga Maps platform within hours. Schools appear as colour-coded dots showing their current connectivity level. Governments, partners, and school staff can see the data directly.
 {% endcolumn %}
 
 {% column %}
-### Latency & uptime
+**Analytics dashboards**
 
-Minimum round-trip time (MinRTT) captured on every speed test. Ping checks run every 15 minutes during school hours (8am–8pm local time) to track whether the connection is reachable. Daily uptime is derived from these checks.
+Hosted dashboards (up to 10) show school-level and country-level trends: speeds over time, uptime by district, ISP performance, and benchmark comparison against national targets.
 {% endcolumn %}
 
 {% column %}
-### Network metadata
+**REST API**
 
-Every test captures the ISP name, ASN, IP address, hostname, WiFi SSID, signal strength, channel, and adapter model. This makes it possible to diagnose whether performance issues sit at the ISP level or the local network.
+Programmatic access to the full measurement dataset — measurements, daily ping aggregations, school records, and country data — for integration with government systems or custom analysis.
 {% endcolumn %}
 {% endcolumns %}
 
 ***
 
-## Automated testing
+## How is Giga Meter different from Ookla?
 
-Giga Meter runs on a fixed schedule — no action required from school staff once installed.
+Consumer speed test apps give you a number. Giga Meter gives you a record.
 
-| | Detail |
-| --- | --- |
-| **Daily speed tests** | 4 per day: within 15 min of device startup, then one each in the 8am–12pm, 12pm–4pm, and 4pm–8pm windows |
-| **Ping checks** | Every 15 minutes between 8am and 8pm local time |
-| **Manual tests** | Available on demand from the app interface |
-| **Scheduling** | Test times are randomised within each window to avoid patterns |
-| **Background operation** | Tests run silently without interrupting device use |
-
-***
-
-## School identification
-
-Every measurement is tied to a specific school — not just a device or IP address.
-
-| Feature | Detail |
-| --- | --- |
-| **School registration** | Device is registered to a school using the national school ID, looked up in Giga's school database at setup |
-| **Giga school ID** | Each school carries a persistent Giga ID that links measurements across devices and over time |
-| **Geolocation validation** | Device coordinates are captured on every test. Measurements are automatically flagged if the device is more than 4km from the registered school location, or if GPS accuracy falls below 500m |
-| **Multi-device support** | Up to 3 app instances can be registered per school. Multiple devices produce independent measurements and improve data reliability |
-| **School metadata** | Measurements are tagged with country, admin1–admin4 divisions, education level, environment type, and ISP from the Giga school master |
-
-***
-
-## Data pipeline
-
-| Feature | Detail |
-| --- | --- |
-| **Sync to Giga Maps** | Measurements sync every 4 hours; school registration syncs every hour |
-| **REST API** | Authenticated API access to measurements, ping aggregation, school data, country data, and IP metadata |
-| **Filtering and pagination** | All endpoints support pagination and filtering by school, country, date, and more |
-| **Historical records** | Full measurement history retained; daily ping aggregations computed automatically |
-| **Anomaly detection** | Schools can be flagged for data quality issues or anomalous measurements by administrators |
-
-***
-
-## Analytics dashboards
-
-Included with Tier 1 and Tier 2 subscriptions. Hosted and maintained by Giga.
-
-* School-level and country-level connectivity views
-* Download speed, upload speed, latency, and uptime over time
-* ISP-level performance breakdowns
-* Benchmark comparison against national connectivity targets
-* Up to 10 dashboards per deployment
-* Custom dashboard development available at cost
-
-***
-
-## How is Giga Meter different from Ookla or other speed test apps?
-
-Consumer speed test apps measure network performance as a one-off, user-initiated check. Giga Meter is built for continuous, unattended monitoring tied to a specific school — with data flowing into a shared public platform designed for government decision-making, not a consumer profile.
+The difference is structural: Ookla and similar tools are user-initiated, anonymous, and built for personal awareness. Giga Meter is automated, school-registered, and built for government accountability.
 
 |  | **Giga Meter** | **Ookla / consumer apps** |
 | --- | :---: | :---: |
-| Measurement target | Public internet (off-net, via M-Lab) | Public internet |
-| Who initiates the test | Automated — runs on fixed schedule | User-initiated |
-| Frequency | 4 speed tests + up to 96 ping checks per day | On demand |
-| Tied to a specific school | ✓ Registered to a school ID | — |
-| Geolocation validation | ✓ Flagged if >4km from registered school | — |
-| School metadata | Country, admin hierarchy, education level, Giga ID | — |
-| Data destination | Giga Maps (public) + government dashboard | Commercial platform / user profile |
-| Data ownership | UNICEF / government | Commercial operator |
-| Multi-device coordination | Up to 3 devices per school | Independent sessions |
-| Background operation | ✓ Runs without user action | — |
+| Who initiates the test | Automated — fixed schedule | User |
+| Frequency | 4 speed tests + up to 96 ping checks / day | On demand |
+| Tied to a school record | ✓ | — |
+| Geolocation validation | ✓ Flagged if >4km from school | — |
+| School metadata | Country, admin levels, education level, Giga ID | — |
+| Measures public internet (off-net) | ✓ | ✓ |
+| Background operation | ✓ No user action needed | — |
+| Data goes to | Giga Maps + government dashboard | Commercial platform |
 | Open source | ✓ | — |
 
-The core difference: Giga Meter treats **the school** as the unit of measurement, not the device or the user. Every result is anchored to a school record, validated against a known location, and fed into a shared evidence base designed for policy and accountability — not a personal speed report.
+The right framing: Giga Meter treats **the school** as the unit of measurement. Every result is anchored to a school record, validated against a known location, and contributed to a shared evidence base that governments can use to hold ISPs accountable, plan investments, and track progress against connectivity targets.
 
 ***
 
-→ [Measurement protocols](../technical-reference/measurement-protocols.md)\
-→ [Pricing](../pricing/pricing.md)\
-→ [Installation guide](../installation/installation-guide.md)
+→ [Measurement protocols — detailed methodology](../technical-reference/measurement-protocols.md)\
+→ [Case studies — how governments use this data](case-studies.md)\
+→ [Pricing](../pricing/pricing.md)
