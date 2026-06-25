@@ -18,6 +18,7 @@ To date, we are in:
 
 ![](.gitbook/assets/country-grid.png)
 
+<!-- stats-start -->
 {% columns %}
 {% column %}
 ## 39
@@ -37,6 +38,7 @@ Schools
 Measurements
 {% endcolumn %}
 {% endcolumns %}
+<!-- stats-end -->
 
 {% columns %}
 {% column %}
