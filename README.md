@@ -27,7 +27,7 @@ Countries
 {% endcolumn %}
 
 {% column %}
-## 20,944
+## 20,946
 
 Schools
 {% endcolumn %}
