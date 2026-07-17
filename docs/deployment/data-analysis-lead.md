@@ -293,7 +293,7 @@ Context matters. A 5 Mbps download speed may be poor for a school with 200 stude
 | **Drop-off**              | No measurement in 29+ days                                               | Unlikely to return without a site visit                                |
 | **Drop-off rate**         | Drop-offs ÷ total installed schools                                      | Above 10% = increase follow-up effort                                  |
 
-For full definitions of every field in the dashboard, see [Metric Glossary](../technical-reference/metric-glossary.md).
+For full definitions of every field in the dashboard, see [Metric Glossary](../../installation/metric-glossary.md).
 
 **Output:** Metric reference document circulated to all data users before the first review meeting.
 
@@ -423,6 +423,6 @@ Analytical support still needed from Giga: \[describe if applicable]
 * [Government Onboarding Guide](government-onboarding-overview.md)
 * [Deployment Blueprint](deployment-blueprint.md)
 * [Installation Lead Guide](installation-lead.md)
-* [Metric Glossary](../technical-reference/metric-glossary.md)
+* [Metric Glossary](../../installation/metric-glossary.md)
 * [Measurement Protocols](../technical-reference/measurement-protocols.md)
 * [Data Governance & Privacy](../technical-reference/data-governance.md)

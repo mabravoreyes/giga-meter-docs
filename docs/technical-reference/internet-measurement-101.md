@@ -150,6 +150,6 @@ When reviewing school data:
 * Flag schools with high variability separately from schools with consistently low speeds; they need different interventions
 * Use speed data alongside uptime data; a school with good average speeds but frequent outages has a different problem than one with consistently low speeds
 
-→ [Metric Glossary](metric-glossary.md) - definitions for every metric\
+→ [Metric Glossary](../../installation/metric-glossary.md) - definitions for every metric\
 → [Measurement Protocols](measurement-protocols.md) - how NDT7 and ping tests work\
 → [API Reference](api-reference.md) - accessing raw measurement data

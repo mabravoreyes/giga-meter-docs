@@ -1,65 +1,13 @@
-# Introduction
+# Start here
 
-{% hint style="info" %}
-**2.0.3 - 2026-05-20**
-
-Version 2.0.3 improves speed-measurement accuracy, adds automatic location detection, adds Mongolian language support, and moves software updates to signed distribution.
-
-[Full release notes →](https://github.com/unicef/project-connect-daily-check-app/releases/tag/v2.0.3)
-{% endhint %}
-
-Giga Meter is an open-source desktop application that measures the quality of a school's internet connection. It runs automated tests during the school day and reports the results to [Giga Maps](https://maps.giga.global/), the public, global map of school connectivity. Giga Meter is developed by [Giga](https://giga.global/), a UNICEF-ITU initiative to connect every school to the internet.
-
-Giga Meter is active in:
-
-![](https://448102781-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FnO4TCnw5Pvr77OIRKx3h%2Fuploads%2Fgit-blob-760ceb42a49607c376cc4391715aee4d8084b559%2Fcountry-grid.png?alt=media)
-
-{% columns %}
-{% column %}
-### 39
-
-Countries
-{% endcolumn %}
-
-{% column %}
-### 20,978
-
-Schools
-{% endcolumn %}
-
-{% column %}
-### 3,091,134
-
-Measurements
-{% endcolumn %}
-{% endcolumns %}
-
-{% columns %}
-{% column %}
-#### <a href="https://meter.giga.global" class="button primary" data-icon="rotate">Download the app</a>
-{% endcolumn %}
-
-{% column %}
-#### <a href="https://superset.giga.global" class="button primary" data-icon="sidebar">Access dashboards</a>
-{% endcolumn %}
-
-{% column %}
-#### <a href="https://maps.giga.global" class="button primary" data-icon="earth-asia">View Giga Maps</a>
-{% endcolumn %}
-{% endcolumns %}
+Giga Meter measures, monitors, and helps improve school internet connectivity. Choose the path that fits your role, or browse the full documentation in the sidebar.
 
 ***
 
-### What's in this documentation
+### Choose your path
 
-| Section                                                                    | What you'll find                                |
-| -------------------------------------------------------------------------- | ----------------------------------------------- |
-| [About Giga Meter](docs/getting-started/overview.md)                       | What Giga Meter is and why it matters           |
-| [System Requirements](docs/installation/system-requirements.md)            | What you need before installing                 |
-| [Installation Guide](docs/installation/installation-guide.md)              | Step-by-step setup instructions                 |
-| [Measurement Protocols](docs/technical-reference/measurement-protocols.md) | How tests work and when they run                |
-| [Data Governance & Privacy](docs/technical-reference/data-governance.md)   | What data is collected and how it's handled     |
-| [Troubleshooting](docs/troubleshooting/troubleshooting.md)                 | Common issues and fixes                         |
-| [FAQ](docs/troubleshooting/faq.md)                                         | Frequently asked questions                      |
-| [Country Deployment](docs/deployment/government-onboarding-overview.md)    | For governments rolling out Giga Meter at scale |
-| [Case Studies](docs/deployment/case-studies.md)                            | How other governments use the data              |
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>School staff</strong></td><td>Install Giga Meter at your school, keep it running, and check your connectivity data.<br><br><strong>Jump to Installation →</strong></td><td><a href="docs/installation/system-requirements.md">system-requirements.md</a></td></tr><tr><td><strong>Government and ministries</strong></td><td>Plan a national or regional rollout, assign roles, and turn the data into decisions.<br><br><strong>Jump to Country Deployment →</strong></td><td><a href="docs/deployment/government-onboarding-overview.md">government-onboarding-overview.md</a></td></tr><tr><td><strong>IT and technical teams</strong></td><td>Configure the network, understand the measurement methodology, and use the API.<br><br><strong>Jump to Technical Reference →</strong></td><td><a href="docs/technical-reference/internet-measurement-101.md">internet-measurement-101.md</a></td></tr></tbody></table>
+
+***
+
+Looking for something specific? The complete knowledge base is always in the sidebar on the left.

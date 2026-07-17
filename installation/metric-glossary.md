@@ -154,6 +154,6 @@ Plain-language definitions for the terms and metrics used in Giga Meter, Giga Ma
 
 ### Related pages
 
-* [Measurement Protocols](measurement-protocols.md) - how Giga Meter runs its tests
-* [Data Analysis Lead Guide](../deployment/data-analysis-lead.md) - where each term appears on screen
-* [Data Governance & Privacy](data-governance.md) - what data is shared and with whom
+* [Measurement Protocols](../docs/technical-reference/measurement-protocols.md) - how Giga Meter runs its tests
+* [Data Analysis Lead Guide](../docs/deployment/data-analysis-lead.md) - where each term appears on screen
+* [Data Governance & Privacy](../docs/technical-reference/data-governance.md) - what data is shared and with whom

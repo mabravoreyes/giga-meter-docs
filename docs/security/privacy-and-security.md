@@ -96,13 +96,13 @@ Giga Meter uses [Measurement Lab (M-Lab)](https://www.measurementlab.net/) to ru
 
 M-Lab operates a globally distributed network of servers. Giga Meter selects the nearest available server for each test; no fixed server is used.
 
-For network whitelisting, a single DNS wildcard rule (`*.measurementlab.net`) covers all M-Lab servers. See [Network Destinations & Firewall Configuration](network-destinations.md) for the complete list.
+For network whitelisting, a single DNS wildcard rule (`*.measurementlab.net`) covers all M-Lab servers. See [Network Destinations & Firewall Configuration](../../technical-reference/network-destinations.md) for the complete list.
 
 ***
 
 ### Related pages
 
-* [Network Destinations & Firewall Configuration](network-destinations.md)
+* [Network Destinations & Firewall Configuration](../../technical-reference/network-destinations.md)
 * [Data Governance & Privacy](../technical-reference/data-governance.md)
 * [FAQ - What data does Giga Meter transmit?](../troubleshooting/faq.md)
 * [Measurement Protocols](../technical-reference/measurement-protocols.md)

@@ -70,12 +70,12 @@ Complete the [Deployment Blueprint](deployment-blueprint.md) before starting the
 
 ### All deployment resources
 
-| Resource                                                     | What it's for                                                       |
-| ------------------------------------------------------------ | ------------------------------------------------------------------- |
-| [Deployment Blueprint](deployment-blueprint.md)              | Planning worksheet - complete before the rollout starts             |
-| [Installation Lead Guide](installation-lead.md)              | Step-by-step guide for the Installation Lead                        |
-| [Data Analysis Lead Guide](data-analysis-lead.md)            | Step-by-step guide for the Data Analysis Lead                       |
-| [Training Support Materials](deployment-checklist.md)        | Session agenda, talking points, and Q\&A for installation workshops |
-| [Case Studies](case-studies.md)                              | How other governments have used Giga Meter data                     |
-| [Metric Glossary](../technical-reference/metric-glossary.md) | Definitions for every metric                                        |
-| [API Reference](../technical-reference/api-reference.md)     | Endpoint documentation for technical integrations                   |
+| Resource                                                 | What it's for                                                       |
+| -------------------------------------------------------- | ------------------------------------------------------------------- |
+| [Deployment Blueprint](deployment-blueprint.md)          | Planning worksheet - complete before the rollout starts             |
+| [Installation Lead Guide](installation-lead.md)          | Step-by-step guide for the Installation Lead                        |
+| [Data Analysis Lead Guide](data-analysis-lead.md)        | Step-by-step guide for the Data Analysis Lead                       |
+| [Training Support Materials](deployment-checklist.md)    | Session agenda, talking points, and Q\&A for installation workshops |
+| [Case Studies](case-studies.md)                          | How other governments have used Giga Meter data                     |
+| [Metric Glossary](../../installation/metric-glossary.md) | Definitions for every metric                                        |
+| [API Reference](../technical-reference/api-reference.md) | Endpoint documentation for technical integrations                   |
