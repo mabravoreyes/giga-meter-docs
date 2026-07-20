@@ -10,7 +10,7 @@ How governments use Giga Meter data to inform decisions. Each deployment below s
 
 | Country                              | Main goal                                                                 | Benchmark                                        | Deployment model                  |
 | ------------------------------------ | ------------------------------------------------------------------------- | ------------------------------------------------ | --------------------------------- |
-| <h4>🇧🇷 Brazil</h4>                 | Enforce school-specific speed targets and validate ISP fiscal obligations | 1 Mbps per enrolled student in the longest shift | Hybrid                            |
+| <h4>🇧🇷 Brazil</h4>                 | Enforce school-specific speed targets and validate ISP fiscal obligations | 1 Mbps per enrolled student in the busiest shift | Hybrid                            |
 | <h4>🇧🇼 Botswana</h4>               | Track compliance against national connectivity mandate                    | 100 Mbps                                         | Remote (centralised support team) |
 | <h4>🇲🇳 Mongolia</h4>               | Improve LAN performance; enable decentralised ISP contracting             | No formal minimum                                | Remote (centralised support team) |
 | <h4>🇫🇯 Fiji</h4>                   | Identify schools reliable enough for live broadcast STEM lessons          | No formal minimum                                | Hybrid                            |
