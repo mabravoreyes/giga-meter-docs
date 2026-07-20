@@ -1,6 +1,6 @@
 # Using the Dashboard
 
-Giga Meter data is published through an [Apache Superset](https://superset.giga.global) dashboard: seven pre-built screens covering school summaries, speed and latency trends, district breakdowns, per-measurement tables, app-version tracking, and installation health. This page is a screen-by-screen reference.
+Giga Meter data is published through an [Apache Superset](https://superset.giga.global) dashboard. Tabs show school summaries, speed and latency trends, district breakdowns, per-measurement tables, app-version tracking, and installation health. This page is a screen-by-screen reference.
 
 For how to get an account and which access channel suits which user, see the [Data Analysis Lead Guide](../docs/deployment/data-analysis-lead.md).
 
@@ -10,9 +10,9 @@ For how to get an account and which access channel suits which user, see the [Da
 
 ***
 
-### The seven screens
+### Superset Dashboards' sections
 
-All seven screens are reached from the tab bar at the top of the dashboard.
+All tabs are reached from the tab bar at the top of the dashboard.
 
 | Screen                             | What it answers                                                                                             |
 | ---------------------------------- | ----------------------------------------------------------------------------------------------------------- |
