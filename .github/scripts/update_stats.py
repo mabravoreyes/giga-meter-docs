@@ -2,6 +2,22 @@
 Daily stats updater for giga-meter-docs README.md.
 Fetches live counts from the Giga Meter API and regenerates the country flag grid PNG.
 Renders at 2x resolution (1440px wide) for crisp display on retina screens.
+
+--- Release notes style guide ---
+When updating the release hint block (between <!-- release-start --> and <!-- release-end -->),
+write the body in this style:
+
+  "Version X.Y.Z [verb] [change], [verb] [change], and [verb] [change]."
+
+Example:
+  "Version 2.0.3 improves speed-measurement accuracy, adds automatic location detection,
+   adds Mongolian language support, and moves software updates to signed distribution."
+
+Rules:
+- Lead with "Version X.Y.Z" — no "Giga Meter can now" or marketing phrasing
+- One sentence, verb-first for each change, comma-separated
+- End with a link: [Full release notes →](GitHub release URL)
+- Bold the version + date in the header: **X.Y.Z — YYYY-MM-DD**
 """
 
 import io
