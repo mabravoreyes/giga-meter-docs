@@ -19,19 +19,19 @@ Giga Meter is active in:
 <!-- stats-start -->
 {% columns %}
 {% column %}
-#### 39
+## 39
 
 Countries
 {% endcolumn %}
 
 {% column %}
-#### 20,978
+## 20,982
 
 Schools
 {% endcolumn %}
 
 {% column %}
-#### 3,091,134
+## 3,091,134
 
 Measurements
 {% endcolumn %}
